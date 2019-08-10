@@ -2,10 +2,10 @@ import React, { useState } from "react";
 import { Menu as M, Input, Image, Icon } from "semantic-ui-react";
 import { Link as L } from "gatsby";
 import styled from "styled-components";
-Image = styled(Image)`
+const Img = styled(Image)`
   margin: 0 10px;
 `;
-M.Item = styled(M.Item)`
+const Item = styled(M.Item)`
   padding: 0 !important;
 `;
 const Link = styled(L)`
@@ -26,27 +26,29 @@ const Menu = () => {
 
   const handleItemClick = (e, { name }) => setActiveItem(name);
   return (
-    <M>
-      <M.Item>
-        {/* <IconMenu name="bars" size="big" /> */}
-        <Link to="/servicios">Servicios</Link>
-      </M.Item>
-      <M.Item>
-        <Link to="/cursos">Cursos</Link>
-      </M.Item>
-      <M.Item>
-        <Link to="/trabajo">Trabajo</Link>
-      </M.Item>
-      <M.Menu position="right">
-        <M.Item>
-          <Link to="/">
-            <Image size="small" src="img/logotipo.png" />
+    <div className="Menu">
+      <M size="huge" borderless pointing style={{ margin: "0 !important" }}>
+        <Item>
+          {/* <IconMenu name="bars" size="big" /> */}
+          <Link to="/servicios">Servicios</Link>
+        </Item>
+        <Item>
+          <Link to="/cursos">Cursos</Link>
+        </Item>
+        <Item>
+          <Link to="/trabajo">Trabajo</Link>
+        </Item>
+        <M.Menu position="right">
+          <Item>
+            <Link to="/">
+              <Img size="small" src="img/logotipo.png" />
 
-            <Image size="mini" src="img/isologo.png" />
-          </Link>
-        </M.Item>
-      </M.Menu>
-    </M>
+              <Img size="mini" src="img/isologo.png" />
+            </Link>
+          </Item>
+        </M.Menu>
+      </M>
+    </div>
   );
 };
 

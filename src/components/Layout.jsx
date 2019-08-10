@@ -1,15 +1,16 @@
 import React from "react";
 import Head from "./Head/index.jsx";
-import { Container } from "semantic-ui-react";
 import Menu from "./Menu.jsx";
+import styled from "styled-components";
+import { Container } from "semantic-ui-react";
+// const Container = styled.div``;
+
 const Layout = ({ children }) => {
   return (
     <>
       <Head />
-      <Container fluid>
-        <Menu />
-        {children}
-      </Container>
+      <Menu />
+      <Container fluid>{children}</Container>
     </>
   );
 };
