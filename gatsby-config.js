@@ -8,5 +8,15 @@ module.exports = {
     siteImage: `seoImages/banner.png`,
     faviconDefault: `favicon/favicon.png`
   },
-  plugins: [`gatsby-plugin-react-helmet`, `gatsby-plugin-styled-components`]
+  plugins: [
+    `gatsby-plugin-react-helmet`,
+    {
+      resolve: `gatsby-plugin-styled-components`,
+      options: {
+        displayName: false,
+        fileName: false,
+        ssr: false
+      }
+    }
+  ]
 };

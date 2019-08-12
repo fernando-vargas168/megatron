@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import { Container, Button } from "semantic-ui-react";
-import styled from "styled-components";
+import { Container, Button } from "@material-ui/core";
+import styled, { createGlobalStyle } from "styled-components";
 import { Link as L } from "gatsby";
 import { useSpring, animated } from "react-spring";
 import { SuperCopy, CopyH1 } from "../styles/widgets";
@@ -8,48 +8,61 @@ import ColorsBackground from "../components/ColorsBackground";
 import TrailPresentation from "../components/TrailPresentation";
 import Parrallax from "./Parrallax";
 import { Responsive } from "../styles/vars";
-const flex = `
-    display: flex !important;
-    justify-content: center;
-    align-items: flex-start;`;
+const GlobalStyle = createGlobalStyle`
+body {
+  overflow: hidden;
+  
+}`;
 const LandingContainer = styled.div`
-  ${flex}
-
+  display: flex !important;
   align-items: center;
   justify-content: flex-start;
   width: 100vw;
-  height: calc(100vh - 85px);
+  height: calc(100vh - 75px);
   ${Responsive.miniTablet} {
     justify-content: flex-end;
+    // align-items: center;
   }
-  ${Responsive.miniMobile} {
-    align-items: flex-start;
+  ${Responsive.mobile} {
+    display: flex;
+    height: calc(100vh - 57px);
+    align-items: center;
     justify-content: center;
+    margin-top: 0;
   }
 `;
 const LandingText = styled.div`
-  ${flex}
+  display: flex !important;
+  justify-content: center;
+  align-items: flex-start;
   flex-direction: column;
-  width: 50%;
+  height: 80vh;
   width: 50%;
   margin-left: 10%;
   min-width: 35%;
-  max-width: 50%;
   ${Responsive.miniTablet} {
-    width: 40%;
+    width: 45%;
     margin-left: 0;
   }
   ${Responsive.mobile} {
-    width: 50%;
-  }
-  ${Responsive.miniMobile} {
-    max-width: 100%;
-    width: 90%;
+    width: 100%;
+    display: flex;
+    height: calc(100vh - 57px);
+    align-items: center;
+    justify-content: center;
   }
 `;
 const LandingH1 = styled(SuperCopy)`
   text-shadow: 2px 2px 5px black;
   cursor: pointer;
+  text-align: center;
+  ${Responsive.mobile} {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 10vh;
+  }
 `;
 const Link = styled(L)`
   color: black;
@@ -66,35 +79,52 @@ const Landing = () => {
   }));
   const items = [
     <Link to="/servicios">
-      <ColorsBackground colors={["#F04D40", "#F9DA5E"]}>
+      <ColorsBackground colors={["#F00000", "#8F8FFF"]}>
         <LandingH1>Creamos,</LandingH1>
       </ColorsBackground>
     </Link>,
     <Link to="/cursos">
-      <ColorsBackground colors={["#F9DA5E", "#6FCAC7"]}>
+      <ColorsBackground colors={["#8F8FFF", "#FFC832"]}>
         <LandingH1>Enseñamos</LandingH1>
       </ColorsBackground>
     </Link>,
     <Link to="/trabajo">
-      <ColorsBackground colors={["#6FCAC7", "#526dd9"]}>
+      <ColorsBackground colors={["#FFC832", "#228B22"]}>
         <LandingH1>Y Econtramos</LandingH1>
       </ColorsBackground>
     </Link>,
-    <SuperCopy> INGENIERIA</SuperCopy>
+    <LandingH1 style={{ textShadow: "none" }}> INGENIERIA</LandingH1>
+    // <Link to="/servicios">
+    //   <ColorsBackground colors={["#F04D40", "#F9DA5E"]}>
+    //     <LandingH1>Creamos,</LandingH1>
+    //   </ColorsBackground>
+    // </Link>,
+    // <Link to="/cursos">
+    //   <ColorsBackground colors={["#F9DA5E", "#6FCAC7"]}>
+    //     <LandingH1>Enseñamos</LandingH1>
+    //   </ColorsBackground>
+    // </Link>,
+    // <Link to="/trabajo">
+    //   <ColorsBackground colors={["#6FCAC7", "#526dd9"]}>
+    //     <LandingH1>Y Econtramos</LandingH1>
+    //   </ColorsBackground>
+    // </Link>,
+    // <LandingH1 style={{ textShadow: "none" }}> INGENIERIA</LandingH1>
   ];
 
   return (
     <LandingContainer
-      className="LandingContainer"
+      maxWidth={false}
+      className="LContainer"
       onMouseMove={({ clientX: x, clientY: y }) =>
         setParrallax({ xy: calc(x, y) })
       }
     >
       <LandingText className="LandingText">
         <TrailPresentation items={items} toggle={toggle} />
-        {/* <Button onClick={() => setToggle(!toggle)}>Click</Button> */}
       </LandingText>
       <Parrallax parrallax={parrallax} setParrallax={setParrallax} />
+      <GlobalStyle />
     </LandingContainer>
   );
 };

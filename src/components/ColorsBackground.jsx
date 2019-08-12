@@ -19,7 +19,6 @@ const ColorsBackground = ({
       !fixexRequire && setColor(state => (state + 1) % colors.length);
     }, 1000);
     const clear = () => {
-      console.log("Clear");
       fixexRequire = true;
       clearInterval(interval);
     };

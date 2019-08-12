@@ -1,25 +1,30 @@
 import React from "react";
 import { useSpring, useTrail, animated } from "react-spring";
+import styled from "styled-components";
+import { Responsive } from "../styles/vars";
+const TrailsText = styled(animated.div)`
+  ${Responsive.mobile} {
+    width: 100%;
+  }
+`;
 const TrailPresentation = ({ items, toggle }) => {
-  const xVar = -50;
+  const xVar = -1000;
   const trail = useTrail(4, {
     // config,
-    x: toggle ? 0 : xVar,
-    opacity: toggle ? 1 : 0,
-    from: { opacity: 0, x: xVar }
+    from: { opacity: 0, x: xVar },
+    x: 0,
+    opacity: 1
   });
   return trail.map(({ x, height, ...rest }, index) => (
-    <animated.div
+    <TrailsText
       key={index}
       className="trails-text"
       style={{
-        ...rest,
-        transform: x.interpolate(x => `translate3d(${x}px,0,0)`),
-        margin: "10px 0"
+        transform: x.interpolate(x => `translate3d(${x}px,0,0)`)
       }}
     >
       {items[index]}
-    </animated.div>
+    </TrailsText>
   ));
 };
 export default TrailPresentation;

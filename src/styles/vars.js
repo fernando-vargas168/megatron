@@ -6,14 +6,14 @@ export const Colors = {
   white: "white",
   black: "black"
 };
-export const Font = {
-  font1: `Montserrat", monospace`,
-  font2: `Share Tech Mono", monospace`
+export const Fonts = {
+  font1: `"Montserrat"`,
+  font2: `"Share Tech Mono"`
 };
 export const Responsive = {
   miniDesktop: `@media screen and (max-width: 1000px)`,
   tablet: `@media screen and (max-width: 800px)`,
   miniTablet: `@media screen and (max-width: 600px)`,
-  mobile: `@media screen and (max-width: 425px)`,
+  mobile: `@media screen and (max-width: 480px)`,
   miniMobile: `@media screen and (max-width: 350px)`
 };

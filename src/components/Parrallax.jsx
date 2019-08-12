@@ -2,11 +2,6 @@ import React from "react";
 import { useSpring, animated } from "react-spring";
 import styled from "styled-components";
 import { Responsive } from "../styles/vars";
-// const trans1 = (x, y) => `translate3d(${x / 10}px,${y / 10}px,0)`;
-// const trans2 = (x, y) => `translate3d(${x / 7 + 35}px,${y / 8 - 230}px,0)`;
-// const trans3 = (x, y) => `translate3d(${x / 3.5}px,${y / 3.5}px,0)`;
-// const trans4 = (x, y) => `translate3d(${x / 3.3}px,${y / 3.5}px,0)`;
-// const trans5 = (x, y) => `translate3d(${x / 3.1}px,${y / 3.5}px,0)`;
 const trans1 = (x, y) => `translate3d(${x / 10}px,${y / 10}px,0)`;
 const trans2 = (x, y) => `translate3d(${x / 9}px,${y / 9}px,0)`;
 const trans3 = (x, y) => `translate3d(${x / 7.5}px,${y / 7.5}px,0)`;
@@ -40,15 +35,12 @@ const ContainerParrallax1 = styled.div`
     left: 5%;
   }
   ${Responsive.mobile} {
-    width: 150px;
-    height: 150px;
-  }
-  ${Responsive.miniMobile} {
-    width: 200px;
-    height: 200px;
+    // display: none;
+    width: 250px;
+    height: 250px;
     left: 48%;
     transform: translate(-50%, 0);
-    bottom: 0;
+    top: 1%;
   }
   .card {
     position: absolute;
@@ -62,6 +54,9 @@ const ContainerParrallax1 = styled.div`
     top: 0%;
     right: 0%;
     left: 0%;
+    ${Responsive.mobile} {
+      display: none;
+    }
   }
 
   .card2 {
@@ -69,6 +64,9 @@ const ContainerParrallax1 = styled.div`
     height: 105%;
     bottom: 8%;
     left: -2%;
+    ${Responsive.mobile} {
+      display: none;
+    }
   }
 
   .card3 {
@@ -102,7 +100,6 @@ const ContainerParrallax2 = styled.div`
   z-index: -1;
   ${Responsive.tablet} {
     display: none;
-    ${props => console.log(props)}
   }
   .c {
     position: absolute;

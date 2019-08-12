@@ -1,12 +1,5 @@
 import React, { useState, useEffect } from "react";
-import {
-  Container,
-  Header,
-  Image,
-  Grid,
-  Button,
-  Segment
-} from "semantic-ui-react";
+import { Container, Header, Image, Grid } from "@material-ui/core";
 import ColorsBackground from "../../components/ColorsBackground";
 import styled from "styled-components";
 import { SuperCopy, CopyH1, CopyH2, CopyH3, P } from "../../styles/widgets";
@@ -27,35 +20,7 @@ const servicios = () => {
   }, []);
   return (
     <Container className="Services">
-      <Header as="h2">
-        <Grid columns={2} padded="vertically">
-          <Grid.Column
-            width={8}
-            style={{
-              display: "flex",
-              justifyContent: "center",
-              alignItems: "center"
-            }}
-          >
-            <Header.Content>
-              <ColorsBackground>
-                <ServiceSuper>Creamos</ServiceSuper>
-              </ColorsBackground>
-              <CopyH2>INGENIERÍA</CopyH2>
-            </Header.Content>
-          </Grid.Column>
-          <Grid.Column
-            width={8}
-            style={{
-              display: "flex",
-              justifyContent: "center",
-              alignItems: "center"
-            }}
-          >
-            <Image src="img/serviciosCover.png" />
-          </Grid.Column>
-        </Grid>
-      </Header>
+      <h1>Servicios</h1>
     </Container>
   );
 };
