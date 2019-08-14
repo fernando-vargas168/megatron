@@ -36,11 +36,12 @@ const ContainerParrallax1 = styled.div`
   }
   ${Responsive.mobile} {
     // display: none;
-    width: 250px;
-    height: 250px;
-    left: 48%;
+    width: 300px;
+    height: 300px;
+    left: 50%;
     transform: translate(-50%, 0);
-    top: 1%;
+    top: 3%;
+    z-index: -1;
   }
   .card {
     position: absolute;

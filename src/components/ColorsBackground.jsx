@@ -1,8 +1,10 @@
 import React, { cloneElement, useState, useEffect } from "react";
 import { useSpring, animated } from "react-spring";
+import { Colors } from "../styles/vars";
+const { red, blue, yellow, green } = Colors;
 const ColorsBackground = ({
   children,
-  colors = ["#F04D40", "#F9DA5E", "#6FCAC7", "#526dd9"]
+  colors = [red, blue, yellow, green]
 }) => {
   const ChildrenComponent = ({ style }) => (
     <>

@@ -30,6 +30,9 @@ export const SuperCopy = styled(CopyH1)`
   ${Responsive.miniTablet} {
     font-size: 1.7em;
   }
+  @media screen and (max-width: 480px) {
+    font-size: 1.5em;
+  }
   ${Responsive.mobile} {
     font-size: 2.5em;
   }

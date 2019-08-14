@@ -17,6 +17,54 @@ module.exports = {
         fileName: false,
         ssr: false
       }
+    },
+    {
+      resolve: "gatsby-source-filesystem",
+      options: {
+        name: `servicios`,
+        path: `${__dirname}/src/pages/servicios`
+      }
+    },
+    {
+      resolve: "gatsby-source-filesystem",
+      options: {
+        name: `cursos`,
+        path: `${__dirname}/src/pages/cursos`
+      }
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `${__dirname}/static/img/`,
+        name: "img"
+      }
+    },
+    `gatsby-transformer-sharp`,
+    `gatsby-plugin-sharp`,
+    {
+      resolve: `gatsby-transformer-remark`,
+      options: {
+        plugins: [
+          {
+            resolve: `gatsby-remark-relative-images-v2`,
+            options: {
+              name: "img"
+            }
+          },
+          {
+            resolve: `gatsby-remark-images`,
+            options: {
+              maxWidth: 300
+            }
+          },
+          {
+            resolve: "gatsby-remark-copy-linked-files",
+            options: {
+              destinationDir: "static"
+            }
+          }
+        ]
+      }
     }
   ]
 };

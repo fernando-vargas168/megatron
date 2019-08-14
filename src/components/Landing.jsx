@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { Container, Button } from "@material-ui/core";
 import styled, { createGlobalStyle } from "styled-components";
 import { Link as L } from "gatsby";
 import { useSpring, animated } from "react-spring";
@@ -8,6 +7,8 @@ import ColorsBackground from "../components/ColorsBackground";
 import TrailPresentation from "../components/TrailPresentation";
 import Parrallax from "./Parrallax";
 import { Responsive } from "../styles/vars";
+import { Colors } from "../styles/vars";
+const { red, blue, yellow, green } = Colors;
 const GlobalStyle = createGlobalStyle`
 body {
   overflow: hidden;
@@ -79,17 +80,17 @@ const Landing = () => {
   }));
   const items = [
     <Link to="/servicios">
-      <ColorsBackground colors={["#F00000", "#8F8FFF"]}>
+      <ColorsBackground colors={[red, blue]}>
         <LandingH1>Creamos,</LandingH1>
       </ColorsBackground>
     </Link>,
     <Link to="/cursos">
-      <ColorsBackground colors={["#8F8FFF", "#FFC832"]}>
+      <ColorsBackground colors={[blue, yellow]}>
         <LandingH1>Enseñamos</LandingH1>
       </ColorsBackground>
     </Link>,
     <Link to="/trabajo">
-      <ColorsBackground colors={["#FFC832", "#228B22"]}>
+      <ColorsBackground colors={[yellow, green]}>
         <LandingH1>Y Econtramos</LandingH1>
       </ColorsBackground>
     </Link>,

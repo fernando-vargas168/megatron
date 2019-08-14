@@ -9,10 +9,11 @@ import { ThemeProvider } from "@material-ui/styles";
 const GlobalStyle = createGlobalStyle`
 *{
   font-family: ${Fonts.font1};
+  font-weight: 800
 }
 body {
   margin: 0 !important;
-  
+  overflow-x: hidden;
 }
 a{
   color: initial;
@@ -20,7 +21,8 @@ a{
 }
 `;
 const Montserrat = {
-  fontFamily: "Montserrat"
+  fontFamily: "Montserrat",
+  fontWeight: 800
 };
 const theme = createMuiTheme({
   root: {

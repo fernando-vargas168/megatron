@@ -1,28 +1,100 @@
 import React, { useState, useEffect } from "react";
-import { Container, Header, Image, Grid } from "@material-ui/core";
-import ColorsBackground from "../../components/ColorsBackground";
+import { graphql } from "gatsby";
+import {
+  Container,
+  Grid,
+  Box,
+  Card as C,
+  CardContent as CC,
+  CardActionArea,
+  CardMedia,
+  Typography
+} from "@material-ui/core";
 import styled from "styled-components";
-import { SuperCopy, CopyH1, CopyH2, CopyH3, P } from "../../styles/widgets";
-import { servicios as data } from "./servicios.yml";
-const ServiceSuper = styled(SuperCopy)`
-  font-size: 3em;
-`;
-const servicios = () => {
-  const [tablet, setTablet] = useState(false);
-  const [mobile, setMobile] = useState(false);
-  useEffect(() => {
-    setTablet(window.matchMedia("(max-width: 800px)").matches);
-    setMobile(window.matchMedia("(max-width: 650px)").matches);
-    window.addEventListener("resize", () => {
-      setTablet(window.matchMedia("(max-width: 800px)").matches);
-      setMobile(window.matchMedia("(max-width: 650px)").matches);
-    });
-  }, []);
+import HeaderPage from "../../components/HeaderPage.jsx";
+import ContainerPage from "../../components/ContainerPage.jsx";
+
+const servicios = ({ data }) => {
+  // console.log(data.allFile.edges[0].node);
   return (
-    <Container className="Services">
-      <h1>Servicios</h1>
-    </Container>
+    <ContainerPage className="Servicios">
+      <HeaderPage
+        img="/img/serviciosCover.svg"
+        text1="Creamos"
+        text2="Servicios y proyectos"
+        altImg="Persona Dibujando un plano de un cohete en representación de los servicios de Megatron"
+      />
+      <CardsContainer container spacing={3}>
+        {data.allFile.edges.map(({ node }, index) => (
+          <CardChild
+            key={index}
+            text={node.childMarkdownRemark.frontmatter.title}
+            img={node.childMarkdownRemark.frontmatter.img}
+          />
+        ))}
+      </CardsContainer>
+    </ContainerPage>
   );
 };
-
+const CardChild = ({ text, img }) => (
+  <CardContainer item xs={12} sm={6}>
+    <Card>
+      <CardActionArea>
+        <CardContent>
+          <IconServicio src={img} alt="" />
+          <Typography gutterBottom variant="h5" component="h2">
+            {text}
+          </Typography>
+        </CardContent>
+      </CardActionArea>
+    </Card>
+  </CardContainer>
+);
+const CardsContainer = styled(Grid)`
+  margin-top: 15px !important;
+  width: 100%;
+`;
+const Card = styled(C)`
+  background: white !important;
+  box-shadow: 2px 2px 5px 0.5px !important;
+  width: 300px;
+`;
+const CardContainer = styled(Grid)`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+`;
+const CardContent = styled(CC)`
+  padding: 10px !important;
+  height: 100px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+`;
+const IconServicio = styled.img`
+  margin-right: 10px;
+  height: 50px;
+`;
 export default servicios;
+
+export const query = graphql`
+  query Servicios {
+    allFile(
+      filter: {
+        sourceInstanceName: { eq: "servicios" }
+        extension: { eq: "md" }
+      }
+    ) {
+      edges {
+        node {
+          childMarkdownRemark {
+            frontmatter {
+              title
+              img
+            }
+          }
+        }
+      }
+    }
+  }
+`;
