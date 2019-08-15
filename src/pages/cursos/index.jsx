@@ -1,5 +1,6 @@
 import React from "react";
 import Img from "gatsby-image";
+import BackgroundImage from "gatsby-background-image";
 import {
   Grid,
   Card as C,
@@ -35,14 +36,20 @@ const cursos = ({ data }) => {
     </ContainerPage>
   );
 };
-
+const Background = styled(BackgroundImage)`
+  height: 300px !important;
+`;
 export default cursos;
+// const Background = ()=>(<BackgroundImage fluid={img.childImageSharp.fluid}/>)
 const CursoCard = ({ title, img, date }) => {
   return (
     <CardContainer item xs={12} sm={6} md={4}>
       <Card>
         <CardHeader title={title} subheader={date} />
-        <CardMedia image={img} />
+        <CardMedia
+          component={() => <Background fluid={img.childImageSharp.fluid} />}
+        />
+        {/* <CardMedia image={img.childImageSharp.fluid} /> */}
         <CardContent>
           <Typography>{title}</Typography>
         </CardContent>
@@ -87,8 +94,20 @@ export const query = graphql`
           childMarkdownRemark {
             frontmatter {
               title
-              img
+              img {
+                childImageSharp {
+                  fluid {
+                    ...GatsbyImageSharpFluid
+                  }
+                }
+              }
               date
+            }
+          }
+          parent {
+            ... on File {
+              name
+              sourceInstanceName
             }
           }
         }

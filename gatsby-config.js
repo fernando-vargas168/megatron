@@ -10,6 +10,7 @@ module.exports = {
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
+    "gatsby-plugin-remove-trailing-slashes",
     {
       resolve: `gatsby-plugin-styled-components`,
       options: {
@@ -35,7 +36,7 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        path: `${__dirname}/static/img/`,
+        path: `${__dirname}/static/img`,
         name: "img"
       }
     },
@@ -45,12 +46,7 @@ module.exports = {
       resolve: `gatsby-transformer-remark`,
       options: {
         plugins: [
-          {
-            resolve: `gatsby-remark-relative-images-v2`,
-            options: {
-              name: "img"
-            }
-          },
+          `gatsby-remark-relative-images`,
           {
             resolve: `gatsby-remark-images`,
             options: {

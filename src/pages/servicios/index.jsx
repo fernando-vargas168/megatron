@@ -90,7 +90,13 @@ export const query = graphql`
           childMarkdownRemark {
             frontmatter {
               title
-              img
+              img {
+                childImageSharp {
+                  fluid {
+                    ...GatsbyImageSharpFluid
+                  }
+                }
+              }
             }
           }
         }
