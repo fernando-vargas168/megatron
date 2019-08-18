@@ -36,9 +36,7 @@ const cursos = ({ data }) => {
     </ContainerPage>
   );
 };
-const Background = styled(BackgroundImage)`
-  height: 300px !important;
-`;
+
 export default cursos;
 // const Background = ()=>(<BackgroundImage fluid={img.childImageSharp.fluid}/>)
 const CursoCard = ({ title, img, date }) => {
@@ -46,10 +44,7 @@ const CursoCard = ({ title, img, date }) => {
     <CardContainer item xs={12} sm={6} md={4}>
       <Card>
         <CardHeader title={title} subheader={date} />
-        <CardMedia
-          component={() => <Background fluid={img.childImageSharp.fluid} />}
-        />
-        {/* <CardMedia image={img.childImageSharp.fluid} /> */}
+        <Background fluid={img.childImageSharp.fluid} />
         <CardContent>
           <Typography>{title}</Typography>
         </CardContent>
@@ -83,7 +78,10 @@ const Card = styled(C)`
 const CardMedia = styled(CM)`
   padding-top: 56.25%; //16:9
 `;
-
+const Background = styled(BackgroundImage)`
+  // height: 300px !important;
+  padding-top: 56.25%; //16:9
+`;
 export const query = graphql`
   query Cursos {
     allFile(

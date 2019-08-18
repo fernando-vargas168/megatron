@@ -1,4 +1,4 @@
 ---
 title: Automatizacion y control
-img: /img/automatizacion.svg
+icon: /img/automatizacion.svg
 ---

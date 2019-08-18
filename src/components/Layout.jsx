@@ -9,7 +9,8 @@ import { ThemeProvider } from "@material-ui/styles";
 const GlobalStyle = createGlobalStyle`
 *{
   font-family: ${Fonts.font1};
-  font-weight: 800
+  font-weight: 800;
+  // transition: 0.1s;
 }
 body {
   margin: 0 !important;

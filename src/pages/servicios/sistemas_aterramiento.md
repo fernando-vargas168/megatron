@@ -1,4 +1,4 @@
 ---
 title: Sistemas de aterramiento
-img: /img/sistemas_aterramiento.svg
+icon: /img/sistemas_aterramiento.svg
 ---

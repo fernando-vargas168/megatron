@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { graphql } from "gatsby";
+import Img from "gatsby-image";
 import {
   Container,
   Grid,
@@ -15,7 +16,6 @@ import HeaderPage from "../../components/HeaderPage.jsx";
 import ContainerPage from "../../components/ContainerPage.jsx";
 
 const servicios = ({ data }) => {
-  // console.log(data.allFile.edges[0].node);
   return (
     <ContainerPage className="Servicios">
       <HeaderPage
@@ -29,19 +29,20 @@ const servicios = ({ data }) => {
           <CardChild
             key={index}
             text={node.childMarkdownRemark.frontmatter.title}
-            img={node.childMarkdownRemark.frontmatter.img}
+            icon={node.childMarkdownRemark.frontmatter.icon}
           />
         ))}
       </CardsContainer>
     </ContainerPage>
   );
 };
-const CardChild = ({ text, img }) => (
+const CardChild = ({ text, icon }) => (
   <CardContainer item xs={12} sm={6}>
     <Card>
       <CardActionArea>
         <CardContent>
-          <IconServicio src={img} alt="" />
+          {/* <Img fluid={img.childImageSharp.fluid} /> */}
+          <IconServicio src={icon} alt="" />
           <Typography gutterBottom variant="h5" component="h2">
             {text}
           </Typography>
@@ -90,13 +91,7 @@ export const query = graphql`
           childMarkdownRemark {
             frontmatter {
               title
-              img {
-                childImageSharp {
-                  fluid {
-                    ...GatsbyImageSharpFluid
-                  }
-                }
-              }
+              icon
             }
           }
         }

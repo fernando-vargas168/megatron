@@ -34,6 +34,20 @@ module.exports = {
       }
     },
     {
+      resolve: "gatsby-source-filesystem",
+      options: {
+        name: `personas`,
+        path: `${__dirname}/src/pages/trabajo/personas`
+      }
+    },
+    {
+      resolve: "gatsby-source-filesystem",
+      options: {
+        name: `empresas`,
+        path: `${__dirname}/src/pages/trabajo/empresas`
+      }
+    },
+    {
       resolve: `gatsby-source-filesystem`,
       options: {
         path: `${__dirname}/static/img`,

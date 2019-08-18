@@ -95,22 +95,6 @@ const Landing = () => {
       </ColorsBackground>
     </Link>,
     <LandingH1 style={{ textShadow: "none" }}> INGENIERIA</LandingH1>
-    // <Link to="/servicios">
-    //   <ColorsBackground colors={["#F04D40", "#F9DA5E"]}>
-    //     <LandingH1>Creamos,</LandingH1>
-    //   </ColorsBackground>
-    // </Link>,
-    // <Link to="/cursos">
-    //   <ColorsBackground colors={["#F9DA5E", "#6FCAC7"]}>
-    //     <LandingH1>Enseñamos</LandingH1>
-    //   </ColorsBackground>
-    // </Link>,
-    // <Link to="/trabajo">
-    //   <ColorsBackground colors={["#6FCAC7", "#526dd9"]}>
-    //     <LandingH1>Y Econtramos</LandingH1>
-    //   </ColorsBackground>
-    // </Link>,
-    // <LandingH1 style={{ textShadow: "none" }}> INGENIERIA</LandingH1>
   ];
 
   return (

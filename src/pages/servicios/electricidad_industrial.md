@@ -1,4 +1,4 @@
 ---
 title: Servicios Eléctricos
-img: /img/electricidad_industrial.svg
+icon: /img/electricidad_industrial.svg
 ---
