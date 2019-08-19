@@ -93,7 +93,7 @@ const Landing = () => {
     </Link>,
     <Link to="/trabajo">
       <ColorsBackground colors={[yellow, green]}>
-        <LandingH1>Y Econtramos</LandingH1>
+        <LandingH1>Y Encontramos</LandingH1>
       </ColorsBackground>
     </Link>,
     <LandingH1
