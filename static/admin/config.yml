@@ -169,10 +169,6 @@ collections:
             name: "sueldo"
             widget: "string"
             required: false
-          - label: "Categoría"
-            name: "categoria"
-            widget: "list"
-            required: false
           - label: "Fecha de publicación"
             hint: "Formato: DD/MM/YY 04/05/19"
             name: "publicado"
