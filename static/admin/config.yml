@@ -23,7 +23,7 @@ collections:
       - label: "Categorías"
         name: "category"
         widget: "list"
-        required: false,
+        required: false
 
       - label: "Contenido del curso"
         name: "contenido"
