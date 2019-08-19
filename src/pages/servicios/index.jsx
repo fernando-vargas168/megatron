@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { graphql } from "gatsby";
+import { navigate } from "gatsby";
 import Img from "gatsby-image";
 import {
   Container,
@@ -9,20 +10,23 @@ import {
   CardContent as CC,
   CardActionArea,
   CardMedia,
-  Typography
+  Typography,
+  Dialog
 } from "@material-ui/core";
 import styled from "styled-components";
 import HeaderPage from "../../components/HeaderPage.jsx";
 import ContainerPage from "../../components/ContainerPage.jsx";
+import Form from "../../components/Form";
 
 const servicios = ({ data }) => {
   return (
     <ContainerPage className="Servicios">
       <HeaderPage
-        img="/img/serviciosCover.svg"
+        icon="/img/serviciosCover.svg"
         text1="Creamos"
         text2="Servicios y proyectos"
         altImg="Persona Dibujando un plano de un cohete en representación de los servicios de Megatron"
+        bottom="true"
       />
       <CardsContainer container spacing={3}>
         {data.allFile.edges.map(({ node }, index) => (
@@ -30,27 +34,43 @@ const servicios = ({ data }) => {
             key={index}
             text={node.childMarkdownRemark.frontmatter.title}
             icon={node.childMarkdownRemark.frontmatter.icon}
+            slug={node.childMarkdownRemark.fields.slug}
           />
         ))}
       </CardsContainer>
     </ContainerPage>
   );
 };
-const CardChild = ({ text, icon }) => (
-  <CardContainer item xs={12} sm={6}>
-    <Card>
-      <CardActionArea>
-        <CardContent>
-          {/* <Img fluid={img.childImageSharp.fluid} /> */}
-          <IconServicio src={icon} alt="" />
-          <Typography gutterBottom variant="h5" component="h2">
-            {text}
-          </Typography>
-        </CardContent>
-      </CardActionArea>
-    </Card>
-  </CardContainer>
-);
+const CardChild = ({ text, icon, slug }) => {
+  const [open, setOpen] = useState(false);
+
+  const handleOpen = () => {
+    setOpen(true);
+  };
+
+  const handleClose = () => {
+    setOpen(false);
+  };
+  return (
+    <CardContainer item xs={12} sm={6}>
+      <Card>
+        {/* <CardActionArea onClick={() => navigate(`/servicios${slug}`)}> */}
+        <CardActionArea onClick={handleOpen}>
+          <CardContent>
+            {/* <Img fluid={img.childImageSharp.fluid} /> */}
+            <IconServicio src={icon} alt="" />
+            <Typography gutterBottom variant="h5" component="h2">
+              {text}
+            </Typography>
+          </CardContent>
+        </CardActionArea>
+      </Card>
+      <Dialog open={open} onClose={handleClose}>
+        <Form formName="servicios" name="servicio" value={text} title={text} />
+      </Dialog>
+    </CardContainer>
+  );
+};
 const CardsContainer = styled(Grid)`
   margin-top: 15px !important;
   width: 100%;
@@ -89,6 +109,9 @@ export const query = graphql`
       edges {
         node {
           childMarkdownRemark {
+            fields {
+              slug
+            }
             frontmatter {
               title
               icon

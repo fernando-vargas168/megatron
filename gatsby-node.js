@@ -1,6 +1,7 @@
 const path = require("path");
 const { createFilePath } = require(`gatsby-source-filesystem`);
 exports.onCreateNode = ({ node, getNode, actions }) => {
+  const { createNodeField } = actions;
   if (node.internal.type === `MarkdownRemark`) {
     const { frontmatter } = node;
     if (frontmatter) {
@@ -17,13 +18,13 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
       }
     }
   }
-  const { createNodeField } = actions;
+
   if (node.internal.type === `MarkdownRemark`) {
-    const slug = createFilePath({ node, getNode });
+    const value = createFilePath({ node, getNode });
     createNodeField({
       node,
       name: `slug`,
-      value: "asd"
+      value: value
     });
   }
 };
@@ -48,9 +49,11 @@ exports.createPages = ({ graphql, actions }) => {
           edges {
             node {
               childMarkdownRemark {
+                html
                 frontmatter {
                   title
                   name
+                  icon
                   img {
                     childImageSharp {
                       fluid {
@@ -70,9 +73,31 @@ exports.createPages = ({ graphql, actions }) => {
                     }
                   }
                   description
-                  softSkills
+                  hardSkills
+                  ciudad
+                  edad
                   ci
                   nit
+                  softSkills
+                  licenciaDeConducir
+                  estadoCivil
+                  educacion
+                  experiencia
+                  puesto
+                  sueldo
+                  categoria
+                  publicado
+                  contrato
+                  vigente
+                  beneficios
+                  requisitos
+                  valores
+                  otrosRequisitos
+                  contenido
+                  requisitosRecomendados
+                }
+                fields {
+                  slug
                 }
               }
 
@@ -90,29 +115,29 @@ exports.createPages = ({ graphql, actions }) => {
     result.data.allFile.edges.forEach(({ node }, i) => {
       if (node.sourceInstanceName === "cursos") {
         createPage({
-          // path: node.fields.slug,
-          path: `a${i}`,
+          path: `/cursos${node.childMarkdownRemark.fields.slug}`,
+          // path: `a${i}`,
           component: cursosTemplate,
           context: node.childMarkdownRemark
         });
       } else if (node.sourceInstanceName === "servicios") {
         createPage({
-          // path: node.fields.slug,
-          path: `a${i}`,
+          path: `/servicios${node.childMarkdownRemark.fields.slug}`,
+          // path: `a${i}`,
           component: serviciosTemplate,
           context: node.childMarkdownRemark
         });
       } else if (node.sourceInstanceName === "personas") {
         createPage({
-          // path: node.fields.slug,
-          path: `a${i}`,
+          path: `/trabajo${node.childMarkdownRemark.fields.slug}`,
+          // path: `a${i}`,
           component: personasTemplate,
           context: node.childMarkdownRemark
         });
       } else if (node.sourceInstanceName === "empresas") {
         createPage({
-          // path: node.fields.slug,
-          path: `a${i}`,
+          path: `/trabajo${node.childMarkdownRemark.fields.slug}`,
+          // path: `a${i}`,
           component: empresasTemplate,
           context: node.childMarkdownRemark
         });

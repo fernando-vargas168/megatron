@@ -13,9 +13,12 @@ beneficios:
   - buen ambiente laboral
   - Vacaciones pagas
 requisitos:
-  - Diseñador gráfico
-  - Conocimiento de Adobe
+  - Adobe
+  - Social Media
+  - Comunity Manager
 valores:
   - Creativo
   - Trabajo en equipo
+otrosRequisitos:
+  - Licencia de Conducir
 ---

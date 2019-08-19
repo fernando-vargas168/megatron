@@ -1,6 +1,7 @@
 import React, { cloneElement, useState, useEffect } from "react";
 import { useSpring, animated } from "react-spring";
 import { Colors } from "../styles/vars";
+import { borderRadius } from "@material-ui/system";
 const { red, blue, yellow, green } = Colors;
 const ColorsBackground = ({
   children,
@@ -13,7 +14,8 @@ const ColorsBackground = ({
   );
   const [color, setColor] = useState(0);
   const springProps = useSpring({
-    background: `${colors[color]}`
+    background: `${colors[color]}`,
+    borderRadius: "4px"
   });
   useEffect(() => {
     let fixexRequire = false;

@@ -13,9 +13,12 @@ beneficios:
   - Oficinas de lujo
   - Comida en oficina
 requisitos:
-  - Licenciado en economía
-  - Conocimiento de normativa ASFI
+  - Excel
+  - Estadística avanzada
 valores:
   - Centrado
   - Trabajo independiente
+otrosRequisitos:
+  - Licenciado en economía
+  - Conocimiento de normativa ASFI
 ---

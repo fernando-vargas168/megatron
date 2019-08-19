@@ -1,5 +1,6 @@
-import React from "react";
+import React, { useState } from "react";
 import Img from "gatsby-image";
+import { navigate } from "gatsby";
 import BackgroundImage from "gatsby-background-image";
 import {
   Grid,
@@ -9,19 +10,22 @@ import {
   Button,
   CardContent,
   CardHeader,
-  Typography
+  Typography,
+  Dialog
 } from "@material-ui/core";
 import styled from "styled-components";
 import ContainerPage from "../../components/ContainerPage";
 import HeaderPage from "../../components/HeaderPage";
+import Form from "../../components/Form";
 const cursos = ({ data }) => {
   return (
     <ContainerPage className="Cursos">
       <HeaderPage
-        img="/img/cursosCover.svg"
+        icon="/img/cursosCover.svg"
         text1="Enseñamos"
         text2="Cursos"
         alt="Ingeniero dando clases / clases de ingeniería de Megatron"
+        bottom="true"
       />
       <CardsContainer container spacing={3}>
         {data.allFile.edges.map(({ node }, index) => (
@@ -30,6 +34,7 @@ const cursos = ({ data }) => {
             title={node.childMarkdownRemark.frontmatter.title}
             img={node.childMarkdownRemark.frontmatter.img}
             date={node.childMarkdownRemark.frontmatter.date}
+            slug={node.childMarkdownRemark.fields.slug}
           />
         ))}
       </CardsContainer>
@@ -39,7 +44,16 @@ const cursos = ({ data }) => {
 
 export default cursos;
 // const Background = ()=>(<BackgroundImage fluid={img.childImageSharp.fluid}/>)
-const CursoCard = ({ title, img, date }) => {
+const CursoCard = ({ title, img, date, slug }) => {
+  const [open, setOpen] = useState(false);
+
+  const handleOpen = () => {
+    setOpen(true);
+  };
+
+  const handleClose = () => {
+    setOpen(false);
+  };
   return (
     <CardContainer item xs={12} sm={6} md={4}>
       <Card>
@@ -49,14 +63,26 @@ const CursoCard = ({ title, img, date }) => {
           <Typography>{title}</Typography>
         </CardContent>
         <CardActions>
-          <Button variant="contained" size="small" color="primary">
+          <Button
+            onClick={handleOpen}
+            variant="contained"
+            size="small"
+            color="primary"
+          >
             Reservar
           </Button>
-          <Button variant="contained" size="small">
+          <Button
+            variant="contained"
+            onClick={() => navigate(`/cursos${slug}`)}
+            size="small"
+          >
             Más información
           </Button>
         </CardActions>
       </Card>
+      <Dialog open={open} onClose={handleClose}>
+        <Form formName="cursos" name="curso" value={title} title={title} />
+      </Dialog>
     </CardContainer>
   );
 };
@@ -94,18 +120,15 @@ export const query = graphql`
               title
               img {
                 childImageSharp {
-                  fluid {
+                  fluid(maxWidth: 300) {
                     ...GatsbyImageSharpFluid
                   }
                 }
               }
               date
             }
-          }
-          parent {
-            ... on File {
-              name
-              sourceInstanceName
+            fields {
+              slug
             }
           }
         }

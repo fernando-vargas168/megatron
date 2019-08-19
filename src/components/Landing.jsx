@@ -54,7 +54,9 @@ const LandingText = styled.div`
   }
 `;
 const LandingH1 = styled(SuperCopy)`
-  text-shadow: 2px 2px 5px black;
+  color: white;
+  // text-shadow: 2px 2px 5px black;
+  box-shadow: 2px 2px 5px black;
   cursor: pointer;
   text-align: center;
   ${Responsive.mobile} {
@@ -94,7 +96,16 @@ const Landing = () => {
         <LandingH1>Y Econtramos</LandingH1>
       </ColorsBackground>
     </Link>,
-    <LandingH1 style={{ textShadow: "none" }}> INGENIERIA</LandingH1>
+    <LandingH1
+      style={{
+        textShadow: "none",
+        color: "black",
+        cursor: "initial",
+        boxShadow: "none"
+      }}
+    >
+      INGENIERIA
+    </LandingH1>
   ];
 
   return (

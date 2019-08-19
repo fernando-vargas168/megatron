@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from "react";
+import { navigate } from "gatsby";
 import ContainerPage from "../../components/ContainerPage";
 import HeaderPage from "../../components/HeaderPage";
 import styled from "styled-components";
-import FavoriteIcon from "@material-ui/icons/Favorite";
+import { Favorite as FI } from "@material-ui/icons/";
 import ShareIcon from "@material-ui/icons/Share";
 import { Colors } from "../../styles/vars";
 import {
@@ -49,16 +50,24 @@ const trabajo = ({ data }) => {
   const [personList, setPersonList] = useState([]);
   const [businessList, setBusinessList] = useState([]);
   const [likedPersonList, setLikedPersonList] = useState(
-    localStorage.LikedPerson ? JSON.parse(localStorage.LikedPerson) : []
+    typeof localStorage !== "undefined" &&
+      typeof localStorage !== "undefined" &&
+      localStorage.LikedPerson
+      ? JSON.parse(localStorage.LikedPerson)
+      : []
   );
   const [likedBusinessList, setLikedBusinessList] = useState(
-    localStorage.LikedBusiness ? JSON.parse(localStorage.LikedBusiness) : []
+    typeof localStorage !== "undefined" &&
+      typeof localStorage !== "undefined" &&
+      localStorage.LikedBusiness
+      ? JSON.parse(localStorage.LikedBusiness)
+      : []
   );
   const [tab, setTab] = React.useState(0);
   const [favorite, setFavorite] = useState(false);
   function handleChange(event, newValue) {
-    setTab(newValue);
     setFavorite(false);
+    setTab(newValue);
   }
   useEffect(() => {
     let arrayPerson = [];
@@ -70,7 +79,8 @@ const trabajo = ({ data }) => {
           img: node.childMarkdownRemark.frontmatter.img,
           description: node.childMarkdownRemark.frontmatter.description,
           softSkills: node.childMarkdownRemark.frontmatter.softSkills,
-          ci: node.childMarkdownRemark.frontmatter.ci
+          ci: node.childMarkdownRemark.frontmatter.ci,
+          slug: node.childMarkdownRemark.fields.slug
         });
       }
     });
@@ -80,8 +90,9 @@ const trabajo = ({ data }) => {
           name: node.childMarkdownRemark.frontmatter.name,
           img: node.childMarkdownRemark.frontmatter.img,
           description: node.childMarkdownRemark.frontmatter.description,
-          softSkills: node.childMarkdownRemark.frontmatter.softSkills,
-          nit: node.childMarkdownRemark.frontmatter.nit
+          nit: node.childMarkdownRemark.frontmatter.nit,
+          slug: node.childMarkdownRemark.fields.slug,
+          vigente: node.childMarkdownRemark.frontmatter.vigente
         });
       }
     });
@@ -91,22 +102,29 @@ const trabajo = ({ data }) => {
   useEffect(() => {
     let subscriptions = true;
     if (subscriptions) {
-      localStorage.setItem("LikedPerson", JSON.stringify(likedPersonList));
-      localStorage.setItem("LikedBusiness", JSON.stringify(likedBusinessList));
+      typeof localStorage !== "undefined" &&
+        localStorage.setItem("LikedPerson", JSON.stringify(likedPersonList));
+      typeof localStorage !== "undefined" &&
+        localStorage.setItem(
+          "LikedBusiness",
+          JSON.stringify(likedBusinessList)
+        );
     }
     return () => (subscriptions = false);
   });
   return (
     <ContainerPage className="Trabajo">
       <HeaderPage
-        img="/img/trabajoCover.svg"
+        icon="/img/trabajoCover.svg"
         text1="Encontramos"
         text2="Bolsa de trabajo"
         alt=""
+        bottom="true"
       />
       <AppBar position="static">
         <Box display="flex">
           <Tabs
+            style={{ width: "100%" }}
             variant="fullWidth"
             value={tab}
             onChange={handleChange}
@@ -134,7 +152,7 @@ const trabajo = ({ data }) => {
               variant="h5"
               style={{ textAlign: "center", color: "gray" }}
             >
-              Tus favoritos
+              Tus intereses
             </Typography>
             <Divider />
           </>
@@ -143,19 +161,24 @@ const trabajo = ({ data }) => {
           {personList.length !== 0 &&
             personList.map((element, index) => {
               if (
-                !(element
-                  ? favorite &&
-                    searchLiked(likedPersonList, element.ci, "ci") === false
-                  : true)
+                // !(element
+                //   ? favorite &&
+                //     searchLiked(likedPersonList, element.ci, "ci") === false
+                //   : true)
+                !(
+                  favorite &&
+                  searchLiked(likedPersonList, element.ci, "ci") === false
+                )
               ) {
                 return (
-                  <PersonaCard
+                  <PersonCard
                     key={index}
                     name={element.name}
                     img={element.img}
                     description={element.description}
                     softSkills={element.softSkills}
                     ci={element.ci}
+                    slug={element.slug}
                     setLikedList={setLikedPersonList}
                     likedList={likedPersonList}
                     favorite={
@@ -193,7 +216,7 @@ const trabajo = ({ data }) => {
                 justifyContent="center"
                 alignItems="center"
               >
-                <Typography>No tienes Favoritos</Typography>
+                <Typography>Lista de intereses vacía</Typography>
                 <Button
                   color="primary"
                   variant="contained"
@@ -216,7 +239,7 @@ const trabajo = ({ data }) => {
               variant="h5"
               style={{ textAlign: "center", color: "gray" }}
             >
-              Tus favoritos
+              Tus intereses
             </Typography>
             <Divider />
           </>
@@ -224,19 +247,25 @@ const trabajo = ({ data }) => {
         <CardsContainer container spacing={3}>
           {businessList.map((element, index) => {
             if (
-              !(element
-                ? favorite &&
-                  searchLiked(likedBusinessList, element.nit, "nit") === false
-                : true)
+              // !(element
+              //   ? favorite &&
+              //     searchLiked(likedBusinessList, element.nit, "nit") === false
+              //   : true)
+              !(
+                favorite &&
+                searchLiked(likedBusinessList, element.nit, "nit") === false
+              ) &&
+              element.vigente
             ) {
               return (
-                <EmpresaCard
+                <BusinessCard
                   key={index}
                   name={element.name}
                   img={element.img}
                   description={element.description}
                   softSkills={element.softSkills}
                   nit={element.nit}
+                  slug={element.slug}
                   setLikedList={setLikedBusinessList}
                   likedList={likedBusinessList}
                   favorite={
@@ -274,7 +303,7 @@ const trabajo = ({ data }) => {
                 justifyContent="center"
                 alignItems="center"
               >
-                <Typography>No tienes Favoritos</Typography>
+                <Typography>Lista de intereses Vacía</Typography>
                 <Button
                   color="primary"
                   variant="contained"
@@ -295,7 +324,7 @@ const trabajo = ({ data }) => {
 };
 
 export default trabajo;
-const PersonaCard = ({
+const PersonCard = ({
   name,
   img,
   description,
@@ -303,6 +332,7 @@ const PersonaCard = ({
   ci,
   setLikedList,
   likedList,
+  slug,
   favorite
 }) => {
   const searchLikedPerson = () => searchLiked(likedList, ci, "ci");
@@ -312,18 +342,17 @@ const PersonaCard = ({
   return (
     <CardContainer item xs={12} sm={6} md={4}>
       <Card>
-        <CardActionArea>
+        <CardActionArea onClick={() => navigate(`/trabajo${slug}`)}>
           {img && <Background fluid={img.childImageSharp.fluid} />}
           <CardContent>
             <Typography gutterBottom variant="h5" component="h2">
-              {name}
+              {name.length >= 38 ? `${name.substr(0, 38)}...` : name}
             </Typography>
             <Typography>{description}</Typography>
-            <Typography>{softSkills}</Typography>
           </CardContent>
         </CardActionArea>
         <CardActions>
-          <IconButton
+          <Button
             style={{ color: like ? Colors.red : "gray" }}
             aria-label="Agregar a favoritos"
             onClick={() => {
@@ -344,23 +373,25 @@ const PersonaCard = ({
             }}
           >
             <FavoriteIcon />
-          </IconButton>
-          <IconButton aria-label="Compartir">
+            {like ? "Agregado" : "Me interesa"}
+          </Button>
+          {/* <IconButton aria-label="Compartir">
             <ShareIcon />
-          </IconButton>
+          </IconButton> */}
         </CardActions>
       </Card>
     </CardContainer>
   );
 };
-const EmpresaCard = ({
+const BusinessCard = ({
   name,
   img,
   description,
-  softSkills,
+
   nit,
   setLikedList,
   likedList,
+  slug,
   favorite
 }) => {
   const searchLikedBusiness = () => searchLiked(likedList, nit, "nit");
@@ -370,27 +401,23 @@ const EmpresaCard = ({
   return (
     <CardContainer item xs={12} sm={6} md={4}>
       <Card>
-        <CardActionArea>
+        <CardActionArea onClick={() => navigate(`/trabajo${slug}`)}>
           {img && <Background fluid={img.childImageSharp.fluid} />}
           <CardContent>
             <Typography gutterBottom variant="h5" component="h2">
               {name}
             </Typography>
             <Typography>{description}</Typography>
-            <Typography>{softSkills}</Typography>
           </CardContent>
         </CardActionArea>
         <CardActions>
-          <IconButton
+          <Button
             style={{ color: like ? Colors.red : "gray" }}
             aria-label="Agregar a favoritos"
             onClick={() => {
               setLike(!like);
               if (searchLikedBusiness() === false) {
-                setLikedList([
-                  ...likedList,
-                  { name, img, description, softSkills, nit }
-                ]);
+                setLikedList([...likedList, { name, img, description, nit }]);
               } else {
                 let likedRemove = searchLikedBusiness();
                 let newLikedList = [];
@@ -402,10 +429,11 @@ const EmpresaCard = ({
             }}
           >
             <FavoriteIcon />
-          </IconButton>
-          <IconButton aria-label="Compartir">
+            {like ? "Agregado" : "Me interesa"}
+          </Button>
+          {/* <IconButton aria-label="Compartir">
             <ShareIcon />
-          </IconButton>
+          </IconButton> */}
         </CardActions>
       </Card>
     </CardContainer>
@@ -425,6 +453,7 @@ const TabPanel = ({ children, value, index, ...other }) => (
 );
 
 const CardsContainer = styled(Grid)`
+  align-items: flex-start !important;
   margin-top: 15px !important;
 `;
 const CardContainer = styled(Grid)`
@@ -436,11 +465,15 @@ const Card = styled(C)`
   min-width: 290px;
   max-width: 350px;
   width: 300px;
-  // background: #aaafff !important;
+`;
+const FavoriteIcon = styled(FI)`
+  margin-right: 5px;
 `;
 const Background = styled(BackgroundImage)`
-  // height: 300px !important;
-  padding-top: 56.25%; //16:9
+  // padding-top: 56.25%; //16:9
+  // padding-top: 100%; //1:1
+  background-position: top !important;
+  padding-top: 75%; //4:3
 `;
 
 export const query = graphql`
@@ -454,6 +487,9 @@ export const query = graphql`
       edges {
         node {
           childMarkdownRemark {
+            fields {
+              slug
+            }
             frontmatter {
               title
               name
@@ -468,6 +504,7 @@ export const query = graphql`
               softSkills
               ci
               nit
+              vigente
             }
           }
           sourceInstanceName

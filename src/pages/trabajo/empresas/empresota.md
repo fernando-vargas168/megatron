@@ -13,9 +13,12 @@ beneficios:
   - Auto de trabajo
   - Horarios respetados 100%
 requisitos:
-  - Ingeniero Comercial
-  - Experiencia con impuestos Nacionales
+  - Excel
+  - Manejo de base de datos mySQL
 valores:
   - Extrovertido
   - Ordenado
+otrosRequisitos:
+  - Ingeniero Comercial
+  - Experiencia con impuestos Nacionales
 ---
