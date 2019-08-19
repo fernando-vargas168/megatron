@@ -24,25 +24,22 @@ collections:
         name: "category"
         widget: "list"
         required: false,
-        
+
       - label: "Contenido del curso"
         name: "contenido"
         widget: "list"
         required: false
-        
-      - 
-        label: "Requisitos recomendados"
+
+      - label: "Requisitos recomendados"
         name: "requisitosRecomendados"
         widget: "list"
         required: false
-        
-      - 
-        label: "Más información"
+
+      - label: "Más información"
         hint: "Este campo pondrá texto plano debajo del contenido principal es opcional investigar sobre formato markdown"
         name: "body"
         widget: "markdown"
         required: false
-        
 
   - name: "servicios" # Used in routes, e.g., /admin/collections/blog
     identifier_field: name
@@ -142,27 +139,22 @@ collections:
     create: true # Allow users to create new documents in this collection
     slug: "{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
     fields: # The fields for each document, usually in front matter
-      - 
-        label: "NIT"
+      - label: "NIT"
         hit: "Tener cuidado de no repetir números"
         name: "nit"
         widget: "number"
-      
-      - 
-        label: "Nombre de la empresa" 
-        name: "name" widget: "string" 
-      - 
-        label: "Breve descripción" 
-        name: "description" 
-        widget: "string" 
-      - 
-        label: "Logo"
+      - label: "Nombre de la empresa"
+        name: "name"
+        widget: "string"
+      - label: "Breve descripción"
+        name: "description"
+        widget: "string"
+      - label: "Logo"
         hint: "Recomendado una foto cuadrada o 4:3 en PNG"
         name: "img"
         widget: "image"
-        
-      - 
-        label: "Puestos requeridos"
+
+      - label: "Puestos requeridos"
         name: "puestos"
         widget: "list"
         fields:
