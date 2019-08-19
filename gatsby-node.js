@@ -52,6 +52,19 @@ exports.createPages = ({ graphql, actions }) => {
                 html
                 frontmatter {
                   title
+                  puestos {
+                    title
+                    description
+                    sueldo
+                    categoria
+                    publicado
+                    contrato
+                    vigente
+                    requisitos
+                    valores
+                    otrosRequisitos
+                    beneficios
+                  }
                   name
                   icon
                   img {
@@ -83,16 +96,6 @@ exports.createPages = ({ graphql, actions }) => {
                   estadoCivil
                   educacion
                   experiencia
-                  puesto
-                  sueldo
-                  categoria
-                  publicado
-                  contrato
-                  vigente
-                  beneficios
-                  requisitos
-                  valores
-                  otrosRequisitos
                   contenido
                   requisitosRecomendados
                 }
@@ -135,11 +138,20 @@ exports.createPages = ({ graphql, actions }) => {
           context: node.childMarkdownRemark
         });
       } else if (node.sourceInstanceName === "empresas") {
-        createPage({
-          path: `/trabajo${node.childMarkdownRemark.fields.slug}`,
-          // path: `a${i}`,
-          component: empresasTemplate,
-          context: node.childMarkdownRemark
+        node.childMarkdownRemark.frontmatter.puestos.forEach((element, i) => {
+          const newPath = `/trabajo${
+            node.childMarkdownRemark.fields.slug
+          }${element.title.replace(/ /gi, "-")}/${`puesto${i}`}`;
+          console.log(newPath);
+          createPage({
+            path: newPath,
+            // path: `a${i}`,
+            component: empresasTemplate,
+            context: {
+              empresa: node.childMarkdownRemark.frontmatter,
+              puesto: element
+            }
+          });
         });
       }
     });

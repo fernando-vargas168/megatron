@@ -27,12 +27,10 @@ const empresasTemplate = ({ pageContext }) => {
       onClick: handleOpen
     }
   ];
+  const { nit, name, img, puestos } = pageContext.empresa;
   const {
-    nit,
-    name,
-    img,
+    title,
     description,
-    puesto,
     sueldo,
     categoria,
     publicado,
@@ -42,7 +40,7 @@ const empresasTemplate = ({ pageContext }) => {
     requisitos,
     valores,
     otrosRequisitos
-  } = pageContext.frontmatter;
+  } = pageContext.puesto;
   const informationGeneral = [
     sueldo ? sueldo : "sueldo no definido",
     contrato,
@@ -60,7 +58,7 @@ const empresasTemplate = ({ pageContext }) => {
           />
         }
         text1={name}
-        text2={`Requiere: ${puesto}`}
+        text2={`Requiere: ${title}`}
         fontRead1
         fontRead2
       />
@@ -97,7 +95,7 @@ const empresasTemplate = ({ pageContext }) => {
         <Form
           formName="contactos_empresas"
           name="contacto_empresa"
-          value={`${name} ${nit}`}
+          value={`${name} ${title}`}
           title={name}
         />
       </Dialog>

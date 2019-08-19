@@ -1,0 +1,210 @@
+# backend:
+#   name: test-repo
+
+backend:
+  name: git-gateway
+  branch: master
+
+publish_mode: editorial_workflow
+media_folder: "static/img"
+public_folder: "/img"
+
+collections:
+  - name: "cursos"
+    identifier_field: name
+    label: "Cursos" # Used in the UI
+    folder: "src/pages/cursos" # The path to the folder where the documents are stored
+    create: true # Allow users to create new documents in this collection
+    slug: "{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
+    fields: # The fields for each document, usually in front matter
+      - { label: "Título", name: "title", widget: "string" }
+      - { label: "Descripción", name: "description", widget: "text" }
+      - { label: "Imagen", name: "img", widget: "image", required: false }
+      - {
+          label: "Categorías",
+          name: "category",
+          widget: "list",
+          required: false,
+        }
+      - {
+          label: "Contenido del curso",
+          name: "contenido",
+          widget: "list",
+          required: false,
+        }
+      - {
+          label: "Requisitos recomendados",
+          name: "requisitosRecomendados",
+          widget: "list",
+          required: false,
+        }
+      - {
+          label: "Más información",
+          hint: "Este campo pondrá texto plano debajo del contenido principal, es opcional, investigar sobre formato markdown",
+          name: "body",
+          widget: "markdown",
+          required: false,
+        }
+
+  - name: "servicios" # Used in routes, e.g., /admin/collections/blog
+    identifier_field: name
+    label: "Servicios" # Used in the UI
+    folder: "src/pages/servicios" # The path to the folder where the documents are stored
+    create: true # Allow users to create new documents in this collection
+    slug: "{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
+    fields: # The fields for each document, usually in front matter
+      - { label: "Título", name: "title", widget: "string" }
+      - {
+          label: "Ícono",
+          hint: "Agregar un archivo SVG o PNG (prefetentemente SVG)",
+          name: "icon",
+          widget: "image",
+        }
+
+  - name: "personas" # Used in routes, e.g., /admin/collections/blog
+    identifier_field: name
+    label: "Personas" # Used in the UI
+    folder: "src/pages/trabajo/personas" # The path to the folder where the documents are stored
+    create: true # Allow users to create new documents in this collection
+    slug: "{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
+    fields: # The fields for each document, usually in front matter
+      - { label: "Nombre Completo", name: "name", widget: "string" }
+      - {
+          label: "Breve descripción laboral",
+          name: "description",
+          widget: "string",
+        }
+      - {
+          label: "Foto",
+          hint: "Recomendado una foto cuadrada o 4:3 en JPG",
+          name: "img",
+          widget: "image",
+        }
+      - {
+          label: "Número de documento de identidad",
+          name: "ci",
+          widget: "number",
+          valueType: "int",
+        }
+      - {
+          label: "Ciudad",
+          name: "ciudad",
+          widget: "select",
+          multiple: false,
+          options:
+            [
+              "Santa Cruz",
+              "La Paz",
+              "Cochabamba",
+              "Tarija",
+              "Sucre",
+              "Beni",
+              "Pando",
+              "Oruro",
+              "Potosí",
+            ],
+        }
+      - { label: "Edad", name: "edad", widget: "number", valueType: "int" }
+      - {
+          label: "Licencia de Conducir",
+          name: "licenciaDeConducir",
+          widget: "boolean",
+          default: false,
+        }
+      - { label: "estado Civil", name: "estadoCivil", widget: "string" }
+      - {
+          label: "Habilidades Duras",
+          hit: "Son habilidades técnicas y concretas, ejemplo: uso de excel",
+          name: "hardSkills",
+          widget: "list",
+        }
+      - {
+          label: "Habilidades Blandas",
+          hit: "Son habilidades personales e interpersonales, ejemplo: puntualidad, trabajo en equipo",
+          name: "softSkills",
+          widget: "list",
+        }
+      - {
+          label: "Educación",
+          name: "educacion",
+          widget: "list",
+          required: false,
+        }
+      - {
+          label: "Experiencia Laboral",
+          name: "experiencia",
+          widget: "list",
+          required: false,
+        }
+
+  - name: "empresas" # Used in routes, e.g., /admin/collections/blog
+    identifier_field: name
+    label: "Empresas" # Used in the UI
+    folder: "src/pages/trabajo/empresas" # The path to the folder where the documents are stored
+    create: true # Allow users to create new documents in this collection
+    slug: "{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
+    fields: # The fields for each document, usually in front matter
+      - {
+          label: "NIT",
+          hit: "Tener cuidado de no repetir números",
+          name: "nit",
+          widget: "number",
+        }
+      - { label: "Nombre de la empresa", name: "name", widget: "string" }
+      - { label: "Breve descripción", name: "description", widget: "string" }
+      - {
+          label: "Logo",
+          hint: "Recomendado una foto cuadrada o 4:3 en PNG",
+          name: "img",
+          widget: "image",
+        }
+      - label: "Puestos requeridos"
+        name: "puestos"
+        widget: "list"
+        fields:
+          - label: Título
+            name: title
+            widget: string
+
+          - label: Descripción
+            name: description
+            widget: text
+          - label: "Sueldo"
+            name: "sueldo"
+            widget: "string"
+            required: false
+          - label: "Categoría"
+            name: "categoria"
+            widget: "list"
+            required: false
+          - label: "Fecha de publicación"
+            hint: "Formato: DD/MM/YY 04/05/19"
+            name: "publicado"
+            widget: "string"
+            required: false
+          - label: "Contrato"
+            name: "contrato"
+            widget: "select"
+            options: ["Tiempo Completo", "Medio Tiempo", "Trabajo Remoto"]
+          - label: "Vigente"
+            hint: "falso si la convocatoria ha concluido"
+            name: "vigente"
+            widget: "boolean"
+            default: true
+          - label: "Beneficios"
+            hint: "Indicar los beneficios de la empresa para el trabajador en el puesto dado"
+            name: "beneficios"
+            widget: "list"
+            required: false
+          - label: "Requisitos técnicos"
+            hint: "Habilidades duras necesarias"
+            name: "requisitos"
+            widget: "list"
+          - label: "Valores"
+            hint: "Habilidades blandas necesarias"
+            name: "valores"
+            widget: "list"
+          - label: "Otros requisitos"
+            hint: "Ejemplo: licencia de conducir"
+            name: "otrosRequisitos"
+            widget: "list"

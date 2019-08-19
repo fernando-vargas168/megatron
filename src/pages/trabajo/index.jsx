@@ -92,7 +92,7 @@ const trabajo = ({ data }) => {
           description: node.childMarkdownRemark.frontmatter.description,
           nit: node.childMarkdownRemark.frontmatter.nit,
           slug: node.childMarkdownRemark.fields.slug,
-          vigente: node.childMarkdownRemark.frontmatter.vigente
+          puestos: node.childMarkdownRemark.frontmatter.puestos
         });
       }
     });
@@ -246,36 +246,20 @@ const trabajo = ({ data }) => {
         )}
         <CardsContainer container spacing={3}>
           {businessList.map((element, index) => {
-            if (
-              // !(element
-              //   ? favorite &&
-              //     searchLiked(likedBusinessList, element.nit, "nit") === false
-              //   : true)
-              !(
-                favorite &&
-                searchLiked(likedBusinessList, element.nit, "nit") === false
-              ) &&
-              element.vigente
-            ) {
-              return (
-                <BusinessCard
-                  key={index}
-                  name={element.name}
-                  img={element.img}
-                  description={element.description}
-                  softSkills={element.softSkills}
-                  nit={element.nit}
-                  slug={element.slug}
-                  setLikedList={setLikedBusinessList}
-                  likedList={likedBusinessList}
-                  favorite={
-                    searchLiked(likedPersonList, element.nit) !== false
-                      ? false
-                      : true
-                  }
-                />
-              );
-            }
+            return (
+              <BusinessPuestos
+                puestos={element.puestos}
+                nit={element.nit}
+                key={index}
+                name={element.name}
+                img={element.img}
+                slug={element.slug}
+                setLikedList={setLikedBusinessList}
+                likedList={likedBusinessList}
+                favorite={favorite}
+                setFavorite={setFavorite}
+              />
+            );
           })}
         </CardsContainer>
         {businessList.length == 0 ? (
@@ -324,6 +308,7 @@ const trabajo = ({ data }) => {
 };
 
 export default trabajo;
+
 const PersonCard = ({
   name,
   img,
@@ -383,31 +368,59 @@ const PersonCard = ({
     </CardContainer>
   );
 };
+const BusinessPuestos = props => {
+  return props.puestos.map((e, i) => {
+    if (
+      !(
+        props.favorite &&
+        searchLiked(props.likedList, parseInt(`${props.nit}${i}`), "id") ===
+          false
+      ) &&
+      e.vigente
+    ) {
+      return (
+        <BusinessCard
+          key={i}
+          index={i}
+          {...props}
+          title={e.title}
+          description={e.description}
+        />
+      );
+    }
+  });
+};
 const BusinessCard = ({
   name,
   img,
+  index,
   description,
-
+  title,
   nit,
   setLikedList,
   likedList,
   slug,
   favorite
 }) => {
-  const searchLikedBusiness = () => searchLiked(likedList, nit, "nit");
+  const searchLikedBusiness = () =>
+    searchLiked(likedList, parseInt(`${nit}${index}`), "id");
   const [like, setLike] = useState(
     searchLikedBusiness() !== false ? true : false
   );
+  const newPath = `/trabajo${slug}${title.replace(
+    / /gi,
+    "-"
+  )}/${`puesto${index}`}`;
   return (
     <CardContainer item xs={12} sm={6} md={4}>
       <Card>
-        <CardActionArea onClick={() => navigate(`/trabajo${slug}`)}>
+        <CardActionArea onClick={() => navigate(newPath)}>
           {img && <Background fluid={img.childImageSharp.fluid} />}
           <CardContent>
             <Typography gutterBottom variant="h5" component="h2">
-              {name}
+              {title}
             </Typography>
-            <Typography>{description}</Typography>
+            <Typography>{name}</Typography>
           </CardContent>
         </CardActionArea>
         <CardActions>
@@ -417,7 +430,17 @@ const BusinessCard = ({
             onClick={() => {
               setLike(!like);
               if (searchLikedBusiness() === false) {
-                setLikedList([...likedList, { name, img, description, nit }]);
+                setLikedList([
+                  ...likedList,
+                  {
+                    name,
+                    img,
+                    description,
+                    nit,
+                    title,
+                    id: parseInt(`${nit}${index}`)
+                  }
+                ]);
               } else {
                 let likedRemove = searchLikedBusiness();
                 let newLikedList = [];
@@ -500,11 +523,19 @@ export const query = graphql`
                   }
                 }
               }
+              puestos {
+                title
+                description
+                sueldo
+                categoria
+                publicado
+                contrato
+                vigente
+              }
               description
               softSkills
               ci
               nit
-              vigente
             }
           }
           sourceInstanceName

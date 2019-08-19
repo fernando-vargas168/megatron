@@ -11,16 +11,8 @@ import {
   Divider
 } from "@material-ui/core";
 import StarIcon from "@material-ui/icons/Star";
-const ListTrabajo = ({
-  title,
-  label,
-  array,
-  xs = 12,
-  sm = 6,
-  md = 4,
-  lg = 3
-}) =>
-  array && (
+const ListBox = ({ title, label, array, xs = 12, sm = 6, md = 4, lg = 3 }) =>
+  array ? (
     <Grid item xs={xs} sm={sm} md={md} lg={lg}>
       <Card>
         <CardContent>
@@ -34,15 +26,17 @@ const ListTrabajo = ({
             }
           >
             {array.map((e, i) => (
-              <ListItemTrabajo text={e} i={i} key={i} length={array.length} />
+              <ListItemBox text={e} i={i} key={i} length={array.length} />
             ))}
           </List>
         </CardContent>
       </Card>
     </Grid>
+  ) : (
+    <></>
   );
 
-const ListItemTrabajo = ({ text, i = 0, length = 0 }) => (
+const ListItemBox = ({ text, i = 0, length = 0 }) => (
   <>
     <ListItem>
       <ListItemIcon>
@@ -53,4 +47,4 @@ const ListItemTrabajo = ({ text, i = 0, length = 0 }) => (
     {i !== length - 1 && <Divider />}
   </>
 );
-export default ListTrabajo;
+export default ListBox;
