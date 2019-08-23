@@ -1,20 +1,21 @@
 ---
-title: Módulos arduino
+title: Módulos Arduino
+description: >
+  Aprenderá la programación de esta novedosa tarjeta electrónica integrada con
+  microcontrolador ATMEL,
+
+  aplicable con sistemas de control embebidos aplicados en telecomunicación,
+  industriales, instrumentación
+
+  automatización, entretenimiento.
 img: /img/arduino.jpg
-description: "Conocer el uso de esta novedosa tarjeta electrónica con Microcontroladores, y aplicable con sistemas robóticos, de telecomunicación, industriales, instrumentación automatizada."
+category:
+  - Electrónica
+  - Robótica
+  - Arduino
 contenido:
-  - Introducción a módulos de Arduino
-  - Programación de Lenguaje Arduino
-  - Comunicación serial Shield
-  - Entradas / Salidas Digitales
-  - Entradas / Salidas Analógicas
-  - Aplicación de sensores
-  - Control de Servomecanismos
-  - Comunicación con módulos Bluethoot
+  - "·\_\_\_\_\_\_\_\_ Introducción a los MÓDULOS ARDUINO ·\_\_\_\_\_\_\_\_ Programación de Lenguaje Arduino ·\_\_\_\_\_\_\_\_ Comunicación serial Shield ·\_\_\_\_\_\_\_\_ Entradas / Salidas  Digitales ·\_\_\_\_\_\_\_\_ Entradas / Salidas  Analógicas ·\_\_\_\_\_\_\_\_ Aplicación de Sensores con Arduino Temperatura   - Ultrasónicos Infrarrojos   - Color Humedad - Movimiento Presión - Caudal ·\_\_\_\_\_\_\_\_ Control de  Servomecanismos ·\_\_\_\_\_\_\_\_ Comunicación con módulos Bluethoot ·\_\_\_\_\_\_\_\_ PROYECTOS CON ARDUINO"
 requisitosRecomendados:
   - Conocimientos de principios de electrónica digital
-date: Lunes 19 de agosto 2019
-category:
-  - electrónica
-  - robótica
 ---
+
