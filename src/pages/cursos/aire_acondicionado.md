@@ -6,8 +6,7 @@ description: >-
   instrumentación automatizada.
 img: ''
 category:
-  - electrónica
-  - robótica
+  - Refrigeración
 contenido:
   - "·\_\_\_\_\_\_\_\_ Unidades de potencia frigorífica  ·\_\_\_\_\_\_\_\_ Unidades de presión y vacío para diagnosticar equipos con analizador. ·\_\_\_\_\_\_\_\_ Herramientas"
   - "para colocación de equipos de aire acondicionados compactos y modelo split. ·\_\_\_\_\_\_\_\_ Determinación de la sección mínima de la línea eléctrica de alimentación. ·\_\_\_\_\_\_\_\_ Distribución de energía eléctrica y sus elementos de protección. ·\_\_\_\_\_\_\_\_ Aprender a conectar caños de cobre que se usan en equipos split ·\_\_\_\_\_\_\_\_ Cálculo básico de potencia frigorífica necesaria para climatizar un ambiente. ·\_\_\_\_\_\_\_\_ Realizar descontaminación por vacío y otros métodos"
