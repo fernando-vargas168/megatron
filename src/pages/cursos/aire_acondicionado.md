@@ -1,10 +1,10 @@
 ---
-title: Aire Acondicionado
+title: Aires Acondicionados
 description: >-
-  Conocer el uso de esta novedosa tarjeta electrónica con Microcontroladores, y
-  aplicable con sistemas robóticos, de telecomunicación, industriales,
-  instrumentación automatizada.
-img: ''
+  Aprenderá el funcionamiento, instalación y mantenimiento de equipos de aire
+  acondicionado ventana, split ,centrales, ademas des soldadura , manejo de
+  manómetros vaciado y carga de gas y reparación de tarjetas electrónicas.
+img: /img/aire-acondicionado.jpeg
 category:
   - Refrigeración
 contenido:
@@ -21,8 +21,4 @@ requisitosRecomendados:
     Conocimientos de principios de Refrigeración Doméstica y/o Electricidad
     Aplicada
 ---
-Aprenderá el funcionamiento, la instalación y mantenimiento Preventivo de equipos de aire acondicionado
 
-Split , Soldadura , manejo de manómetros conocimientos de frió de color
-
-conocimientos de artefactos frío solo y frío/calor ,tarjetas electrónicas
