@@ -1,20 +1,24 @@
 ---
-title: Aire Acondicionado
-img: /img/aire_acondicionado.jpg
-description: "Conocer el uso de esta novedosa tarjeta electrónica con Microcontroladores, y aplicable con sistemas robóticos, de telecomunicación, industriales, instrumentación automatizada."
-contenido:
-  - Introducción a módulos de Arduino
-  - Programación de Lenguaje Arduino
-  - Comunicación serial Shield
-  - Entradas / Salidas Digitales
-  - Entradas / Salidas Analógicas
-  - Aplicación de sensores
-  - Control de Servomecanismos
-  - Comunicación con módulos Bluethoot
-requisitosRecomendados:
-  - Conocimientos de principios de electrónica digital
-date: Lunes 19 de agosto 2019
+title: Aires Acondicionados
+description: >-
+  Aprenderá el funcionamiento, instalación y mantenimiento de equipos de aire
+  acondicionado ventana, split centrales, ademas des soldadura , manejo de
+  manómetros vaciado y carga de gas y reparación de tarjetas electrónicas.
+img: /img/aire-acondicionado.jpeg
 category:
-  - electrónica
-  - robótica
+  - Refrigeración
+contenido:
+  - "·\_\_\_\_\_\_\_\_ Unidades de potencia frigorífica  ·\_\_\_\_\_\_\_\_ Unidades de presión y vacío para diagnosticar equipos con analizador. ·\_\_\_\_\_\_\_\_ Herramientas"
+  - "para colocación de equipos de aire acondicionados compactos y modelo split. ·\_\_\_\_\_\_\_\_ Determinación de la sección mínima de la línea eléctrica de alimentación. ·\_\_\_\_\_\_\_\_ Distribución de energía eléctrica y sus elementos de protección. ·\_\_\_\_\_\_\_\_ Aprender a conectar caños de cobre que se usan en equipos split ·\_\_\_\_\_\_\_\_ Cálculo básico de potencia frigorífica necesaria para climatizar un ambiente. ·\_\_\_\_\_\_\_\_ Realizar descontaminación por vacío y otros métodos"
+  - "para carga de refrigerante ·\_\_\_\_\_\_\_\_ Procedimiento de colocación de equipos compactos de pared o ventana. ·\_\_\_\_\_\_\_\_ Detección de defectos en el sistema de refrigeración"
+  - busca de perdida de refrigerante
+  - "distintos métodos. ·\_\_\_\_\_\_\_\_ Aire acondicionado  Inverter frío sólo y frío / calor"
+  - con gas r-22 y r-410 (ecológico)
+  - "presiónes de refrigerante.  ·\_\_\_\_\_\_\_\_ Tarjetas electrónicas"
+  - funcionamiento y reparación de los mismos
+requisitosRecomendados:
+  - >-
+    Conocimientos de principios de Refrigeración Doméstica y/o Electricidad
+    Aplicada
 ---
+
