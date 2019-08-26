@@ -4,7 +4,7 @@ description: >-
   Aprenderá el funcionamiento, instalación y mantenimiento de equipos de aire
   acondicionado ventana, split centrales, ademas des soldadura , manejo de
   manómetros vaciado y carga de gas y reparación de tarjetas electrónicas.
-img: /img/aire-acondicionado.jpeg
+img: /img/aire.png
 category:
   - Refrigeración
 contenido:
