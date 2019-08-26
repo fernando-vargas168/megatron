@@ -9,7 +9,8 @@ category:
   - Refrigeración
 contenido:
   - Unidades de potencia frigorífica
-  - "Unidades de presión y vacío para diagnosticar equipos con analizador. ·\_\_\_\_\_\_\_\_ Herramientas"
+  - Unidades de presión y vacío
+  - Herramientas
   - para colocación de equipos de aire acondicionados compactos y modelo split
   - ". ·\_\_\_\_\_\_\_\_ Determinación de la sección mínima de la línea eléctrica de alimentación"
   - Distribución de energía eléctrica y sus elementos de protección
