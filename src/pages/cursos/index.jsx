@@ -17,28 +17,40 @@ import styled from "styled-components";
 import ContainerPage from "../../components/ContainerPage";
 import HeaderPage from "../../components/HeaderPage";
 import Form from "../../components/Form";
+import SEO from "../../components/Head/SEO";
 const cursos = ({ data }) => {
+  let cursos = [];
+  data.allFile.edges.forEach(({ node }) =>
+    cursos.push(node.childMarkdownRemark.frontmatter.title)
+  );
   return (
-    <ContainerPage className="Cursos">
-      <HeaderPage
-        icon="/img/cursosCover.svg"
-        text1="Enseñamos"
-        text2="Cursos"
-        alt="Ingeniero dando clases / clases de ingeniería de Megatron"
-        bottom="true"
+    <div>
+      <SEO
+        title="MEGATRON | cursos de ingeniería en BOLIVIA"
+        description={cursos.join(" | ")}
+        path="/cursos"
       />
-      <CardsContainer container spacing={3}>
-        {data.allFile.edges.map(({ node }, index) => (
-          <CursoCard
-            key={index}
-            title={node.childMarkdownRemark.frontmatter.title}
-            img={node.childMarkdownRemark.frontmatter.img}
-            date={node.childMarkdownRemark.frontmatter.date}
-            slug={node.childMarkdownRemark.fields.slug}
-          />
-        ))}
-      </CardsContainer>
-    </ContainerPage>
+      <ContainerPage className="Cursos">
+        <HeaderPage
+          icon="/img/cursosCover.svg"
+          text1="Enseñamos"
+          text2="Cursos"
+          alt="Ingeniero dando clases / clases de ingeniería de Megatron"
+          bottom="true"
+        />
+        <CardsContainer container spacing={3}>
+          {data.allFile.edges.map(({ node }, index) => (
+            <CursoCard
+              key={index}
+              title={node.childMarkdownRemark.frontmatter.title}
+              img={node.childMarkdownRemark.frontmatter.img}
+              date={node.childMarkdownRemark.frontmatter.date}
+              slug={node.childMarkdownRemark.fields.slug}
+            />
+          ))}
+        </CardsContainer>
+      </ContainerPage>
+    </div>
   );
 };
 

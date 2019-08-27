@@ -22,6 +22,7 @@ import {
   Divider
 } from "@material-ui/core";
 import BackgroundImage from "gatsby-background-image";
+import SEO from "../../components/Head/SEO";
 function a11yProps(index) {
   return {
     id: `simple-tab-${index}`,
@@ -113,172 +114,93 @@ const trabajo = ({ data }) => {
     return () => (subscriptions = false);
   });
   return (
-    <ContainerPage className="Trabajo">
-      <HeaderPage
-        icon="/img/trabajoCover.svg"
-        text1="Encontramos"
-        text2="Bolsa de trabajo"
-        alt=""
-        bottom="true"
+    <div>
+      <SEO
+        title="MEGATRON | Encuentra trabajo en Bolivia | Contrata personas para tu empresa"
+        description="Bolsa de trabajo en Bolivia para ingenieros y técnicos, somos una empresa de ingenieros y podemos ayudarte a conectar con personas"
+        path="/trabajo"
       />
-      <AppBar position="static">
-        <Box display="flex">
-          <Tabs
-            style={{ width: "100%" }}
-            variant="fullWidth"
-            value={tab}
-            onChange={handleChange}
-            aria-label="simple tabs example"
-          >
-            <Tab label="Personas" {...a11yProps(0)} />
-            <Tab label="Empresas" {...a11yProps(1)} />
-          </Tabs>
-          <Button
-            style={{
-              color: "white",
-              marginLeft: "auto",
-              marginRight: "10px"
-            }}
-            onClick={() => setFavorite(!favorite)}
-          >
-            <FavoriteIcon style={{ color: favorite ? Colors.red : "white" }} />
-          </Button>
-        </Box>
-      </AppBar>
-      <TabPanel value={tab} index={0}>
-        {favorite && (
-          <>
-            <Typography
-              variant="h5"
-              style={{ textAlign: "center", color: "gray" }}
+      <ContainerPage className="Trabajo">
+        <HeaderPage
+          icon="/img/trabajoCover.svg"
+          text1="Encontramos"
+          text2="Bolsa de trabajo"
+          alt=""
+          bottom="true"
+        />
+        <AppBar position="static">
+          <Box display="flex">
+            <Tabs
+              style={{ width: "100%" }}
+              variant="fullWidth"
+              value={tab}
+              onChange={handleChange}
+              aria-label="simple tabs example"
             >
-              Tus intereses
-            </Typography>
-            <Divider />
-          </>
-        )}
-        <CardsContainer container spacing={3}>
-          {personList.length !== 0 &&
-            personList.map((element, index) => {
-              if (
-                // !(element
-                //   ? favorite &&
-                //     searchLiked(likedPersonList, element.ci, "ci") === false
-                //   : true)
-                !(
-                  favorite &&
-                  searchLiked(likedPersonList, element.ci, "ci") === false
-                )
-              ) {
-                return (
-                  <PersonCard
-                    key={index}
-                    name={element.name}
-                    img={element.img}
-                    description={element.description}
-                    softSkills={element.softSkills}
-                    ci={element.ci}
-                    slug={element.slug}
-                    setLikedList={setLikedPersonList}
-                    likedList={likedPersonList}
-                    favorite={
-                      searchLiked(likedPersonList, element.ci) !== false
-                        ? false
-                        : true
-                    }
-                  />
-                );
-              }
-            })}
-        </CardsContainer>
-        {personList.length == 0 ? (
-          <>
-            <Divider />
-            <Box
-              display="flex"
-              flexDirection="column"
-              justifyContent="center"
-              alignItems="center"
+              <Tab label="Personas" {...a11yProps(0)} />
+              <Tab label="Empresas" {...a11yProps(1)} />
+            </Tabs>
+            <Button
+              style={{
+                color: "white",
+                marginLeft: "auto",
+                marginRight: "10px"
+              }}
+              onClick={() => setFavorite(!favorite)}
             >
-              <Typography>
-                No hay personas disponibles actualmente 😢
-              </Typography>
-            </Box>
-          </>
-        ) : (
-          favorite &&
-          likedPersonList.length == 0 && (
-            <>
-              <Divider />
-              <Box
-                display="flex"
-                flexDirection="column"
-                justifyContent="center"
-                alignItems="center"
-              >
-                <Typography>Lista de intereses vacía</Typography>
-                <Button
-                  color="primary"
-                  variant="contained"
-                  onClick={() => {
-                    setFavorite(false);
-                    setTab(0);
-                  }}
-                >
-                  Ver personas
-                </Button>
-              </Box>
-            </>
-          )
-        )}
-      </TabPanel>
-      <TabPanel value={tab} index={1}>
-        {favorite && (
-          <>
-            <Typography
-              variant="h5"
-              style={{ textAlign: "center", color: "gray" }}
-            >
-              Tus intereses
-            </Typography>
-            <Divider />
-          </>
-        )}
-        <CardsContainer container spacing={3}>
-          {businessList.map((element, index) => {
-            return (
-              <BusinessPuestos
-                puestos={element.puestos}
-                nit={element.nit}
-                key={index}
-                name={element.name}
-                img={element.img}
-                slug={element.slug}
-                setLikedList={setLikedBusinessList}
-                likedList={likedBusinessList}
-                favorite={favorite}
-                setFavorite={setFavorite}
+              <FavoriteIcon
+                style={{ color: favorite ? Colors.red : "white" }}
               />
-            );
-          })}
-        </CardsContainer>
-        {businessList.length == 0 ? (
-          <>
-            <Divider />
-            <Box
-              display="flex"
-              flexDirection="column"
-              justifyContent="center"
-              alignItems="center"
-            >
-              <Typography>
-                No hay Empresas disponibles actualmente 😢
+            </Button>
+          </Box>
+        </AppBar>
+        <TabPanel value={tab} index={0}>
+          {favorite && (
+            <>
+              <Typography
+                variant="h5"
+                style={{ textAlign: "center", color: "gray" }}
+              >
+                Tus intereses
               </Typography>
-            </Box>
-          </>
-        ) : (
-          favorite &&
-          likedBusinessList.length == 0 && (
+              <Divider />
+            </>
+          )}
+          <CardsContainer container spacing={3}>
+            {personList.length !== 0 &&
+              personList.map((element, index) => {
+                if (
+                  // !(element
+                  //   ? favorite &&
+                  //     searchLiked(likedPersonList, element.ci, "ci") === false
+                  //   : true)
+                  !(
+                    favorite &&
+                    searchLiked(likedPersonList, element.ci, "ci") === false
+                  )
+                ) {
+                  return (
+                    <PersonCard
+                      key={index}
+                      name={element.name}
+                      img={element.img}
+                      description={element.description}
+                      softSkills={element.softSkills}
+                      ci={element.ci}
+                      slug={element.slug}
+                      setLikedList={setLikedPersonList}
+                      likedList={likedPersonList}
+                      favorite={
+                        searchLiked(likedPersonList, element.ci) !== false
+                          ? false
+                          : true
+                      }
+                    />
+                  );
+                }
+              })}
+          </CardsContainer>
+          {personList.length == 0 ? (
             <>
               <Divider />
               <Box
@@ -287,23 +209,111 @@ const trabajo = ({ data }) => {
                 justifyContent="center"
                 alignItems="center"
               >
-                <Typography>Lista de intereses Vacía</Typography>
-                <Button
-                  color="primary"
-                  variant="contained"
-                  onClick={() => {
-                    setFavorite(false);
-                    setTab(1);
-                  }}
-                >
-                  Ver Empresas
-                </Button>
+                <Typography>
+                  No hay personas disponibles actualmente 😢
+                </Typography>
               </Box>
             </>
-          )
-        )}
-      </TabPanel>
-    </ContainerPage>
+          ) : (
+            favorite &&
+            likedPersonList.length == 0 && (
+              <>
+                <Divider />
+                <Box
+                  display="flex"
+                  flexDirection="column"
+                  justifyContent="center"
+                  alignItems="center"
+                >
+                  <Typography>Lista de intereses vacía</Typography>
+                  <Button
+                    color="primary"
+                    variant="contained"
+                    onClick={() => {
+                      setFavorite(false);
+                      setTab(0);
+                    }}
+                  >
+                    Ver personas
+                  </Button>
+                </Box>
+              </>
+            )
+          )}
+        </TabPanel>
+        <TabPanel value={tab} index={1}>
+          {favorite && (
+            <>
+              <Typography
+                variant="h5"
+                style={{ textAlign: "center", color: "gray" }}
+              >
+                Tus intereses
+              </Typography>
+              <Divider />
+            </>
+          )}
+          <CardsContainer container spacing={3}>
+            {businessList.map((element, index) => {
+              return (
+                <BusinessPuestos
+                  puestos={element.puestos}
+                  nit={element.nit}
+                  key={index}
+                  name={element.name}
+                  img={element.img}
+                  slug={element.slug}
+                  setLikedList={setLikedBusinessList}
+                  likedList={likedBusinessList}
+                  favorite={favorite}
+                  setFavorite={setFavorite}
+                />
+              );
+            })}
+          </CardsContainer>
+          {businessList.length == 0 ? (
+            <>
+              <Divider />
+              <Box
+                display="flex"
+                flexDirection="column"
+                justifyContent="center"
+                alignItems="center"
+              >
+                <Typography>
+                  No hay Empresas disponibles actualmente 😢
+                </Typography>
+              </Box>
+            </>
+          ) : (
+            favorite &&
+            likedBusinessList.length == 0 && (
+              <>
+                <Divider />
+                <Box
+                  display="flex"
+                  flexDirection="column"
+                  justifyContent="center"
+                  alignItems="center"
+                >
+                  <Typography>Lista de intereses Vacía</Typography>
+                  <Button
+                    color="primary"
+                    variant="contained"
+                    onClick={() => {
+                      setFavorite(false);
+                      setTab(1);
+                    }}
+                  >
+                    Ver Empresas
+                  </Button>
+                </Box>
+              </>
+            )
+          )}
+        </TabPanel>
+      </ContainerPage>
+    </div>
   );
 };
 

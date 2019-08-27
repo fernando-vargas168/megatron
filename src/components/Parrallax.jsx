@@ -20,6 +20,7 @@ const ContainerParrallax1 = styled.div`
   right: 10%;
   width: 400px;
   height: 400px;
+  z-index: -1;
   ${Responsive.miniDesktop} {
     width: 300px;
     height: 300px;
@@ -42,6 +43,10 @@ const ContainerParrallax1 = styled.div`
     transform: translate(-50%, 0);
     top: 3%;
     z-index: -1;
+  }
+  ${Responsive.landscape} {
+    width: 200px;
+    height: 200px;
   }
   .card {
     position: absolute;
@@ -98,7 +103,7 @@ const ContainerParrallax2 = styled.div`
   top: 0;
   left: 0;
   right: 0;
-  z-index: -1;
+  z-index: -2;
   ${Responsive.tablet} {
     display: none;
   }

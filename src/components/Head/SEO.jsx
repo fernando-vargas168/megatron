@@ -1,6 +1,7 @@
 import React from "react";
 import { useStaticQuery, graphql } from "gatsby";
-const SEO = ({ title, description, image, url }) => {
+import Helmet from "react-helmet";
+const SEO = ({ title, description, image, path }) => {
   const data = useStaticQuery(
     graphql`
       query SEO {
@@ -24,8 +25,8 @@ const SEO = ({ title, description, image, url }) => {
     siteLanguage: defaultLanguage
   } = data.site.siteMetadata;
   return (
-    <>
-      <title />
+    <Helmet>
+      <title>{title ? title : defaultTitle}</title>
       <meta
         name="description"
         content={description ? description : defaultDescription}
@@ -34,7 +35,10 @@ const SEO = ({ title, description, image, url }) => {
       <meta name="language" content={defaultLanguage} />
 
       {/* OpenGraph tags */}
-      <meta property="og:url" content={url ? url : defaultUrl} />
+      <meta
+        property="og:url"
+        content={path ? `${defaultUrl}/${path}` : defaultUrl}
+      />
       {/* {isBlogPost ? <meta property="og:type" content="article" /> : null} */}
       <meta property="og:title" content={title ? title : defaultTitle} />
       <meta
@@ -51,7 +55,7 @@ const SEO = ({ title, description, image, url }) => {
         content={description ? description : defaultDescription}
       />
       <meta name="twitter:image" content={image ? image : defaultImage} />
-    </>
+    </Helmet>
   );
 };
 

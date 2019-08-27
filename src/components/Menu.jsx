@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Link as L } from "gatsby";
+import { Link, navigate } from "gatsby";
 import styled from "styled-components";
 import { Responsive } from "../styles/vars";
 import ResponsiveComponent from "../../lib/ResponsiveComponent";
@@ -11,14 +11,15 @@ import {
   Typography,
   Button,
   Tabs,
-  Tab as T,
+  Tab,
   Box,
   ButtonBase,
-  MenuItem as MI,
+  MenuItem,
   Menu as MenuResponsive
 } from "@material-ui/core";
 
 import MenuIcon from "@material-ui/icons/Menu";
+import Contact from "./Contact";
 const useStyles = makeStyles(theme => ({
   root: {
     flexGrow: 1
@@ -70,22 +71,19 @@ const LogoStyled = styled.div`
     }
   }
 `;
-const Link = styled(L)`
-  padding: 0 12px;
-  height: 57px;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  ${Responsive.mobile} {
-    width: auto;
-    padding: 4px 16px;
-  }
-`;
-const Tab = styled(T)`
-  padding: 0 !important;
-`;
+// const Link = styled(L)`
+//   padding: 0 12px;
+//   height: 57px;
+//   width: 100%;
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+//   text-align: center;
+//   ${Responsive.mobile} {
+//     width: auto;
+//     padding: 4px 16px;
+//   }
+// `;
 
 const Logo = () => (
   <LogoStyled>
@@ -102,6 +100,7 @@ function a11yProps(index) {
 }
 const Menu = ({ location }) => {
   const classes = useStyles();
+  const [openContact, setOpenContact] = useState(false);
   return (
     <div
       style={{ height: "57px !important", maxHeight: "57px" }}
@@ -113,17 +112,28 @@ const Menu = ({ location }) => {
         color="inherit"
       >
         <ResponsiveComponent mobile>
-          <MenuMobile />
+          <MenuMobile
+            openContact={openContact}
+            setOpenContact={setOpenContact}
+          />
         </ResponsiveComponent>
         <ResponsiveComponent tablet desktop>
-          <MenuDesktop location={location} />
+          <MenuDesktop
+            location={location}
+            openContact={openContact}
+            setOpenContact={setOpenContact}
+          />
         </ResponsiveComponent>
       </AppMenu>
+      <Contact
+        openContact={openContact}
+        setOpenContact={setOpenContact}
+      ></Contact>
     </div>
   );
 };
-const MenuDesktop = ({ location }) => {
-  const [value, setValue] = useState(3);
+const MenuDesktop = ({ location, setOpenContact }) => {
+  const [value, setValue] = useState(4);
   useEffect(() => {
     const pathname = location.replace(/\//gi, "");
     try {
@@ -137,8 +147,11 @@ const MenuDesktop = ({ location }) => {
         case "trabajo":
           setValue(2);
           break;
-        default:
+        case "contacto":
           setValue(3);
+          break;
+        default:
+          setValue(4);
       }
     } catch (error) {
       console.error("Error en Menu al intentar establecer el pathname");
@@ -148,26 +161,37 @@ const MenuDesktop = ({ location }) => {
   return (
     <Tabs value={value}>
       />
-      <Tab label={<Link to="/servicios">Servicios</Link>} {...a11yProps(0)} />
-      <Tab label={<Link to="/cursos">Cursos </Link>} {...a11yProps(1)} />
-      <Tab label={<Link to="/trabajo">Trabajo</Link>} {...a11yProps(2)} />
+      <Tab
+        onClick={() => navigate("/servicios")}
+        label={"Servicios"}
+        {...a11yProps(0)}
+      />
+      <Tab
+        onClick={() => navigate("/cursos")}
+        label={"Cursos "}
+        {...a11yProps(1)}
+      />
+      <Tab
+        onClick={() => navigate("/trabajo")}
+        label={"Trabajo"}
+        {...a11yProps(2)}
+      />
+      <Tab
+        onClick={() => setOpenContact(true)}
+        label={"Contacto"}
+        {...a11yProps(3)}
+      />
       <Tab
         style={{ marginLeft: "auto" }}
-        label={
-          <Link to="/">
-            <Logo />
-          </Link>
-        }
+        onClick={() => navigate("/")}
+        label={<Logo />}
         {...a11yProps(3)}
       />
     </Tabs>
   );
 };
 
-const MenuItem = styled(MI)`
-  padding: 0 !important;
-`;
-const MenuMobile = () => {
+const MenuMobile = ({ setOpenContact }) => {
   const [anchorEl, setAnchorEl] = useState(null);
 
   function handleClick(event) {
@@ -198,14 +222,37 @@ const MenuMobile = () => {
         open={Boolean(anchorEl)}
         onClose={handleClose}
       >
-        <MenuItem onClick={handleClose}>
-          <Link to="/servicios">Servicios</Link>
+        <MenuItem
+          onClick={() => {
+            handleClose();
+            navigate("/servicios");
+          }}
+        >
+          Servicios
         </MenuItem>
-        <MenuItem onClick={handleClose}>
-          <Link to="/cursos">Cursos</Link>
+        <MenuItem
+          onClick={() => {
+            handleClose();
+            navigate("/cursos");
+          }}
+        >
+          Cursos
         </MenuItem>
-        <MenuItem onClick={handleClose}>
-          <Link to="/trabajo">Trabajo</Link>
+        <MenuItem
+          onClick={() => {
+            handleClose();
+            navigate("/trabajo");
+          }}
+        >
+          Trabajo
+        </MenuItem>
+        <MenuItem
+          onClick={() => {
+            handleClose();
+            setOpenContact(true);
+          }}
+        >
+          Contacto
         </MenuItem>
       </MenuResponsive>
     </Toolbar>

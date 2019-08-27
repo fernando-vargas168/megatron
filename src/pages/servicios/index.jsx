@@ -17,28 +17,41 @@ import styled from "styled-components";
 import HeaderPage from "../../components/HeaderPage.jsx";
 import ContainerPage from "../../components/ContainerPage.jsx";
 import Form from "../../components/Form";
+import SEO from "../../components/Head/SEO.jsx";
 
 const servicios = ({ data }) => {
+  let servicios = [];
+  data.allFile.edges.forEach(({ node }) =>
+    servicios.push(node.childMarkdownRemark.frontmatter.title)
+  );
+
   return (
-    <ContainerPage className="Servicios">
-      <HeaderPage
-        icon="/img/serviciosCover.svg"
-        text1="Creamos"
-        text2="Servicios y proyectos"
-        altImg="Persona Dibujando un plano de un cohete en representación de los servicios de Megatron"
-        bottom="true"
+    <div>
+      <SEO
+        title="MEGATRON | Servicios de Ingeniería en Bolivia"
+        path="/servicios"
+        description={servicios.join(" | ")}
       />
-      <CardsContainer container spacing={3}>
-        {data.allFile.edges.map(({ node }, index) => (
-          <CardChild
-            key={index}
-            text={node.childMarkdownRemark.frontmatter.title}
-            icon={node.childMarkdownRemark.frontmatter.icon}
-            slug={node.childMarkdownRemark.fields.slug}
-          />
-        ))}
-      </CardsContainer>
-    </ContainerPage>
+      <ContainerPage className="Servicios">
+        <HeaderPage
+          icon="/img/serviciosCover.svg"
+          text1="Creamos"
+          text2="Servicios y proyectos"
+          altImg="Persona Dibujando un plano de un cohete en representación de los servicios de Megatron"
+          bottom="true"
+        />
+        <CardsContainer container spacing={3}>
+          {data.allFile.edges.map(({ node }, index) => (
+            <CardChild
+              key={index}
+              text={node.childMarkdownRemark.frontmatter.title}
+              icon={node.childMarkdownRemark.frontmatter.icon}
+              slug={node.childMarkdownRemark.fields.slug}
+            />
+          ))}
+        </CardsContainer>
+      </ContainerPage>
+    </div>
   );
 };
 const CardChild = ({ text, icon, slug }) => {

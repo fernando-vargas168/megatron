@@ -10,6 +10,7 @@ import ListBox from "../components/ListBox";
 import { Responsive } from "../styles/vars";
 import Form from "../components/Form";
 import ButtonFixed from "../components/ButtonFixed";
+import SEO from "../components/Head/SEO";
 const empresasTemplate = ({ pageContext }) => {
   const [open, setOpen] = useState(false);
 
@@ -48,58 +49,65 @@ const empresasTemplate = ({ pageContext }) => {
     `Publicado el: ${publicado}`
   ];
   return (
-    <ContainerPage>
-      <HeaderPage
-        component={
-          <LogoEmpresa
-            h1="hey"
-            className="IMAGEN"
-            fluid={img.childImageSharp.fluid}
-          />
-        }
-        text1={name}
-        text2={`Requiere: ${title}`}
-        fontRead1
-        fontRead2
+    <div>
+      <SEO
+        title={`${name} busca: ${title}`}
+        description={description}
+        image={img}
       />
-      <MarkdownStyles html={pageContext.html} />
-      <ContainerInformation>
-        <ListBox
-          title="Información general"
-          label="informationGeneral"
-          array={informationGeneral}
+      <ContainerPage>
+        <HeaderPage
+          component={
+            <LogoEmpresa
+              h1="hey"
+              className="IMAGEN"
+              fluid={img.childImageSharp.fluid}
+            />
+          }
+          text1={name}
+          text2={`Requiere: ${title}`}
+          fontRead1
+          fontRead2
         />
-        <ListBox
-          title="Requisitos en habilidades"
-          label="requisitos"
-          array={requisitos}
-        />
-        <ListBox
-          title="Requisitos en Valores"
-          label="valores"
-          array={valores}
-        />
-        <ListBox
-          title={`Otros requisitos`}
-          label="otrosRequisitos"
-          array={otrosRequisitos}
-        />
-        <ListBox
-          title={`Beneficios de trabajar en ${name}`}
-          label="beneficios"
-          array={beneficios}
-        />
-      </ContainerInformation>
-      <ButtonFixed buttons={buttons} />
-      <Dialog open={open} onClose={handleClose}>
-        <Form
-          formName="contactos_empresas"
-          name="contacto_empresa"
-          value={`${name} ${title}`}
-          title={name}
-        />
-      </Dialog>
-    </ContainerPage>
+        <MarkdownStyles html={pageContext.html} />
+        <ContainerInformation>
+          <ListBox
+            title="Información general"
+            label="informationGeneral"
+            array={informationGeneral}
+          />
+          <ListBox
+            title="Requisitos en habilidades"
+            label="requisitos"
+            array={requisitos}
+          />
+          <ListBox
+            title="Requisitos en Valores"
+            label="valores"
+            array={valores}
+          />
+          <ListBox
+            title={`Otros requisitos`}
+            label="otrosRequisitos"
+            array={otrosRequisitos}
+          />
+          <ListBox
+            title={`Beneficios de trabajar en ${name}`}
+            label="beneficios"
+            array={beneficios}
+          />
+        </ContainerInformation>
+        <ButtonFixed buttons={buttons} />
+        <Dialog open={open} onClose={handleClose}>
+          <Form
+            formName="contactos_empresas"
+            name="contacto_empresa"
+            value={`${name} ${title}`}
+            title={name}
+          />
+        </Dialog>
+      </ContainerPage>
+    </div>
   );
 };
 const ImageContainer = props => (

@@ -83,7 +83,7 @@ const Landing = () => {
   const items = [
     <Link to="/servicios">
       <ColorsBackground colors={[red, blue]}>
-        <LandingH1>Creamos,</LandingH1>
+        <LandingH1>Creamos</LandingH1>
       </ColorsBackground>
     </Link>,
     <Link to="/cursos">
@@ -93,7 +93,7 @@ const Landing = () => {
     </Link>,
     <Link to="/trabajo">
       <ColorsBackground colors={[yellow, green]}>
-        <LandingH1>Y Encontramos</LandingH1>
+        <LandingH1>Encontramos</LandingH1>
       </ColorsBackground>
     </Link>,
     <LandingH1

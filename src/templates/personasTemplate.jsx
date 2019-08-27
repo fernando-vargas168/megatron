@@ -9,6 +9,7 @@ import { Grid, Dialog } from "@material-ui/core";
 import { Responsive } from "../styles/vars";
 import Form from "../components/Form";
 import ButtonFixed from "../components/ButtonFixed";
+import SEO from "../components/Head/SEO";
 const personasTemplate = ({ pageContext }) => {
   const [open, setOpen] = useState(false);
 
@@ -50,44 +51,55 @@ const personasTemplate = ({ pageContext }) => {
   ];
 
   return (
-    <ContainerPage>
-      <HeaderPage
-        component={<FotoPersona fluid={img.childImageSharp.fluid} />}
-        text1={name}
-        text2={description}
-        fontRead1
-        fontRead2
+    <div>
+      <SEO
+        title={`MEGATRON TRABAJOS | ${name}`}
+        description={description}
+        image={img}
       />
-      <ContainerInformation>
-        <ListBox
-          title="Información General"
-          label="informationGeneral"
-          array={informationGeneral}
+      <ContainerPage>
+        <HeaderPage
+          component={<FotoPersona fluid={img.childImageSharp.fluid} />}
+          text1={name}
+          text2={description}
+          fontRead1
+          fontRead2
         />
-        <ListBox
-          title="Habilidades Blandas"
-          label="softSkills"
-          array={softSkills}
-        />
-        <ListBox
-          title="Habilidades Duras"
-          label="hardSkills"
-          array={hardSkills}
-        />
-        <ListBox title="Educación" label="educacion" array={educacion} />
-        <ListBox title="Experiencia" label="experiencia" array={experiencia} />
-      </ContainerInformation>
-      <MarkdownStyles html={pageContext.html} />
-      <ButtonFixed buttons={buttons} />
-      <Dialog open={open} onClose={handleClose}>
-        <Form
-          formName="contactos_empresas"
-          name="contacto_empresa"
-          value={`${name} ${ci}`}
-          title={name}
-        />
-      </Dialog>
-    </ContainerPage>
+        <ContainerInformation>
+          <ListBox
+            title="Información General"
+            label="informationGeneral"
+            array={informationGeneral}
+          />
+          <ListBox
+            title="Habilidades Blandas"
+            label="softSkills"
+            array={softSkills}
+          />
+          <ListBox
+            title="Habilidades Duras"
+            label="hardSkills"
+            array={hardSkills}
+          />
+          <ListBox title="Educación" label="educacion" array={educacion} />
+          <ListBox
+            title="Experiencia"
+            label="experiencia"
+            array={experiencia}
+          />
+        </ContainerInformation>
+        <MarkdownStyles html={pageContext.html} />
+        <ButtonFixed buttons={buttons} />
+        <Dialog open={open} onClose={handleClose}>
+          <Form
+            formName="contactos_empresas"
+            name="contacto_empresa"
+            value={`${name} ${ci}`}
+            title={name}
+          />
+        </Dialog>
+      </ContainerPage>
+    </div>
   );
 };
 const ContainerInformation = styled(props => (

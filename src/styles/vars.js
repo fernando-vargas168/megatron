@@ -1,7 +1,8 @@
 // Colors
 export const Colors = {
   red: "#F00000",
-  blue: "#8F8FFF",
+  // blue: "#8F8FFF",
+  blue: "#0000FF",
   yellow: "#FFC832",
   green: "#228B22",
   white: "white",
@@ -16,5 +17,6 @@ export const Responsive = {
   tablet: `@media screen and (max-width: 800px)`,
   miniTablet: `@media screen and (max-width: 600px)`,
   mobile: `@media screen and (max-width: 450px)`,
-  miniMobile: `@media screen and (max-width: 350px)`
+  miniMobile: `@media screen and (max-width: 350px)`,
+  landscape: `@media screen and (max-height: 450px) and (orientation: landscape)`
 };

@@ -8,6 +8,7 @@ import ListBox from "../components/ListBox";
 import { Responsive } from "../styles/vars";
 import ButtonFixed from "../components/ButtonFixed";
 import Form from "../components/Form";
+import SEO from "../components/Head/SEO";
 const cursosTemplate = ({ pageContext }) => {
   const [open, setOpen] = useState(false);
 
@@ -35,44 +36,51 @@ const cursosTemplate = ({ pageContext }) => {
     }
   ];
   return (
-    <ContainerPage>
-      <HeaderPage
-        background={[
-          img.childImageSharp.fluid,
-          `linear-gradient(rgba(0, 0, 0, 0.73), rgba(0, 0, 0, 0.73))`
-        ].reverse()}
-        text1={title}
-        text2={description}
-        fontRead1
-        fontRead2
+    <div>
+      <SEO
+        title={`MEGATRON CURSOS | ${title}`}
+        description={description}
+        image={img}
       />
-      <ContainerInformation>
-        <ListBox
-          lg={6}
-          md={6}
-          xs={12}
-          title="Contenido del curso"
-          label="contenido"
-          array={contenido}
+      <ContainerPage>
+        <HeaderPage
+          background={[
+            img.childImageSharp.fluid,
+            `linear-gradient(rgba(0, 0, 0, 0.73), rgba(0, 0, 0, 0.73))`
+          ].reverse()}
+          text1={title}
+          text2={description}
+          fontRead1
+          fontRead2
         />
-        <ListBox
-          lg={6}
-          md={6}
-          xs={12}
-          title="Requisitos Recomendados"
-          label="requisitosRecomendados"
-          array={requisitosRecomendados}
+        <ContainerInformation>
+          <ListBox
+            lg={6}
+            md={6}
+            xs={12}
+            title="Contenido del curso"
+            label="contenido"
+            array={contenido}
+          />
+          <ListBox
+            lg={6}
+            md={6}
+            xs={12}
+            title="Requisitos Recomendados"
+            label="requisitosRecomendados"
+            array={requisitosRecomendados}
+          />
+        </ContainerInformation>
+        <MarkdownStyles
+          style={{ marginBottom: "25px" }}
+          html={pageContext.html}
         />
-      </ContainerInformation>
-      <MarkdownStyles
-        style={{ marginBottom: "25px" }}
-        html={pageContext.html}
-      />
-      <ButtonFixed buttons={buttons} />
-      <Dialog open={open} onClose={handleClose}>
-        <Form formName="cursos" name="curso" value={title} title={title} />
-      </Dialog>
-    </ContainerPage>
+        <ButtonFixed buttons={buttons} />
+        <Dialog open={open} onClose={handleClose}>
+          <Form formName="cursos" name="curso" value={title} title={title} />
+        </Dialog>
+      </ContainerPage>
+    </div>
   );
 };
 

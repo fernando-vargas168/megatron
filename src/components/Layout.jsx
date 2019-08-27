@@ -69,7 +69,7 @@ const Layout = ({ children, location }) => {
         method="post"
         data-netlify="true"
         data-netlify-honeypot="bot-field"
-        netlify
+        netlify="true"
       >
         <input type="hidden" name="form-name" value="personas" />
         <input type="text" name="name" />
@@ -83,7 +83,7 @@ const Layout = ({ children, location }) => {
         method="post"
         data-netlify="true"
         data-netlify-honeypot="bot-field"
-        netlify
+        netlify="true"
       >
         <input type="hidden" name="form-name" value="cursos" />
         <input type="text" name="name" />
@@ -97,7 +97,7 @@ const Layout = ({ children, location }) => {
         method="post"
         data-netlify="true"
         data-netlify-honeypot="bot-field"
-        netlify
+        netlify="true"
       >
         <input type="hidden" name="form-name" value="servicios" />
         <input type="text" name="name" />
@@ -111,7 +111,7 @@ const Layout = ({ children, location }) => {
         method="post"
         data-netlify="true"
         data-netlify-honeypot="bot-field"
-        netlify
+        netlify="true"
       >
         <input type="hidden" name="form-name" value="empresas" />
         <input type="text" name="name" />
