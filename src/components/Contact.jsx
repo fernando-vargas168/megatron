@@ -92,12 +92,12 @@ const Contact = ({ openContact, setOpenContact }) => {
           value="Av. Cañoto #113 esq. Buenos Aires | Santa Cruz |
           Bolivia"
           icon={<PinDropIcon className={classes.icon} />}
-          href="mailto:ing_fvargas@hotmail.com"
+          href="https://www.google.com/maps/place/Megatron+Empresa+Industrial/@-17.7814131,-63.1908203,17z/data=!3m1!4b1!4m5!3m4!1s0x93f1e9cd70711897:0x7a8e9bc0f6959a56!8m2!3d-17.7814182!4d-63.1886316"
         />
         <ListItemIcon
           value="3303219"
           icon={<PhoneIcon className={classes.icon} />}
-          href="https://www.google.com/maps/place/Megatron+Empresa+Industrial/@-17.7814131,-63.1908203,17z/data=!3m1!4b1!4m5!3m4!1s0x93f1e9cd70711897:0x7a8e9bc0f6959a56!8m2!3d-17.7814182!4d-63.1886316"
+          href="tel:3303219"
         />
       </List>
     </Dialog>
