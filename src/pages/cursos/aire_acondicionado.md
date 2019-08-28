@@ -1,5 +1,5 @@
 ---
-title: Aires Acondicionados  martes 25 de Septiembre
+title: 'Aires Acondicionados  '
 description: >-
   Aprenderá el funcionamiento, instalación y mantenimiento de equipos de aire
   acondicionado ventana, split centrales, ademas des soldadura , manejo de
@@ -10,16 +10,17 @@ category:
 contenido:
   - Unidades de potencia frigorífica
   - Unidades de presión y vacío
-  - Herramientas
-  - para colocación de equipos de aire acondicionados compactos y modelo split
   - >-
-    Dimensionamiento de conductores eléctricos según potencia de aire y sus
+    Herramientas para instalación de equipos de aire acondicionados compactos y
+    modelo split
+  - >-
+    Dimensionamiento de conductores eléctricos según potencia de consumo y 
     equipos de protección
-  - Aprender a conectar caños de cobre que se usan en equipos split
+  - Soldadura y conexión  de cañerias de cobre
   - Cálculo básico de potencia frigorífica para climatizar un ambiente
   - Descontaminación por vacío para carga de refrigerante
-  - Instalación y Mantenimiento de pared o ventana
-  - Detección de defectos en el sistema de refrigeración
+  - Instalación y Mantenimiento aires tipo pared o ventana
+  - Detección de fallas de compresores
   - Gases Refrigerantes r-22 y r-410 (ecológico)
   - Tarjetas electrónicas
 requisitosRecomendados:
