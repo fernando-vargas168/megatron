@@ -1,8 +1,8 @@
 import React from "react";
 import styled from "styled-components";
 import { Container as C } from "@material-ui/core";
-const ContainerPage = ({ children }) => {
-  return <Container>{children}</Container>;
+const ContainerPage = ({ children, style }) => {
+  return <Container style={style}>{children}</Container>;
 };
 const Container = styled(C)`
   padding: 0 !important;

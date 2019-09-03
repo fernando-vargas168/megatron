@@ -14,7 +14,5 @@ contenido:
 requisitosRecomendados:
   - Conocimientos de principios de electrónica digital
 date: Lunes 19 de agosto 2019
-category:
-  - electrónica
-  - robótica
+category: electricidad
 ---

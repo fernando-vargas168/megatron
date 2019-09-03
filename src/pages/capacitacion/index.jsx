@@ -4,6 +4,7 @@ import { navigate } from "gatsby";
 import BackgroundImage from "gatsby-background-image";
 import {
   Grid,
+  Box,
   Card as C,
   CardMedia as CM,
   CardActions,
@@ -11,18 +12,55 @@ import {
   CardContent,
   CardHeader,
   Typography,
-  Dialog
+  Dialog,
+  ExpansionPanel,
+  ExpansionPanelSummary,
+  ExpansionPanelDetails,
+  Icon
 } from "@material-ui/core";
+import Circle from "@material-ui/icons/FiberManualRecord";
+import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
 import styled from "styled-components";
 import ContainerPage from "../../components/ContainerPage";
 import HeaderPage from "../../components/HeaderPage";
 import Form from "../../components/Form";
 import SEO from "../../components/Head/SEO";
+
 const Capacitacion = ({ data }) => {
-  let capacitacion = [];
-  data.allFile.edges.forEach(({ node }) =>
-    capacitacion.push(node.childMarkdownRemark.frontmatter.title)
-  );
+  let capacitacion = []; //SEO
+
+  let refrigeracion = []; //Category
+  let electricidad = []; //Category
+  let electronica = []; //Category
+  let automatizacion = []; //Category
+  const stylesCategory = {
+    refrigeracion: { color: "#00d8f9" },
+    electricidad: { color: "#e5383b" },
+    electronica: { color: "#145f3a" },
+    automatizacion: { color: "#ff3f00" }
+  };
+  for (let i = 0; i < data.allFile.edges.length; i++) {
+    capacitacion.push(
+      data.allFile.edges[i].node.childMarkdownRemark.frontmatter.title
+    );
+    switch (
+      data.allFile.edges[i].node.childMarkdownRemark.frontmatter.category
+    ) {
+      case "refrigeracion":
+        refrigeracion.push(data.allFile.edges[i].node.childMarkdownRemark);
+        break;
+      case "electricidad":
+        electricidad.push(data.allFile.edges[i].node.childMarkdownRemark);
+        break;
+      case "electronica":
+        electronica.push(data.allFile.edges[i].node.childMarkdownRemark);
+        break;
+      case "automatizacion":
+        automatizacion.push(data.allFile.edges[i].node.childMarkdownRemark);
+        break;
+    }
+  }
+
   return (
     <div>
       <SEO
@@ -30,7 +68,7 @@ const Capacitacion = ({ data }) => {
         description={capacitacion.join(" | ")}
         path="/capacitacion"
       />
-      <ContainerPage className="Capacitacion">
+      <ContainerPage className="Capacitacion" style={{ minHeight: "200vh" }}>
         <HeaderPage
           icon="/img/capacitacionCover.svg"
           text1="Enseñamos"
@@ -38,17 +76,104 @@ const Capacitacion = ({ data }) => {
           alt="Ingeniero dando clases / clases de ingeniería de Megatron"
           bottom="true"
         />
-        <CardsContainer container spacing={3}>
-          {data.allFile.edges.map(({ node }, index) => (
-            <CursoCard
-              key={index}
-              title={node.childMarkdownRemark.frontmatter.title}
-              img={node.childMarkdownRemark.frontmatter.img}
-              date={node.childMarkdownRemark.frontmatter.date}
-              slug={node.childMarkdownRemark.fields.slug}
-            />
-          ))}
-        </CardsContainer>
+        <ExpandContainer>
+          <ExpansionPanel defaultExpanded>
+            <ExpansionPanelSummary
+              expandIcon={<ExpandMoreIcon />}
+              aria-controls="panel1a-content"
+              id="panel1a-header"
+            >
+              <Circle style={stylesCategory.refrigeracion} />
+              <Typography>Refrigeración</Typography>
+            </ExpansionPanelSummary>
+            <ExpansionPanelDetails>
+              <CardsContainer container spacing={3}>
+                {refrigeracion.map((element, index) => (
+                  <CursoCard
+                    key={index}
+                    title={element.frontmatter.title}
+                    img={element.frontmatter.img}
+                    date={element.frontmatter.date}
+                    slug={element.fields.slug}
+                    styleAvatar={stylesCategory.refrigeracion}
+                  />
+                ))}
+              </CardsContainer>
+            </ExpansionPanelDetails>
+          </ExpansionPanel>
+          <ExpansionPanel defaultExpanded>
+            <ExpansionPanelSummary
+              expandIcon={<ExpandMoreIcon />}
+              aria-controls="panel1a-content"
+              id="panel1a-header"
+            >
+              <Circle style={stylesCategory.automatizacion} />
+              <Typography>Automatización</Typography>
+            </ExpansionPanelSummary>
+            <ExpansionPanelDetails>
+              <CardsContainer container spacing={3}>
+                {automatizacion.map((element, index) => (
+                  <CursoCard
+                    key={index}
+                    title={element.frontmatter.title}
+                    img={element.frontmatter.img}
+                    date={element.frontmatter.date}
+                    slug={element.fields.slug}
+                    styleAvatar={stylesCategory.automatizacion}
+                  />
+                ))}
+              </CardsContainer>
+            </ExpansionPanelDetails>
+          </ExpansionPanel>
+          <ExpansionPanel defaultExpanded>
+            <ExpansionPanelSummary
+              expandIcon={<ExpandMoreIcon />}
+              aria-controls="panel1a-content"
+              id="panel1a-header"
+            >
+              <Circle style={stylesCategory.electricidad} />
+              <Typography>Electricidad</Typography>
+            </ExpansionPanelSummary>
+            <ExpansionPanelDetails>
+              <CardsContainer container spacing={3}>
+                {electricidad.map((element, index) => (
+                  <CursoCard
+                    key={index}
+                    title={element.frontmatter.title}
+                    img={element.frontmatter.img}
+                    date={element.frontmatter.date}
+                    slug={element.fields.slug}
+                    styleAvatar={stylesCategory.electricidad}
+                  />
+                ))}
+              </CardsContainer>
+            </ExpansionPanelDetails>
+          </ExpansionPanel>
+          <ExpansionPanel defaultExpanded>
+            <ExpansionPanelSummary
+              expandIcon={<ExpandMoreIcon />}
+              aria-controls="panel1a-content"
+              id="panel1a-header"
+            >
+              <Circle style={stylesCategory.electronica} />
+              <Typography>Electrónica | Mecatrónica</Typography>
+            </ExpansionPanelSummary>
+            <ExpansionPanelDetails>
+              <CardsContainer container spacing={3}>
+                {electronica.map((element, index) => (
+                  <CursoCard
+                    key={index}
+                    title={element.frontmatter.title}
+                    img={element.frontmatter.img}
+                    date={element.frontmatter.date}
+                    slug={element.fields.slug}
+                    styleAvatar={stylesCategory.electronica}
+                  />
+                ))}
+              </CardsContainer>
+            </ExpansionPanelDetails>
+          </ExpansionPanel>
+        </ExpandContainer>
       </ContainerPage>
     </div>
   );
@@ -56,7 +181,7 @@ const Capacitacion = ({ data }) => {
 
 export default Capacitacion;
 // const Background = ()=>(<BackgroundImage fluid={img.childImageSharp.fluid}/>)
-const CursoCard = ({ title, img, date, slug }) => {
+const CursoCard = ({ title, img, date, slug, styleAvatar }) => {
   const [open, setOpen] = useState(false);
 
   const handleOpen = () => {
@@ -69,7 +194,11 @@ const CursoCard = ({ title, img, date, slug }) => {
   return (
     <CardContainer item xs={12} sm={6} md={4}>
       <Card>
-        <CardHeader title={title} subheader={date} />
+        <CardHeader
+          avatar={<Circle style={styleAvatar}></Circle>}
+          title={title}
+          subheader={date}
+        />
         <Background fluid={img.childImageSharp.fluid} />
         <CardContent>
           <Typography>{title}</Typography>
@@ -103,6 +232,13 @@ const CursoCard = ({ title, img, date, slug }) => {
     </CardContainer>
   );
 };
+
+const ExpandContainer = styled(Box)`
+  display: flex;
+  flex-direction: column;
+  justify-contente: center;
+  align-itemas: center;
+`;
 
 const CardsContainer = styled(Grid)`
   margin-top: 15px !important;
@@ -146,6 +282,7 @@ export const query = graphql`
                 }
               }
               date
+              category
             }
             fields {
               slug

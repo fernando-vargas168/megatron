@@ -20,6 +20,13 @@ collections:
       - { label: "Título", name: "title", widget: "string" }
       - { label: "Descripción", name: "description", widget: "text" }
       - {
+          label: "Categoría",
+          name: "category",
+          widget: "select",
+          options:
+            ["electronica", "refrigeracion", "automatizacion", "electricidad"],
+        }
+      - {
           label: "Fecha",
           name: "date",
           widget: "date",

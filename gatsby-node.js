@@ -88,6 +88,7 @@ exports.createPages = ({ graphql, actions }) => {
                     }
                   }
                   description
+                  category
                   date
                   hardSkills
                   ciudad

@@ -5,8 +5,7 @@ description: >-
   acondicionado ventana, split centrales, ademas des soldadura , manejo de
   manómetros vaciado y carga de gas y reparación de tarjetas electrónicas.
 img: /img/aire.png
-category:
-  - Refrigeración
+category: refrigeracion
 contenido:
   - Unidades de potencia frigorífica
   - "Unidades de presión y vacío para diagnosticar equipos con analizador. ·\_\_\_\_\_\_\_\_ Herramientas"
@@ -27,4 +26,3 @@ requisitosRecomendados:
     Conocimientos de principios de Refrigeración Doméstica y/o Electricidad
     Aplicada
 ---
-
