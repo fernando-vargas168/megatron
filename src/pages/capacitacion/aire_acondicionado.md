@@ -4,8 +4,9 @@ description: >-
   Aprenderá el funcionamiento, instalación y mantenimiento de equipos de aire
   acondicionado ventana, split centrales, ademas des soldadura , manejo de
   manómetros vaciado y carga de gas y reparación de tarjetas electrónicas.
-img: /img/aire.png
 category: refrigeracion
+date: 25th Sep 19
+img: /img/aire.png
 contenido:
   - Unidades de potencia frigorífica
   - Unidades de presión y vacío
@@ -27,3 +28,4 @@ requisitosRecomendados:
     Conocimientos de principios de Refrigeración Doméstica y/o Electricidad
     Aplicada
 ---
+
