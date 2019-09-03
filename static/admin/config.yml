@@ -34,10 +34,6 @@ collections:
           required: false,
         }
       - { label: "Imagen", name: "img", widget: "image", required: false }
-      - label: "Categorías"
-        name: "category"
-        widget: "list"
-        required: false
 
       - label: "Contenido del curso"
         name: "contenido"
