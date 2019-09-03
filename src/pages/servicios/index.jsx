@@ -44,7 +44,8 @@ const servicios = ({ data }) => {
           {data.allFile.edges.map(({ node }, index) => (
             <CardChild
               key={index}
-              text={node.childMarkdownRemark.frontmatter.title}
+              title={node.childMarkdownRemark.frontmatter.title}
+              description={node.childMarkdownRemark.frontmatter.description}
               icon={node.childMarkdownRemark.frontmatter.icon}
               slug={node.childMarkdownRemark.fields.slug}
             />
@@ -54,7 +55,7 @@ const servicios = ({ data }) => {
     </div>
   );
 };
-const CardChild = ({ text, icon, slug }) => {
+const CardChild = ({ title, description, icon, slug }) => {
   const [open, setOpen] = useState(false);
 
   const handleOpen = () => {
@@ -73,13 +74,19 @@ const CardChild = ({ text, icon, slug }) => {
             {/* <Img fluid={img.childImageSharp.fluid} /> */}
             <IconServicio src={icon} alt="" />
             <Typography gutterBottom variant="h5" component="h2">
-              {text}
+              {title}
             </Typography>
           </CardContent>
         </CardActionArea>
       </Card>
       <Dialog open={open} onClose={handleClose}>
-        <Form formName="servicios" name="servicio" value={text} title={text} />
+        <Form
+          formName="servicios"
+          name="servicio"
+          value={title}
+          title={title}
+          description={description}
+        />
       </Dialog>
     </CardContainer>
   );
@@ -128,6 +135,7 @@ export const query = graphql`
             frontmatter {
               title
               icon
+              description
             }
           }
         }

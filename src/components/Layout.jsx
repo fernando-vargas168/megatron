@@ -6,6 +6,7 @@ import { Container } from "@material-ui/core";
 import { Fonts } from "../styles/vars";
 import { createMuiTheme } from "@material-ui/core/styles";
 import { ThemeProvider } from "@material-ui/styles";
+import FormNetlify from "./FormNetlify.jsx";
 const GlobalStyle = createGlobalStyle`
 *{
   font-family: ${Fonts.font1};
@@ -61,63 +62,7 @@ const Layout = ({ children, location }) => {
         <div className="Page">{children}</div>
         <GlobalStyle />
       </ThemeProvider>
-
-      <form
-        hidden
-        action="/"
-        name="personas"
-        method="post"
-        data-netlify="true"
-        data-netlify-honeypot="bot-field"
-        netlify="true"
-      >
-        <input type="hidden" name="form-name" value="personas" />
-        <input type="text" name="name" />
-        <input type="email" name="email" />
-        <input type="celular" name="email" />
-      </form>
-      <form
-        hidden
-        action="/"
-        name="cursos"
-        method="post"
-        data-netlify="true"
-        data-netlify-honeypot="bot-field"
-        netlify="true"
-      >
-        <input type="hidden" name="form-name" value="cursos" />
-        <input type="text" name="name" />
-        <input type="email" name="email" />
-        <input type="celular" name="email" />
-      </form>
-      <form
-        hidden
-        action="/"
-        name="servicios"
-        method="post"
-        data-netlify="true"
-        data-netlify-honeypot="bot-field"
-        netlify="true"
-      >
-        <input type="hidden" name="form-name" value="servicios" />
-        <input type="text" name="name" />
-        <input type="email" name="email" />
-        <input type="celular" name="email" />
-      </form>
-      <form
-        hidden
-        action="/"
-        name="empresas"
-        method="post"
-        data-netlify="true"
-        data-netlify-honeypot="bot-field"
-        netlify="true"
-      >
-        <input type="hidden" name="form-name" value="empresas" />
-        <input type="text" name="name" />
-        <input type="email" name="email" />
-        <input type="celular" name="email" />
-      </form>
+      <FormNetlify />
     </>
   );
 };

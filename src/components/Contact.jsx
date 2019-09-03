@@ -10,7 +10,9 @@ import {
   List,
   ListItem,
   Snackbar,
-  SnackbarContent
+  SnackbarContent,
+  Paper,
+  Box
 } from "@material-ui/core";
 import { green } from "@material-ui/core/colors";
 import { CopyToClipboard } from "react-copy-to-clipboard";
@@ -23,8 +25,11 @@ import PhoneIcon from "@material-ui/icons/Phone";
 import { makeStyles } from "@material-ui/core/styles";
 import { Whatsapp, Facebook, Youtube } from "../../lib/icons";
 const useStyles = makeStyles(theme => ({
-  list: {
-    marginTop: "75px"
+  paper: {
+    marginTop: "75px",
+    margin: "0 16px",
+    padding: "16px",
+    width: "300px"
   },
   listButton: {
     width: "100%",
@@ -50,6 +55,7 @@ const Contact = ({ openContact, setOpenContact }) => {
       open={openContact}
       onClose={() => setOpenContact(false)}
       TransitionComponent={Transition}
+      // scroll="paper"
     >
       <AppBar>
         <Toolbar>
@@ -64,7 +70,20 @@ const Contact = ({ openContact, setOpenContact }) => {
           <Typography variant="h6">Contacto Megatron</Typography>
         </Toolbar>
       </AppBar>
-      <List className={classes.list}>
+      <Box display="flex" justifyContent="center" alignItems="center">
+        <Paper className={classes.paper}>
+          <Typography variant="h5" component="h3">
+            Megatron
+          </Typography>
+          <Typography component="p">
+            Somos una empresa dinámica y distinta dedicada al desarrollo de
+            ingeniería, investigación, capacitación y actualización
+            características necesarias para avanzar en el área industrial
+            BOLIVIANA
+          </Typography>
+        </Paper>
+      </Box>
+      <List>
         <ListItemIcon
           buttonStyled={{ background: "#3b5998", color: "white" }}
           icon={<Facebook className={classes.icon}></Facebook>}

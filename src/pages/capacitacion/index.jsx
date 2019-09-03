@@ -18,23 +18,23 @@ import ContainerPage from "../../components/ContainerPage";
 import HeaderPage from "../../components/HeaderPage";
 import Form from "../../components/Form";
 import SEO from "../../components/Head/SEO";
-const cursos = ({ data }) => {
-  let cursos = [];
+const Capacitacion = ({ data }) => {
+  let capacitacion = [];
   data.allFile.edges.forEach(({ node }) =>
-    cursos.push(node.childMarkdownRemark.frontmatter.title)
+    capacitacion.push(node.childMarkdownRemark.frontmatter.title)
   );
   return (
     <div>
       <SEO
-        title="MEGATRON | cursos de ingeniería en BOLIVIA"
-        description={cursos.join(" | ")}
-        path="/cursos"
+        title="MEGATRON | capacitacion de ingeniería en BOLIVIA"
+        description={capacitacion.join(" | ")}
+        path="/capacitacion"
       />
-      <ContainerPage className="Cursos">
+      <ContainerPage className="Capacitacion">
         <HeaderPage
-          icon="/img/cursosCover.svg"
+          icon="/img/capacitacionCover.svg"
           text1="Enseñamos"
-          text2="Cursos"
+          text2="Curso Taller"
           alt="Ingeniero dando clases / clases de ingeniería de Megatron"
           bottom="true"
         />
@@ -54,7 +54,7 @@ const cursos = ({ data }) => {
   );
 };
 
-export default cursos;
+export default Capacitacion;
 // const Background = ()=>(<BackgroundImage fluid={img.childImageSharp.fluid}/>)
 const CursoCard = ({ title, img, date, slug }) => {
   const [open, setOpen] = useState(false);
@@ -85,7 +85,7 @@ const CursoCard = ({ title, img, date, slug }) => {
           </Button>
           <Button
             variant="contained"
-            onClick={() => navigate(`/cursos${slug}`)}
+            onClick={() => navigate(`/capacitacion${slug}`)}
             size="small"
           >
             Más información
@@ -93,7 +93,12 @@ const CursoCard = ({ title, img, date, slug }) => {
         </CardActions>
       </Card>
       <Dialog open={open} onClose={handleClose}>
-        <Form formName="cursos" name="curso" value={title} title={title} />
+        <Form
+          formName="capacitacion"
+          name="capacitacion"
+          value={title}
+          title={title}
+        />
       </Dialog>
     </CardContainer>
   );
@@ -121,9 +126,12 @@ const Background = styled(BackgroundImage)`
   padding-top: 56.25%; //16:9
 `;
 export const query = graphql`
-  query Cursos {
+  query Capacitacion {
     allFile(
-      filter: { sourceInstanceName: { eq: "cursos" }, extension: { eq: "md" } }
+      filter: {
+        sourceInstanceName: { eq: "capacitacion" }
+        extension: { eq: "md" }
+      }
     ) {
       edges {
         node {

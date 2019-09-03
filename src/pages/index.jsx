@@ -1,67 +1,13 @@
 import React from "react";
 import Landing from "../components/Landing";
 import SEO from "../components/Head/SEO";
+import FormNetlify from "../components/FormNetlify";
 const index = () => {
   return (
     <div className="home">
       <SEO />
       <Landing />
-      <form
-        hidden
-        action="/"
-        name="personas"
-        method="post"
-        data-netlify="true"
-        data-netlify-honeypot="bot-field"
-        netlify="true "
-      >
-        <input type="hidden" name="form-name" value="personas" />
-        <input type="text" name="name" />
-        <input type="email" name="email" />
-        <input type="celular" name="email" />
-      </form>
-      <form
-        hidden
-        action="/"
-        name="cursos"
-        method="post"
-        data-netlify="true"
-        data-netlify-honeypot="bot-field"
-        netlify="true "
-      >
-        <input type="hidden" name="form-name" value="cursos" />
-        <input type="text" name="name" />
-        <input type="email" name="email" />
-        <input type="celular" name="email" />
-      </form>
-      <form
-        hidden
-        action="/"
-        name="servicios"
-        method="post"
-        data-netlify="true"
-        data-netlify-honeypot="bot-field"
-        netlify="true "
-      >
-        <input type="hidden" name="form-name" value="servicios" />
-        <input type="text" name="name" />
-        <input type="email" name="email" />
-        <input type="celular" name="email" />
-      </form>
-      <form
-        hidden
-        action="/"
-        name="empresas"
-        method="post"
-        data-netlify="true"
-        data-netlify-honeypot="bot-field"
-        netlify="true "
-      >
-        <input type="hidden" name="form-name" value="empresas" />
-        <input type="text" name="name" />
-        <input type="email" name="email" />
-        <input type="celular" name="email" />
-      </form>
+      <FormNetlify />
     </div>
   );
 };

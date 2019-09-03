@@ -86,7 +86,7 @@ const Landing = () => {
         <LandingH1>Creamos</LandingH1>
       </ColorsBackground>
     </Link>,
-    <Link to="/cursos">
+    <Link to="/capacitacion">
       <ColorsBackground colors={[blue, yellow]}>
         <LandingH1>Enseñamos</LandingH1>
       </ColorsBackground>

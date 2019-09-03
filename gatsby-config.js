@@ -29,8 +29,8 @@ module.exports = {
     {
       resolve: "gatsby-source-filesystem",
       options: {
-        name: `cursos`,
-        path: `${__dirname}/src/pages/cursos`
+        name: `capacitacion`,
+        path: `${__dirname}/src/pages/capacitacion`
       }
     },
     {
@@ -56,6 +56,7 @@ module.exports = {
     },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
+    `gatsby-plugin-netlify-cms`,
     {
       resolve: `gatsby-transformer-remark`,
       options: {

@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import styled from "styled-components";
-import { Button, TextField, Typography } from "@material-ui/core";
-const Form = ({ value, name, formName = "contact", title }) => {
+import { Button, TextField, Typography, DialogTitle } from "@material-ui/core";
+const Form = ({ value, name, formName = "contact", title, description }) => {
   const [values, setValues] = useState({
     name: "",
     email: "",
@@ -21,7 +21,8 @@ const Form = ({ value, name, formName = "contact", title }) => {
     >
       <input type="hidden" name="form-name" value={formName} />
       <input type="hidden" name={name} value={value} />
-      {title && <Typography>{title}</Typography>}
+      {title && <DialogTitle id="simple-dialog-title">{title}</DialogTitle>}
+      {description && <Typography>{description}</Typography>}
       <TextField
         value={values.name}
         id="standard-name"

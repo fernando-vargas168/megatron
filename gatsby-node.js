@@ -33,7 +33,9 @@ exports.createPages = ({ graphql, actions }) => {
   const { createPage } = actions;
   const personasTemplate = path.resolve("src/templates/personasTemplate.jsx");
   const empresasTemplate = path.resolve("src/templates/empresasTemplate.jsx");
-  const cursosTemplate = path.resolve("src/templates/cursosTemplate.jsx");
+  const capacitacionTemplate = path.resolve(
+    "src/templates/capacitacionTemplate.jsx"
+  );
   const serviciosTemplate = path.resolve("src/templates/serviciosTemplate.jsx");
   return graphql(
     `
@@ -41,7 +43,7 @@ exports.createPages = ({ graphql, actions }) => {
         allFile(
           filter: {
             sourceInstanceName: {
-              in: ["personas", "empresas", "cursos", "servicios"]
+              in: ["personas", "empresas", "capacitacion", "servicios"]
             }
             extension: { eq: "md" }
           }
@@ -86,6 +88,7 @@ exports.createPages = ({ graphql, actions }) => {
                     }
                   }
                   description
+                  date
                   hardSkills
                   ciudad
                   edad
@@ -116,11 +119,11 @@ exports.createPages = ({ graphql, actions }) => {
       throw result.errors;
     }
     result.data.allFile.edges.forEach(({ node }, i) => {
-      if (node.sourceInstanceName === "cursos") {
+      if (node.sourceInstanceName === "capacitacion") {
         createPage({
-          path: `/cursos${node.childMarkdownRemark.fields.slug}`,
+          path: `/capacitacion${node.childMarkdownRemark.fields.slug}`,
           // path: `a${i}`,
-          component: cursosTemplate,
+          component: capacitacionTemplate,
           context: node.childMarkdownRemark
         });
       } else if (node.sourceInstanceName === "servicios") {
@@ -142,7 +145,7 @@ exports.createPages = ({ graphql, actions }) => {
           const newPath = `/trabajo${
             node.childMarkdownRemark.fields.slug
           }${element.title.replace(/ /gi, "-")}/${`puesto${i}`}`;
-          console.log(newPath);
+          // console.log(newPath);
           createPage({
             path: newPath,
             // path: `a${i}`,

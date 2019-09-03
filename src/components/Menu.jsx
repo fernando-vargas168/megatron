@@ -141,7 +141,7 @@ const MenuDesktop = ({ location, setOpenContact }) => {
         case "servicios":
           setValue(0);
           break;
-        case "cursos":
+        case "capacitacion":
           setValue(1);
           break;
         case "trabajo":
@@ -167,8 +167,8 @@ const MenuDesktop = ({ location, setOpenContact }) => {
         {...a11yProps(0)}
       />
       <Tab
-        onClick={() => navigate("/cursos")}
-        label={"Cursos "}
+        onClick={() => navigate("/capacitacion")}
+        label={"Capacitacion "}
         {...a11yProps(1)}
       />
       <Tab
@@ -178,14 +178,14 @@ const MenuDesktop = ({ location, setOpenContact }) => {
       />
       <Tab
         onClick={() => setOpenContact(true)}
-        label={"Contacto"}
+        label={"Empresa y Contacto"}
         {...a11yProps(3)}
       />
       <Tab
         style={{ marginLeft: "auto" }}
         onClick={() => navigate("/")}
         label={<Logo />}
-        {...a11yProps(3)}
+        {...a11yProps(4)}
       />
     </Tabs>
   );
@@ -233,10 +233,10 @@ const MenuMobile = ({ setOpenContact }) => {
         <MenuItem
           onClick={() => {
             handleClose();
-            navigate("/cursos");
+            navigate("/capacitacion");
           }}
         >
-          Cursos
+          Capacitacion
         </MenuItem>
         <MenuItem
           onClick={() => {
@@ -252,7 +252,7 @@ const MenuMobile = ({ setOpenContact }) => {
             setOpenContact(true);
           }}
         >
-          Contacto
+          Empresa y Contacto
         </MenuItem>
       </MenuResponsive>
     </Toolbar>

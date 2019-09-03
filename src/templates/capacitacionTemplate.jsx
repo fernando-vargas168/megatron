@@ -9,7 +9,7 @@ import { Responsive } from "../styles/vars";
 import ButtonFixed from "../components/ButtonFixed";
 import Form from "../components/Form";
 import SEO from "../components/Head/SEO";
-const cursosTemplate = ({ pageContext }) => {
+const capacitacionTemplate = ({ pageContext }) => {
   const [open, setOpen] = useState(false);
 
   const handleOpen = () => {
@@ -38,7 +38,7 @@ const cursosTemplate = ({ pageContext }) => {
   return (
     <div>
       <SEO
-        title={`MEGATRON CURSOS | ${title}`}
+        title={`MEGATRON CPACITACIÓN | ${title}`}
         description={description}
         image={img}
       />
@@ -77,7 +77,12 @@ const cursosTemplate = ({ pageContext }) => {
         />
         <ButtonFixed buttons={buttons} />
         <Dialog open={open} onClose={handleClose}>
-          <Form formName="cursos" name="curso" value={title} title={title} />
+          <Form
+            formName="capacitacion"
+            name="curso"
+            value={title}
+            title={title}
+          />
         </Dialog>
       </ContainerPage>
     </div>
@@ -98,4 +103,4 @@ const ContainerInformation = styled(props => (
     padding: 10px 16px;
   }
 `;
-export default cursosTemplate;
+export default capacitacionTemplate;
