@@ -65,6 +65,7 @@ collections:
           name: "icon",
           widget: "image",
         }
+      - { label: "Descripción", name: "description", widget: "text" }
 
   - name: "personas" # Used in routes, e.g., /admin/collections/blog
     identifier_field: name
@@ -119,13 +120,13 @@ collections:
       - { label: "estado Civil", name: "estadoCivil", widget: "string" }
       - {
           label: "Habilidades Duras",
-          hit: "Son habilidades técnicas y concretas, ejemplo: uso de excel",
+          hint: "Son habilidades técnicas y concretas, ejemplo: uso de excel",
           name: "hardSkills",
           widget: "list",
         }
       - {
           label: "Habilidades Blandas",
-          hit: "Son habilidades personales e interpersonales, ejemplo: puntualidad, trabajo en equipo",
+          hint: "Son habilidades personales e interpersonales, ejemplo: puntualidad, trabajo en equipo",
           name: "softSkills",
           widget: "list",
         }
@@ -150,7 +151,7 @@ collections:
     slug: "{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
     fields: # The fields for each document, usually in front matter
       - label: "NIT"
-        hit: "Tener cuidado de no repetir números"
+        hint: "Tener cuidado de no repetir números"
         name: "nit"
         widget: "number"
       - label: "Nombre de la empresa"
