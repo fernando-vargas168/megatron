@@ -19,10 +19,13 @@ import {
   Tabs,
   Tab,
   Box,
-  Divider
+  Divider,
+  Dialog
 } from "@material-ui/core";
 import BackgroundImage from "gatsby-background-image";
 import SEO from "../../components/Head/SEO";
+import ButtonFixed from "../../components/ButtonFixed";
+import Form from "../../components/Form";
 function a11yProps(index) {
   return {
     id: `simple-tab-${index}`,
@@ -66,6 +69,8 @@ const trabajo = ({ data }) => {
   );
   const [tab, setTab] = React.useState(0);
   const [favorite, setFavorite] = useState(false);
+  const [openConvocatoria, setOpenConvocatoria] = useState(false);
+  const [openEmpleo, setOpenEmpleo] = useState(false);
   function handleChange(event, newValue) {
     setFavorite(false);
     setTab(newValue);
@@ -313,6 +318,32 @@ const trabajo = ({ data }) => {
           )}
         </TabPanel>
       </ContainerPage>
+      <ButtonFixed
+        buttons={[
+          {
+            text: "Quiero contratar",
+            onClick: () => setOpenConvocatoria(true)
+          },
+          { text: "Busco Empleo", onClick: () => setOpenEmpleo(true) }
+        ]}
+      ></ButtonFixed>
+      <Dialog
+        open={openConvocatoria}
+        onClose={() => setOpenConvocatoria(false)}
+      >
+        <Form
+          formName="convocatoria"
+          title="Publica una convocatoria de empleo"
+          description="nos comunicaremos con su empresa para publicar su convocatoria"
+        ></Form>
+      </Dialog>
+      <Dialog open={openEmpleo} onClose={() => setOpenEmpleo(false)}>
+        <Form
+          formName="empleo"
+          title="Solicitud de Búsqueda de empleo"
+          description="Publica tu curriculum, muchas empresas buscan en nuestro sitio web"
+        ></Form>
+      </Dialog>
     </div>
   );
 };

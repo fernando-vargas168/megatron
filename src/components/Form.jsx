@@ -20,7 +20,7 @@ const Form = ({ value, name, formName = "contact", title, description }) => {
       data-netlify-honeypot="bot-field"
     >
       <input type="hidden" name="form-name" value={formName} />
-      <input type="hidden" name={name} value={value} />
+      {value && <input type="hidden" name={name} value={value} />}
       {title && <DialogTitle id="simple-dialog-title">{title}</DialogTitle>}
       {description && <Typography>{description}</Typography>}
       <TextField

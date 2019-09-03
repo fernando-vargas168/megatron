@@ -15,7 +15,7 @@ const FormNetlify = () => {
         <input type="hidden" name="form-name" value="personas" />
         <input type="text" name="name" />
         <input type="email" name="email" />
-        <input type="celular" name="email" />
+        <input type="celular" name="text" />
       </form>
       <form
         hidden
@@ -29,7 +29,7 @@ const FormNetlify = () => {
         <input type="hidden" name="form-name" value="capacitacion" />
         <input type="text" name="name" />
         <input type="email" name="email" />
-        <input type="celular" name="email" />
+        <input type="celular" name="text" />
       </form>
       <form
         hidden
@@ -43,7 +43,7 @@ const FormNetlify = () => {
         <input type="hidden" name="form-name" value="servicios" />
         <input type="text" name="name" />
         <input type="email" name="email" />
-        <input type="celular" name="email" />
+        <input type="celular" name="text" />
       </form>
       <form
         hidden
@@ -57,7 +57,35 @@ const FormNetlify = () => {
         <input type="hidden" name="form-name" value="empresas" />
         <input type="text" name="name" />
         <input type="email" name="email" />
-        <input type="celular" name="email" />
+        <input type="celular" name="text" />
+      </form>
+      <form
+        hidden
+        action="/"
+        name="buscoEmpleo"
+        method="post"
+        data-netlify="true"
+        data-netlify-honeypot="bot-field"
+        netlify="true "
+      >
+        <input type="hidden" name="form-name" value="buscoEmpleo" />
+        <input type="text" name="name" />
+        <input type="email" name="email" />
+        <input type="celular" name="text" />
+      </form>
+      <form
+        hidden
+        action="/"
+        name="convocatoria"
+        method="post"
+        data-netlify="true"
+        data-netlify-honeypot="bot-field"
+        netlify="true "
+      >
+        <input type="hidden" name="form-name" value="convocatoria" />
+        <input type="text" name="name" />
+        <input type="email" name="email" />
+        <input type="celular" name="text" />
       </form>
     </div>
   );

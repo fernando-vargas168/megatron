@@ -79,7 +79,7 @@ const capacitacionTemplate = ({ pageContext }) => {
         <Dialog open={open} onClose={handleClose}>
           <Form
             formName="capacitacion"
-            name="curso"
+            name="capacitacion"
             value={title}
             title={title}
           />
