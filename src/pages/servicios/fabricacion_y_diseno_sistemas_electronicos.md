@@ -1,5 +1,5 @@
 ---
-title: Fabricación y diseño de sistemas electrónicos
+title: Fabricación y Diseño de Sistemas Electrónicos
 icon: >-
   /img/depositphotos_138398326-stock-illustration-electronics-repair-icon-cartoon-style.jpg
 description: >-
