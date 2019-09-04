@@ -1,5 +1,8 @@
 ---
-title: Automatizacion y control
-icon: /img/automatizacion.svg
-description: Implementación de Sistemas Automáticos de todo tipo con PLCs , REDES INDUSTRIALES O ELECTRONICA tanto para máquinas o procesos completo.
+title: Automatización y control
+icon: /img/imagenes-web2-5.png
+description: >-
+  Implementamos sistemas automáticos de todo tipo con PLCs , REDES INDUSTRIALES
+  ó ELECTRÓNICA tanto para máquinas industriales o procesos completos.
 ---
+
