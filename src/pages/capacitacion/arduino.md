@@ -14,7 +14,14 @@ img: /img/arduino.jpg
 contenido:
   - Introducción a los MÓDULOS ARDUINO
   - Programación de Lenguaje Arduino
-  - "·\_\_\_\_\_\_\_\_ Comunicación serial Shield ·\_\_\_\_\_\_\_\_ Entradas / Salidas  Digitales ·\_\_\_\_\_\_\_\_ Entradas / Salidas  Analógicas ·\_\_\_\_\_\_\_\_ Aplicación de Sensores con Arduino Temperatura   - Ultrasónicos Infrarrojos   - Color Humedad - Movimiento Presión - Caudal ·\_\_\_\_\_\_\_\_ Control de  Servomecanismos ·\_\_\_\_\_\_\_\_ Comunicación con módulos Bluethoot ·\_\_\_\_\_\_\_\_ PROYECTOS CON ARDUINO"
+  - Comunicación serial Shield
+  - Entradas / Salidas  Digitales / Analógicas
+  - >-
+    Sensores /Temperatura  - Ultrasónicos Infrarrojos   - Color - Humedad -
+    Presión - Caudal
+  - Control de  Servomecanismos
+  - Comunicación con módulos Bluethoot
+  - PROYECTOS CON ARDUINO
 requisitosRecomendados:
   - Conocimientos y principios de electrónica digital
 ---
