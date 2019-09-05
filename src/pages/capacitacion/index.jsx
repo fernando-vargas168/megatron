@@ -93,30 +93,6 @@ const Capacitacion = ({ data }) => {
               aria-controls="panel1a-content"
               id="panel1a-header"
             >
-              <Circle style={stylesCategory.refrigeracion} />
-              <Typography>Refrigeración</Typography>
-            </ExpansionPanelSummary>
-            <ExpansionPanelDetails>
-              <CardsContainer container spacing={3}>
-                {refrigeracion.map((element, index) => (
-                  <CursoCard
-                    key={index}
-                    title={element.frontmatter.title}
-                    img={element.frontmatter.img}
-                    date={element.frontmatter.date}
-                    slug={element.fields.slug}
-                    styleAvatar={stylesCategory.refrigeracion}
-                  />
-                ))}
-              </CardsContainer>
-            </ExpansionPanelDetails>
-          </ExpansionPanel>
-          <ExpansionPanel defaultExpanded>
-            <ExpansionPanelSummary
-              expandIcon={<ExpandMoreIcon />}
-              aria-controls="panel1a-content"
-              id="panel1a-header"
-            >
               <Circle style={stylesCategory.automatizacion} />
               <Typography>Automatización</Typography>
             </ExpansionPanelSummary>
@@ -154,6 +130,30 @@ const Capacitacion = ({ data }) => {
                     date={element.frontmatter.date}
                     slug={element.fields.slug}
                     styleAvatar={stylesCategory.electricidad}
+                  />
+                ))}
+              </CardsContainer>
+            </ExpansionPanelDetails>
+          </ExpansionPanel>
+          <ExpansionPanel defaultExpanded>
+            <ExpansionPanelSummary
+              expandIcon={<ExpandMoreIcon />}
+              aria-controls="panel1a-content"
+              id="panel1a-header"
+            >
+              <Circle style={stylesCategory.refrigeracion} />
+              <Typography>Refrigeración</Typography>
+            </ExpansionPanelSummary>
+            <ExpansionPanelDetails>
+              <CardsContainer container spacing={3}>
+                {refrigeracion.map((element, index) => (
+                  <CursoCard
+                    key={index}
+                    title={element.frontmatter.title}
+                    img={element.frontmatter.img}
+                    date={element.frontmatter.date}
+                    slug={element.fields.slug}
+                    styleAvatar={stylesCategory.refrigeracion}
                   />
                 ))}
               </CardsContainer>
