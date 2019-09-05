@@ -23,6 +23,7 @@ import CheckCircleIcon from "@material-ui/icons/CheckCircle";
 import EmailIcon from "@material-ui/icons/Email";
 import PinDropIcon from "@material-ui/icons/PinDrop";
 import PhoneIcon from "@material-ui/icons/Phone";
+import BugReportIcon from "@material-ui/icons/BugReport";
 import { makeStyles } from "@material-ui/core/styles";
 import { Whatsapp, Facebook, Youtube } from "../../lib/icons";
 import { contacto as contact } from "../../site-config/site-config";
@@ -144,6 +145,11 @@ const Contact = ({ openContact, setOpenContact }) => {
             href={`tel:${contact.tel.value}`}
           />
         )}
+        <ListItemIcon
+          text={"Reportar un bug"}
+          icon={<BugReportIcon className={classes.icon} />}
+          href={`https://docs.google.com/forms/d/e/1FAIpQLScneVat0_Y2wQizZ4-0-YKtwvAxqHgKnfxMwEHDzem-65b1tw/viewform?usp=sf_link`}
+        />
       </List>
     </Dialog>
   );

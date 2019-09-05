@@ -235,9 +235,9 @@ const CursoCard = ({ title, img, date, slug, styleAvatar }) => {
           subheader={date}
         />
         <Background fluid={img.childImageSharp.fluid} />
-        <CardContent>
+        {/* <CardContent>
           <Typography>{title}</Typography>
-        </CardContent>
+        </CardContent> */}
         <CardActions>
           <Button
             onClick={handleOpen}
