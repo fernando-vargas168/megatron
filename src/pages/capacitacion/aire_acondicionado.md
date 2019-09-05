@@ -2,8 +2,9 @@
 title: 'Aires Acondicionados  '
 description: >-
   Aprenderá el funcionamiento, instalación y mantenimiento de equipos de aire
-  acondicionado ventana, split centrales, ademas des soldadura , manejo de
-  manómetros vaciado y carga de gas y reparación de tarjetas electrónicas.
+  acondicionado ventana, split centrales, ademas de equipos de soldadura ,
+  manejo de manómetro, vaciado y carga de gas y reparación de tarjetas
+  electrónicas.
 category: refrigeracion
 date: 25th Sep 19
 img: /img/aire.png
