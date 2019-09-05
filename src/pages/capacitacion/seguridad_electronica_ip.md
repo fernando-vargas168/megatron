@@ -1,5 +1,5 @@
 ---
-title: Seguridad Electrónica IP.
+title: Seguridad Electrónica IP
 description: >-
   Reconocer todos los componentes utilizados en los sistemas CCTV manejo
   configuración de redes, monitoreo de cámaras IP y Wifi en vivo, utilización de
