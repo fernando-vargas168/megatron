@@ -13,33 +13,25 @@ contenido:
   - Conceptos de ELECTRICIDAD INDUSTRIAL
   - Simbología y normas
   - Dispositivos de automatización eléctrica
-  - Pulsadores
-  - Interruptores
-  - Llaves Selectoras de distintos tiempos
-  - Contactores
-  - Relés de mando
-  - Relés Térmicos
-  - Guardamotores
-  - Relés Falta de Fases
-  - Temporizadores
-  - Circuitos de Automatismos
-  - Arranque Directo
+  - >-
+    Accionamientos (Pulsadores – Interruptores -Llaves Selectoras-Finales de
+    carrera)
+  - >-
+    Elementos de protección (Relés Térmicos – Guardamotores - Relés Falta de
+    Fase)
+  - Dispositivos de control (Contactores - Relés de mando -Temporizadores)
+  - Circuitos de Automatismos (Arranque Directo
   - Arranque Secuencial
-  - Arranque Inversión de Giro de un Motor
-  - Arranque Estrella triangulo
-  - . Instrumentación Industrial
-  - Sistemas de Control
-  - Lazo Abierto
-  - Lazo Cerrado
-  - Sensores de proximidad ( inductivos
-  - capacitivos
-  - fotoeléctricos)
-  - Sensores de Nivel (Electrodos
-  - Boya)
-  - Sensores de temperatura
-  - Arrancadores Suaves
-  - Variadores de Frecuencia
-  - Puesta en marcha de procesos reales.
+  - Arranque Inversión de Giro- Arranque estrella triangulo)
+  - >-
+    Instrumentación Industrial (Sistemas de Control - Lazo Abierto - Lazo
+    Cerrado)
+  - Sensores de proximidad (inductivos – capacitivos - fotoeléctricos)
+  - Sensores de Nivel (Electrodos - Boya)
+  - Sensores de temperatura (Termocuplas
+  - Controladores)
+  - Arrancadores Electrónicos (Arrancadores Suaves - Variadores de Frecuencia)
+  - Puesta en marcha de procesos reales
 requisitosRecomendados:
   - Conocimientos de instalaciones eléctricas domiciliarias
 ---
