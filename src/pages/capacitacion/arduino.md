@@ -8,7 +8,7 @@ description: >
   industriales, instrumentación
 
   automatización, entretenimiento.
-category: electronica
+category: mecatronica
 date: 3rd Oct 19
 img: /img/arduino.jpg
 contenido:
