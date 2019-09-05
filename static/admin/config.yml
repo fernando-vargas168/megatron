@@ -368,5 +368,5 @@ collections:
                     widget: boolean
                     default: true
                   - label: Escribir Teléfono
-                    name: tel
+                    name: value
                     widget: string
