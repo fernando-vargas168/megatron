@@ -1,12 +1,12 @@
 ---
 title: Nano PLCS
 description: >-
-  Aprenderá el manejo de Minicontroladores programables para aplicaciones de
+  Aprenderá el manejo de minicontroladores programables para aplicaciones de
   automatización de gama baja a media aplicados en problemas domésticos
   comerciales e industriales.
 category: automatizacion
 date: 18th Sep 19
-img: /img/nano.jpg
+img: /img/nanoplcs.png
 contenido:
   - Fundamentos Teóricos de PLC modelo EASY DE EATON
   - Descripción y explicación de instrucciones básicas
