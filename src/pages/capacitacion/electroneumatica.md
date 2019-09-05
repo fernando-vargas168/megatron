@@ -1,18 +1,25 @@
 ---
 title: Electroneumática
-img: /img/electroneumatica.jpg
-description: "Conocer el uso de esta novedosa tarjeta electrónica con Microcontroladores, y aplicable con sistemas robóticos, de telecomunicación, industriales, instrumentación automatizada."
-contenido:
-  - Introducción a módulos de Arduino
-  - Programación de Lenguaje Arduino
-  - Comunicación serial Shield
-  - Entradas / Salidas Digitales
-  - Entradas / Salidas Analógicas
-  - Aplicación de sensores
-  - Control de Servomecanismos
-  - Comunicación con módulos Bluethoot
-requisitosRecomendados:
-  - Conocimientos de principios de electrónica digital
-date: Lunes 19 de agosto 2019
+description: >-
+  Manejar sistemas de automatización mediante aire comprimido muy utilizado en
+  plantas y fábricas del sector industrial fusionado con la parte eléctrica,
+  cilindros , sensores , manejo de electroválvulas los mismos controlados con
+  relés o PLCs. 
 category: automatizacion
+date: 9th Nov 19
+img: /img/electroneumatica.png
+contenido:
+  - Introducción a la neumática
+  - Propiedades de aire comprimido
+  - Simbologia electroneumática
+  - Tipos de accionamientos
+  - Válvulas y electroválvulas
+  - Cilindros
+  - Sensores y actuadores
+  - Automatización de circuitos y conexiones electroneumáticas
+  - Puesta en marcha de ejercicios propuestos.
+requisitosRecomendados:
+  - Automatización Eléctrica
+  - Nano PLCs
 ---
+
