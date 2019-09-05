@@ -217,154 +217,156 @@ collections:
             hint: "Ejemplo: licencia de conducir"
             name: "otrosRequisitos"
             widget: "list"
-  - name: "siteConfig" # Used in routes, e.g., /admin/collections/blog
+  - label: "Configuración del sitio web"
+    name: "siteConfig" # Used in routes, e.g., /admin/collections/blog
     identifier_field: name
-    label: "Configuración del Sitio Web" # Used in the UI
-    folder: "site-config/site-config-custom.yml" # The path to the folder where the documents are stored
     create: false # Allow users to create new documents in this collection
-    slug: "{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
-    fields: # The fields for each document, usually in front matter
-      - label: "Restaurar Valores por defecto"
-        hint: "Esto restaurará el sitio a su estado inicial"
-        name: "default"
-        widget: "boolean"
-      - label: "Servicios"
-        hint: "Esto restaurará el sitio a su estado inicial"
-        name: "servicios"
-        widget: "object"
+    files:
+      - label: Configuración personalizada
+        name: site-config
+        file: site-config/site-config-custom.yml
         fields:
-          - label: "Imagen de Fondo"
-            name: "background"
-            widget: image
-          - label: "Descripción"
-            hint: "Texto corto que indica al usuario de qué trata la página de Servicios"
-            name: text
-            widget: text
-      - label: "Capacitación"
-        hint: "Esto restaurará el sitio a su estado inicial"
-        name: "capacitacion"
-        widget: "object"
-        fields:
-          - label: "Imagen de Fondo"
-            name: "background"
-            widget: image
-          - label: "Descripción"
-            hint: "Texto corto que indica al usuario de qué trata la página de Capacitación"
-            name: text
-            widget: text
-      - label: "Trabajo"
-        hint: "Esto restaurará el sitio a su estado inicial"
-        name: "trabajo"
-        widget: "object"
-        fields:
-          - label: "Imagen de Fondo"
-            name: "background"
-            widget: image
-          - label: "Descripción"
-            hint: "Texto corto que indica al usuario de qué trata la página de Trabajo"
-            name: text
-            widget: text
-      - label: "Contacto"
-        hint: "Información de contacto"
-        name: "contacto"
-        widget: "object"
-        fields:
-          - label: "Información de la empresa"
-            name: "info"
-            widget: list
+          - label: "Restaurar Valores por defecto"
+            hint: "Esto restaurará el sitio a su estado inicial"
+            name: "default"
+            widget: "boolean"
+          - label: "Servicios"
+            hint: "Esto restaurará el sitio a su estado inicial"
+            name: "servicios"
+            widget: "object"
             fields:
-              - label: Título
-                name: title
-                widget: string
-              - label: Descripción
-                name: description
+              - label: "Imagen de Fondo"
+                name: "background"
+                widget: image
+              - label: "Descripción"
+                hint: "Texto corto que indica al usuario de qué trata la página de Servicios"
+                name: text
                 widget: text
-          - label: "Facebook"
-            name: facebook
-            widget: object
+          - label: "Capacitación"
+            hint: "Esto restaurará el sitio a su estado inicial"
+            name: "capacitacion"
+            widget: "object"
             fields:
-              - label: Visibilidad
-                name: visible
-                widget: boolean
-                default: true
-              - label: URL
-                name: url
-                hint: link de la página de Facebook
-                widget: string
-              - label: Texto
+              - label: "Imagen de Fondo"
+                name: "background"
+                widget: image
+              - label: "Descripción"
+                hint: "Texto corto que indica al usuario de qué trata la página de Capacitación"
                 name: text
-                hint: Si desea puede agregar un corto texto al lado del ícono de Facebook
-                required: false
-                widget: string
-          - label: "Youtube"
-            name: youtube
-            widget: object
+                widget: text
+          - label: "Trabajo"
+            hint: "Esto restaurará el sitio a su estado inicial"
+            name: "trabajo"
+            widget: "object"
             fields:
-              - label: Visibilidad
-                name: visible
-                widget: boolean
-                default: true
-              - label: URL
-                name: url
-                hint: link de la página de Youtube
-                widget: string
-              - label: Texto
+              - label: "Imagen de Fondo"
+                name: "background"
+                widget: image
+              - label: "Descripción"
+                hint: "Texto corto que indica al usuario de qué trata la página de Trabajo"
                 name: text
-                hint: Si desea puede agregar un corto texto al lado del ícono de Youtube
-                required: false
-                widget: string
-          - label: "whatsapp"
-            name: whatsapp
-            widget: object
+                widget: text
+          - label: "Contacto"
+            hint: "Información de contacto"
+            name: "contacto"
+            widget: "object"
             fields:
-              - label: Visibilidad
-                name: visible
-                widget: boolean
-                default: true
-              - label: URL
-                name: url
-                hint: link de la página de whatsapp
-                widget: string
-              - label: Texto
-                name: text
-                hint: Si desea puede agregar un corto texto al lado del ícono de whatsapp
-                required: false
-                widget: string
-          - label: "email"
-            name: email
-            widget: object
-            fields:
-              - label: Visibilidad
-                name: visible
-                widget: boolean
-                default: true
-              - label: Escribir Email
-                name: value
-                widget: string
+              - label: "Información de la empresa"
+                name: "info"
+                widget: list
+                fields:
+                  - label: Título
+                    name: title
+                    widget: string
+                  - label: Descripción
+                    name: description
+                    widget: text
+              - label: "Facebook"
+                name: facebook
+                widget: object
+                fields:
+                  - label: Visibilidad
+                    name: visible
+                    widget: boolean
+                    default: true
+                  - label: URL
+                    name: url
+                    hint: link de la página de Facebook
+                    widget: string
+                  - label: Texto
+                    name: text
+                    hint: Si desea puede agregar un corto texto al lado del ícono de Facebook
+                    required: false
+                    widget: string
+              - label: "Youtube"
+                name: youtube
+                widget: object
+                fields:
+                  - label: Visibilidad
+                    name: visible
+                    widget: boolean
+                    default: true
+                  - label: URL
+                    name: url
+                    hint: link de la página de Youtube
+                    widget: string
+                  - label: Texto
+                    name: text
+                    hint: Si desea puede agregar un corto texto al lado del ícono de Youtube
+                    required: false
+                    widget: string
+              - label: "whatsapp"
+                name: whatsapp
+                widget: object
+                fields:
+                  - label: Visibilidad
+                    name: visible
+                    widget: boolean
+                    default: true
+                  - label: Número de Whatsapp
+                    name: value
+                    hint: "IMPORTANTE: NO ESCRIBIR el prefijo del país +591"
+                    widget: string
+                  - label: Mensaje
+                    name: text
+                    hint: Este será el mensaje que los usuarios le enviarán al hacer click en el contacto de Whatsapp
+                    required: false
+                    widget: string
+              - label: "email"
+                name: email
+                widget: object
+                fields:
+                  - label: Visibilidad
+                    name: visible
+                    widget: boolean
+                    default: true
+                  - label: Escribir Email
+                    name: value
+                    widget: string
 
-          - label: "Dirección"
-            name: address
-            widget: object
-            fields:
-              - label: Visibilidad
-                name: visible
-                widget: boolean
-                default: true
-              - label: URL
-                name: url
-                hint: link de la dirección en Google Maps (u otro servicio de GPS satelital en internet)
-                widget: string
-              - label: Escribir la dirección de la empresa
-                name: text
-                widget: text
-          - label: "Teléfono"
-            name: tel
-            widget: object
-            fields:
-              - label: Visibilidad
-                name: visible
-                widget: boolean
-                default: true
-              - label: Escribir Teléfono
+              - label: "Dirección"
+                name: address
+                widget: object
+                fields:
+                  - label: Visibilidad
+                    name: visible
+                    widget: boolean
+                    default: true
+                  - label: URL
+                    name: url
+                    hint: link de la dirección en Google Maps (u otro servicio de GPS satelital en internet)
+                    widget: string
+                  - label: Escribir la dirección de la empresa
+                    name: text
+                    widget: text
+              - label: "Teléfono"
                 name: tel
-                widget: string
+                widget: object
+                fields:
+                  - label: Visibilidad
+                    name: visible
+                    widget: boolean
+                    default: true
+                  - label: Escribir Teléfono
+                    name: tel
+                    widget: string
