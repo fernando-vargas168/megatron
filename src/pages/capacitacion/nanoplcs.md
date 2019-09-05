@@ -1,18 +1,24 @@
 ---
 title: Nano PLCS
-img: /img/nano.jpg
-description: "Conocer el uso de esta novedosa tarjeta electrónica con Microcontroladores, y aplicable con sistemas robóticos, de telecomunicación, industriales, instrumentación automatizada."
-contenido:
-  - Introducción a módulos de Arduino
-  - Programación de Lenguaje Arduino
-  - Comunicación serial Shield
-  - Entradas / Salidas Digitales
-  - Entradas / Salidas Analógicas
-  - Aplicación de sensores
-  - Control de Servomecanismos
-  - Comunicación con módulos Bluethoot
-requisitosRecomendados:
-  - Conocimientos de principios de electrónica digital
-date: Lunes 19 de agosto 2019
+description: >-
+  Aprenderá el manejo de Minicontroladores programables para aplicaciones de
+  automatización de gama baja a media aplicados en problemas domésticos
+  comerciales e industriales.
 category: automatizacion
+date: 18th Sep 19
+img: /img/nano.jpg
+contenido:
+  - Fundamentos Teóricos de PLC modelo EASY DE EATON
+  - Descripción y explicación de instrucciones básicas
+  - Entradas y Salidas
+  - Temporizadores
+  - Contadores
+  - Relés Auxiliares
+  - Manejo de señales Analógicas
+  - Puesta en marcha de procesos de automatización cortos.
+requisitosRecomendados:
+  - Conocimientos y principios basicos de Electricidad
+  - Conocimientos de Electricidad Domiciliaria
+  - Conocimientos de Contactares Reles.
 ---
+
