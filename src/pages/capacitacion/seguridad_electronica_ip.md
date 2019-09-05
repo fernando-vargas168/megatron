@@ -1,18 +1,26 @@
 ---
-title: Seguridad electrónica IP
-img: /img/seguridad_electronica_ip.jpg
-description: "Conocer el uso de esta novedosa tarjeta electrónica con Microcontroladores, y aplicable con sistemas robóticos, de telecomunicación, industriales, instrumentación automatizada."
-contenido:
-  - Introducción a módulos de Arduino
-  - Programación de Lenguaje Arduino
-  - Comunicación serial Shield
-  - Entradas / Salidas Digitales
-  - Entradas / Salidas Analógicas
-  - Aplicación de sensores
-  - Control de Servomecanismos
-  - Comunicación con módulos Bluethoot
-requisitosRecomendados:
-  - Conocimientos de principios de electrónica digital
-date: Lunes 19 de agosto 2019
+title: Seguridad Electrónica IP.
+description: >-
+  Reconocer todos los componentes utilizados en los sistemas CCTV manejo
+  configuración de redes, monitoreo de cámaras IP y Wifi en vivo, utilización de
+  dispositivos instalar cámaras de seguridad y programación de DVR  para
+  visualizarlas en tiempo real a través de internet por medio de diversos
+  dispositivos, aplicación de sensores de movimiento y cercas eléctricas para
+  protección perimetral.
 category: electronica
+date: 18th Sep 19
+img: /img/seguridad_electronica_ip.jpg
+contenido:
+  - Introducción a cámaras de seguridad
+  - Circuito cerrado CCTV
+  - Instalación y configuración de cámaras IP
+  - Cableado e instalación con cable coaxial y UTP
+  - Configuración de DVR/ NVR/ HIBRIDOS
+  - Conexión configuración de redes
+  - Direcciones IP / Protocolos
+  - Control de acceso / Cerraduras eléctricas/ Sensores/ alarmas
+  - Cercas  eléctricas
+requisitosRecomendados:
+  - Conocimientos y principios de Electricidad Aplicada.
 ---
+
