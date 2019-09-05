@@ -1,7 +1,13 @@
 ---
-title: Automatismo Eléctricos
-img: /img/automatizacion.jpg
-description: "Conocer el uso de esta novedosa tarjeta electrónica con Microcontroladores, y aplicable con sistemas robóticos, de telecomunicación, industriales, instrumentación automatizada."
+title: Automatismos Eléctricos
+description: >-
+  Aprenda a diseñar y armar tableros de control con tecnología eléctrica
+  electrónica y sensórica para cualquier tipo de máquinas o procesos
+  automatizados; Puesta en marcha de motores con arrancadores suaves y
+  variadores de frecuencia.
+category: automatizacion
+date: 19th Aug 19
+img: /img/automatismos.png
 contenido:
   - Introducción a módulos de Arduino
   - Programación de Lenguaje Arduino
@@ -13,6 +19,5 @@ contenido:
   - Comunicación con módulos Bluethoot
 requisitosRecomendados:
   - Conocimientos de principios de electrónica digital
-date: Lunes 19 de agosto 2019
-category: automatizacion
 ---
+
