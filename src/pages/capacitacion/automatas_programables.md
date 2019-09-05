@@ -9,14 +9,7 @@ category: automatizacion
 date: 15th Jul 19
 img: /img/programacionplcs.png
 contenido:
-  - Introducción a módulos de Arduino
-  - Programación de Lenguaje Arduino
-  - Comunicación serial Shield
-  - Entradas / Salidas Digitales
-  - Entradas / Salidas Analógicas
-  - Aplicación de sensores
-  - Control de Servomecanismos
-  - Comunicación con módulos Bluethoot
+  - ''
 requisitosRecomendados:
   - Conocimientos de principios de electrónica digital
 ---
