@@ -7,6 +7,7 @@ import ColorsBackground from "./ColorsBackground";
 import { Container, Box } from "@material-ui/core";
 import { Responsive, Fonts } from "../styles/vars";
 import Img from "gatsby-image";
+
 const HeaderPage = ({
   icon,
   img,

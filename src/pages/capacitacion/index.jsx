@@ -25,39 +25,48 @@ import ContainerPage from "../../components/ContainerPage";
 import HeaderPage from "../../components/HeaderPage";
 import Form from "../../components/Form";
 import SEO from "../../components/Head/SEO";
+import find from "../../../lib/findDataPages";
 
 const Capacitacion = ({ data }) => {
+  const { customBackground, customText } = find(data, "capacitacion");
   let capacitacion = []; //SEO
 
   let refrigeracion = []; //Category
   let electricidad = []; //Category
   let electronica = []; //Category
   let automatizacion = []; //Category
+  let mecatronica = []; //Category
   const stylesCategory = {
     refrigeracion: { color: "#00d8f9" },
     electricidad: { color: "#e5383b" },
     electronica: { color: "#145f3a" },
-    automatizacion: { color: "#ff3f00" }
+    automatizacion: { color: "#ff3f00" },
+    mecatronica: { color: "#231991" }
   };
   for (let i = 0; i < data.allFile.edges.length; i++) {
-    capacitacion.push(
-      data.allFile.edges[i].node.childMarkdownRemark.frontmatter.title
-    );
-    switch (
-      data.allFile.edges[i].node.childMarkdownRemark.frontmatter.category
-    ) {
-      case "refrigeracion":
-        refrigeracion.push(data.allFile.edges[i].node.childMarkdownRemark);
-        break;
-      case "electricidad":
-        electricidad.push(data.allFile.edges[i].node.childMarkdownRemark);
-        break;
-      case "electronica":
-        electronica.push(data.allFile.edges[i].node.childMarkdownRemark);
-        break;
-      case "automatizacion":
-        automatizacion.push(data.allFile.edges[i].node.childMarkdownRemark);
-        break;
+    if (data.allFile.edges[i].node.extension == "md") {
+      capacitacion.push(
+        data.allFile.edges[i].node.childMarkdownRemark.frontmatter.title
+      );
+      switch (
+        data.allFile.edges[i].node.childMarkdownRemark.frontmatter.category
+      ) {
+        case "refrigeracion":
+          refrigeracion.push(data.allFile.edges[i].node.childMarkdownRemark);
+          break;
+        case "electricidad":
+          electricidad.push(data.allFile.edges[i].node.childMarkdownRemark);
+          break;
+        case "electronica":
+          electronica.push(data.allFile.edges[i].node.childMarkdownRemark);
+          break;
+        case "automatizacion":
+          automatizacion.push(data.allFile.edges[i].node.childMarkdownRemark);
+          break;
+        case "mecatronica":
+          mecatronica.push(data.allFile.edges[i].node.childMarkdownRemark);
+          break;
+      }
     }
   }
 
@@ -70,9 +79,10 @@ const Capacitacion = ({ data }) => {
       />
       <ContainerPage className="Capacitacion" style={{ minHeight: "200vh" }}>
         <HeaderPage
+          background={customBackground}
           icon="/img/capacitacionCover.svg"
           text1="Enseñamos"
-          text2="Curso Taller"
+          text2={customText}
           alt="Ingeniero dando clases / clases de ingeniería de Megatron"
           bottom="true"
         />
@@ -156,7 +166,7 @@ const Capacitacion = ({ data }) => {
               id="panel1a-header"
             >
               <Circle style={stylesCategory.electronica} />
-              <Typography>Electrónica | Mecatrónica</Typography>
+              <Typography>Electrónica</Typography>
             </ExpansionPanelSummary>
             <ExpansionPanelDetails>
               <CardsContainer container spacing={3}>
@@ -168,6 +178,31 @@ const Capacitacion = ({ data }) => {
                     date={element.frontmatter.date}
                     slug={element.fields.slug}
                     styleAvatar={stylesCategory.electronica}
+                  />
+                ))}
+              </CardsContainer>
+            </ExpansionPanelDetails>
+          </ExpansionPanel>
+
+          <ExpansionPanel defaultExpanded>
+            <ExpansionPanelSummary
+              expandIcon={<ExpandMoreIcon />}
+              aria-controls="panel1a-content"
+              id="panel1a-header"
+            >
+              <Circle style={stylesCategory.mecatronica} />
+              <Typography>Mecatrónica</Typography>
+            </ExpansionPanelSummary>
+            <ExpansionPanelDetails>
+              <CardsContainer container spacing={3}>
+                {mecatronica.map((element, index) => (
+                  <CursoCard
+                    key={index}
+                    title={element.frontmatter.title}
+                    img={element.frontmatter.img}
+                    date={element.frontmatter.date}
+                    slug={element.fields.slug}
+                    styleAvatar={stylesCategory.mecatronica}
                   />
                 ))}
               </CardsContainer>
@@ -265,12 +300,14 @@ export const query = graphql`
   query Capacitacion {
     allFile(
       filter: {
-        sourceInstanceName: { eq: "capacitacion" }
-        extension: { eq: "md" }
+        sourceInstanceName: { in: ["capacitacion", "siteConfig"] }
+        extension: { in: ["md", "yml"] }
       }
     ) {
       edges {
         node {
+          relativePath
+          extension
           childMarkdownRemark {
             frontmatter {
               title
@@ -288,13 +325,19 @@ export const query = graphql`
               slug
             }
           }
-        }
-      }
-    }
-    file(relativePath: { eq: "automatas_programables.jpg" }) {
-      childImageSharp {
-        fluid {
-          ...GatsbyImageSharpFluid
+          childSiteConfigYaml {
+            default
+            capacitacion {
+              background {
+                childImageSharp {
+                  fluid {
+                    ...GatsbyImageSharpFluid
+                  }
+                }
+              }
+              text
+            }
+          }
         }
       }
     }

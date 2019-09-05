@@ -18,12 +18,16 @@ import HeaderPage from "../../components/HeaderPage.jsx";
 import ContainerPage from "../../components/ContainerPage.jsx";
 import Form from "../../components/Form";
 import SEO from "../../components/Head/SEO.jsx";
-
+import find from "../../../lib/findDataPages";
 const servicios = ({ data }) => {
+  const { customBackground, customText } = find(data, "servicios");
+
   let servicios = [];
-  data.allFile.edges.forEach(({ node }) =>
-    servicios.push(node.childMarkdownRemark.frontmatter.title)
-  );
+  data.allFile.edges.forEach(({ node }) => {
+    if (node.extension === "md") {
+      servicios.push(node.childMarkdownRemark.frontmatter.title);
+    }
+  });
 
   return (
     <div>
@@ -34,22 +38,26 @@ const servicios = ({ data }) => {
       />
       <ContainerPage className="Servicios">
         <HeaderPage
+          background={customBackground}
           icon="/img/serviciosCover.svg"
           text1="Creamos"
-          text2="Servicios y proyectos"
+          text2={customText}
           altImg="Persona Dibujando un plano de un cohete en representación de los servicios de Megatron"
           bottom="true"
         />
         <CardsContainer container spacing={3}>
-          {data.allFile.edges.map(({ node }, index) => (
-            <CardChild
-              key={index}
-              title={node.childMarkdownRemark.frontmatter.title}
-              description={node.childMarkdownRemark.frontmatter.description}
-              icon={node.childMarkdownRemark.frontmatter.icon}
-              slug={node.childMarkdownRemark.fields.slug}
-            />
-          ))}
+          {data.allFile.edges.map(
+            ({ node }, index) =>
+              node.extension === "md" && (
+                <CardChild
+                  key={index}
+                  title={node.childMarkdownRemark.frontmatter.title}
+                  description={node.childMarkdownRemark.frontmatter.description}
+                  icon={node.childMarkdownRemark.frontmatter.icon}
+                  slug={node.childMarkdownRemark.fields.slug}
+                />
+              )
+          )}
         </CardsContainer>
       </ContainerPage>
     </div>
@@ -122,12 +130,14 @@ export const query = graphql`
   query Servicios {
     allFile(
       filter: {
-        sourceInstanceName: { eq: "servicios" }
-        extension: { eq: "md" }
+        sourceInstanceName: { in: ["servicios", "siteConfig"] }
+        extension: { in: ["md", "yml"] }
       }
     ) {
       edges {
         node {
+          relativePath
+          extension
           childMarkdownRemark {
             fields {
               slug
@@ -136,6 +146,19 @@ export const query = graphql`
               title
               icon
               description
+            }
+          }
+          childSiteConfigYaml {
+            default
+            servicios {
+              background {
+                childImageSharp {
+                  fluid {
+                    ...GatsbyImageSharpFluid
+                  }
+                }
+              }
+              text
             }
           }
         }

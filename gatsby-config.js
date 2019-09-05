@@ -54,6 +54,14 @@ module.exports = {
         name: "img"
       }
     },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `${__dirname}/site-config`,
+        name: "siteConfig"
+      }
+    },
+    `gatsby-transformer-yaml-plus`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     `gatsby-plugin-netlify-cms`,

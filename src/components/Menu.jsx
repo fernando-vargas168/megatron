@@ -40,7 +40,7 @@ const LogoStyled = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  ${Responsive.mobile} {
+  ${Responsive.tablet} {
     flex-direction: row-reverse;
   }
   img {
@@ -48,13 +48,13 @@ const LogoStyled = styled.div`
   }
   .logotipo {
     width: 150px;
-    ${Responsive.miniTablet} {
+    ${Responsive.tablet} {
       display: none;
     }
   }
   .name {
     display: none;
-    ${Responsive.mobile} {
+    ${Responsive.tablet} {
       width: 130px;
       margin-left: 10px;
       display: flex;
@@ -63,10 +63,10 @@ const LogoStyled = styled.div`
   .isologo {
     margin-left: 10px;
     width: 50px;
-    ${Responsive.miniTablet} {
+    ${Responsive.tablet} {
       margin-left: 0px;
     }
-    ${Responsive.mobile} {
+    ${Responsive.tablet} {
       width: 30px;
     }
   }
@@ -111,13 +111,13 @@ const Menu = ({ location }) => {
         position="static"
         color="inherit"
       >
-        <ResponsiveComponent mobile>
+        <ResponsiveComponent mobile tablet>
           <MenuMobile
             openContact={openContact}
             setOpenContact={setOpenContact}
           />
         </ResponsiveComponent>
-        <ResponsiveComponent tablet desktop>
+        <ResponsiveComponent desktop>
           <MenuDesktop
             location={location}
             openContact={openContact}

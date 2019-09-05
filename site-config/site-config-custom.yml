@@ -1,0 +1,36 @@
+default: false
+servicios:
+  background: /img/background.png
+  text: Servicios | Proyectos
+capacitacion:
+  background: /img/background.png
+  text: Cursos | Talleres
+trabajo:
+  background: /img/background.png
+  text: Encuentra Trabajo | Busca trabajo
+contacto:
+  info:
+    - title: Megatron
+      description: Somos una empresa dinámica y distinta dedicada al desarrollo de ingeniería, investigación, capacitación y actualización características necesarias para avanzar en el área industrial BOLIVIANA
+  facebook:
+    visible: true
+    url: https://www.facebook.com/Megatron-1457765754508825/
+    text:
+  youtube:
+    visible: true
+    url: https://www.youtube.com/channel/UCm9e7feD8F3qrn6hFUX_aIw
+    text:
+  whatsapp:
+    visible: true
+    value: 70497120
+    text: Hola Megatron, vengo de su sitio web
+  email:
+    visible: true
+    value: ing_fvargas@hotmail.com
+  address:
+    visible: true
+    text: Av. Cañoto \# 113 esq. Buenos Aires | Santa Cruz | Bolivia
+    url: https://www.google.com/maps/place/Megatron+Empresa+Industrial/@-17.7814131,-63.1908203,17z/data=!3m1!4b1!4m5!3m4!1s0x93f1e9cd70711897:0x7a8e9bc0f6959a56!8m2!3d-17.7814182!4d-63.1886316
+  tel:
+    visible: true
+    value: 3303219

@@ -12,7 +12,8 @@ import {
   Snackbar,
   SnackbarContent,
   Paper,
-  Box
+  Box,
+  Grid
 } from "@material-ui/core";
 import { green } from "@material-ui/core/colors";
 import { CopyToClipboard } from "react-copy-to-clipboard";
@@ -24,12 +25,13 @@ import PinDropIcon from "@material-ui/icons/PinDrop";
 import PhoneIcon from "@material-ui/icons/Phone";
 import { makeStyles } from "@material-ui/core/styles";
 import { Whatsapp, Facebook, Youtube } from "../../lib/icons";
+import { contacto as contact } from "../../site-config/site-config";
+
 const useStyles = makeStyles(theme => ({
   paper: {
-    marginTop: "75px",
-    margin: "0 16px",
+    // width: "300px"
     padding: "16px",
-    width: "300px"
+    margin: "8px 0"
   },
   listButton: {
     width: "100%",
@@ -37,6 +39,11 @@ const useStyles = makeStyles(theme => ({
   },
   icon: {
     marginRight: "7px"
+  },
+  gridPaper: {
+    margin: "0 16px",
+    marginTop: "75px",
+    maxWidth: "calc(100% - 80px)"
   },
   success: {
     backgroundColor: green[600]
@@ -46,7 +53,6 @@ const useStyles = makeStyles(theme => ({
     alignItems: "center"
   }
 }));
-
 const Contact = ({ openContact, setOpenContact }) => {
   const classes = useStyles();
   return (
@@ -70,59 +76,79 @@ const Contact = ({ openContact, setOpenContact }) => {
           <Typography variant="h6">Contacto Megatron</Typography>
         </Toolbar>
       </AppBar>
-      <Box display="flex" justifyContent="center" alignItems="center">
-        <Paper className={classes.paper}>
-          <Typography variant="h5" component="h3">
-            Megatron
-          </Typography>
-          <Typography component="p">
-            Somos una empresa dinámica y distinta dedicada al desarrollo de
-            ingeniería, investigación, capacitación y actualización
-            características necesarias para avanzar en el área industrial
-            BOLIVIANA
-          </Typography>
-        </Paper>
-      </Box>
+      <Grid container className={classes.gridPaper}>
+        {contact.info.map((e, i) => (
+          <Grid item xs={12} key={i}>
+            <Paper className={classes.paper}>
+              <Typography variant="h5" component="h3">
+                {e.title}
+              </Typography>
+              <Typography component="p">{e.description}</Typography>
+            </Paper>
+          </Grid>
+        ))}
+      </Grid>
       <List>
-        <ListItemIcon
-          buttonStyled={{ background: "#3b5998", color: "white" }}
-          icon={<Facebook className={classes.icon}></Facebook>}
-          href="https://www.facebook.com/Megatron-1457765754508825/"
-        />
-        <ListItemIcon
-          buttonStyled={{ background: "#282828" }}
-          icon={<Youtube className={classes.icon} />}
-          href="https://www.youtube.com/channel/UCm9e7feD8F3qrn6hFUX_aIw"
-        />
-        <ListItemIcon
-          value="+591 70497120"
-          icon={<Whatsapp className={classes.icon}></Whatsapp>}
-          buttonStyled={{ background: "#075e54", color: "white" }}
-          href="https://api.whatsapp.com/send?phone=59170497120&text=Hola%20Megatron,%20vengo%20de%20su%20sitio%20web."
-        />
-        <ListItemIcon
-          buttonStyled={{ textTransform: "none" }}
-          value="ing_fvargas@hotmail.com"
-          icon={<EmailIcon className={classes.icon} />}
-          href="mailto:ing_fvargas@hotmail.com"
-        />
-        <ListItemIcon
-          buttonStyled={{ textTransform: "none", height: "75px" }}
-          value="Av. Cañoto #113 esq. Buenos Aires | Santa Cruz |
-          Bolivia"
-          icon={<PinDropIcon className={classes.icon} />}
-          href="https://www.google.com/maps/place/Megatron+Empresa+Industrial/@-17.7814131,-63.1908203,17z/data=!3m1!4b1!4m5!3m4!1s0x93f1e9cd70711897:0x7a8e9bc0f6959a56!8m2!3d-17.7814182!4d-63.1886316"
-        />
-        <ListItemIcon
-          value="3303219"
-          icon={<PhoneIcon className={classes.icon} />}
-          href="tel:3303219"
-        />
+        {contact.facebook.visible && (
+          <ListItemIcon
+            value={contact.facebook.url}
+            text={contact.facebook.text}
+            buttonStyled={{ background: "#3b5998", color: "white" }}
+            icon={<Facebook className={classes.icon}></Facebook>}
+            href={contact.facebook.url}
+          />
+        )}
+        {contact.youtube.visible && (
+          <ListItemIcon
+            value={contact.youtube.url}
+            text={contact.youtube.text}
+            buttonStyled={{ background: "#282828" }}
+            icon={<Youtube className={classes.icon} />}
+            href={contact.youtube.url}
+          />
+        )}
+        {contact.whatsapp.visible && (
+          <ListItemIcon
+            value={`+591 ${contact.whatsapp.value}`}
+            text={`+591 ${contact.whatsapp.value}`}
+            icon={<Whatsapp className={classes.icon}></Whatsapp>}
+            buttonStyled={{ background: "#075e54", color: "white" }}
+            href={`https://api.whatsapp.com/send?phone=591${
+              contact.whatsapp.value
+            }&text=${contact.whatsapp.text.replace(/ /gi, "%20")}`}
+          />
+        )}
+        {contact.email.visible && (
+          <ListItemIcon
+            buttonStyled={{ textTransform: "none" }}
+            value={contact.email.value}
+            text={contact.email.value}
+            icon={<EmailIcon className={classes.icon} />}
+            href={`mailto:${contact.email.value}`}
+          />
+        )}
+        {contact.address.visible && (
+          <ListItemIcon
+            buttonStyled={{ textTransform: "none", height: "75px" }}
+            value={contact.address.text}
+            text={contact.address.text}
+            icon={<PinDropIcon className={classes.icon} />}
+            href={contact.address.url}
+          />
+        )}
+        {contact.tel.visible && (
+          <ListItemIcon
+            value={contact.tel.value}
+            text={contact.tel.value}
+            icon={<PhoneIcon className={classes.icon} />}
+            href={`tel:${contact.tel.value}`}
+          />
+        )}
       </List>
     </Dialog>
   );
 };
-const ListItemIcon = ({ buttonStyled, icon, value, href }) => {
+const ListItemIcon = ({ buttonStyled, icon, value, href, text }) => {
   const [copied, setCopied] = useState(false);
   const classes = useStyles();
   return (
@@ -135,7 +161,7 @@ const ListItemIcon = ({ buttonStyled, icon, value, href }) => {
         href={href}
       >
         {icon}
-        <Typography>{value && value}</Typography>
+        <Typography>{text && text}</Typography>
       </Button>
       {value && (
         <>

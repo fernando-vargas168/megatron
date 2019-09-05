@@ -26,6 +26,7 @@ import BackgroundImage from "gatsby-background-image";
 import SEO from "../../components/Head/SEO";
 import ButtonFixed from "../../components/ButtonFixed";
 import Form from "../../components/Form";
+import find from "../../../lib/findDataPages";
 function a11yProps(index) {
   return {
     id: `simple-tab-${index}`,
@@ -51,6 +52,8 @@ const searchLiked = (likedList, id, idName = "ci") => {
   return match;
 };
 const trabajo = ({ data }) => {
+  const { customBackground, customText } = find(data, "trabajo");
+
   const [personList, setPersonList] = useState([]);
   const [businessList, setBusinessList] = useState([]);
   const [likedPersonList, setLikedPersonList] = useState(
@@ -79,7 +82,7 @@ const trabajo = ({ data }) => {
     let arrayPerson = [];
     let arrayBusiness = [];
     data.allFile.edges.forEach(({ node }, index) => {
-      if (node.sourceInstanceName == "personas") {
+      if (node.sourceInstanceName == "personas" && node.extension == "md") {
         arrayPerson.push({
           name: node.childMarkdownRemark.frontmatter.name,
           img: node.childMarkdownRemark.frontmatter.img,
@@ -91,7 +94,7 @@ const trabajo = ({ data }) => {
       }
     });
     data.allFile.edges.forEach(({ node }, index) => {
-      if (node.sourceInstanceName == "empresas") {
+      if (node.sourceInstanceName == "empresas" && node.extension == "md") {
         arrayBusiness.push({
           name: node.childMarkdownRemark.frontmatter.name,
           img: node.childMarkdownRemark.frontmatter.img,
@@ -127,9 +130,10 @@ const trabajo = ({ data }) => {
       />
       <ContainerPage className="Trabajo">
         <HeaderPage
+          background={customBackground}
           icon="/img/trabajoCover.svg"
           text1="Encontramos"
-          text2="Bolsa de trabajo"
+          text2={customText}
           alt=""
           bottom="true"
         />
@@ -544,8 +548,8 @@ export const query = graphql`
   query Trabajo {
     allFile(
       filter: {
-        sourceInstanceName: { in: ["personas", "empresas"] }
-        extension: { eq: "md" }
+        sourceInstanceName: { in: ["personas", "empresas", "siteConfig"] }
+        extension: { in: ["md", "yml"] }
       }
     ) {
       edges {
@@ -579,6 +583,21 @@ export const query = graphql`
               nit
             }
           }
+          childSiteConfigYaml {
+            default
+            trabajo {
+              background {
+                childImageSharp {
+                  fluid {
+                    ...GatsbyImageSharpFluid
+                  }
+                }
+              }
+              text
+            }
+          }
+          relativePath
+          extension
           sourceInstanceName
         }
       }

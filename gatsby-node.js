@@ -18,6 +18,19 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
       }
     }
   }
+  if (node.internal.type === `SiteConfigYaml`) {
+    const pagesBackground = ["capacitacion", "servicios", "trabajo"];
+    pagesBackground.forEach(e => {
+      if (node[`${e}`].background.indexOf("/img") === 0) {
+        node[`${e}`].background = path
+          .relative(
+            path.dirname(node.fileAbsolutePath),
+            path.join(__dirname, "/static/", node[`${e}`].background)
+          )
+          .replace(/\/\/|\\/gi, "/");
+      }
+    });
+  }
 
   if (node.internal.type === `MarkdownRemark`) {
     const value = createFilePath({ node, getNode });
