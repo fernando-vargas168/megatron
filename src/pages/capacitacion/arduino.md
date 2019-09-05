@@ -9,8 +9,15 @@ category: mecatronica
 date: 3rd Oct 19
 img: /img/arduino.png
 contenido:
-  - "·\_\_\_\_\_\_\_\_ Introducción a los MÓDULOS ARDUINO ·\_\_\_\_\_\_\_\_ Programación de Lenguaje Arduino ·\_\_\_\_\_\_\_\_ Comunicación serial Shield ·\_\_\_\_\_\_\_\_ Entradas / Salidas  Digitales ·\_\_\_\_\_\_\_\_ Entradas / Salidas  Analógicas ·\_\_\_\_\_\_\_\_ Aplicación de Sensores con Arduino Temperatura   - Ultrasónicos Infrarrojos   - Color Humedad - Movimiento Presión - Caudal ·\_\_\_\_\_\_\_\_ Control de  Servomecanismos ·\_\_\_\_\_\_\_\_ Comunicación con módulos Bluethoot ·\_\_\_\_\_\_\_\_ PROYECTOS CON ARDUINO"
+  - Introducción a los MÓDULOS ARDUINO
+  - "Programación de Lenguaje Arduino ·\_\_\_\_\_\_\_\_ Comunicación serial Shield ·\_\_\_\_\_\_\_\_ Entradas / Salidas  Digitales ·\_\_\_\_\_\_\_\_ Entradas / Salidas  Analógicas"
+  - >-
+    Aplicación de Sensores con Arduino Temperatura  -Ultrasónicos Infrarrojos  
+    - Color Humedad - Movimiento Presión - Caudal
+  - Control de Servomecanismos
+  - Comunicación con módulos Bluethoot
+  - Proyectos con Arduino
 requisitosRecomendados:
-  - Conocimientos de principios de electrónica digital
+  - Conocimientos de electrónica digital
 ---
 
