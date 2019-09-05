@@ -9,15 +9,30 @@ category: automatizacion
 date: 19th Aug 19
 img: /img/automatismos.png
 contenido:
-  - Introducción a módulos de Arduino
-  - Programación de Lenguaje Arduino
-  - Comunicación serial Shield
-  - Entradas / Salidas Digitales
-  - Entradas / Salidas Analógicas
-  - Aplicación de sensores
-  - Control de Servomecanismos
-  - Comunicación con módulos Bluethoot
+  - Introducción a la automatización industrial
+  - Conceptos de ELECTRICIDAD INDUSTRIAL
+  - Simbología y normas para circuitos
+  - Dispositivos de automatización
+  - Eléctrica
+  - "Pulsadores •\tInterruptores •\tLlaves Selectoras de distintos tiempos •\tContactores  •\tRelés de mando •\tRelés Térmicos •\tGuardamotores •\tRelés Falta de Fases •\tTemporizadores Circuitos de Automatismos"
+  - Arranque Directo
+  - Arranque Secuencial
+  - Arranque Inversión de Giro de un Motor
+  - Arranque Estrella triangulo
+  - Instrumentación Industrial
+  - Sistemas de Control
+  - Lazo Abierto
+  - Lazo Cerrado
+  - Sensores de proximidad ( inductivos
+  - capacitivos
+  - fotoeléctricos)
+  - Sensores de Nivel (Electrodos
+  - Boya)
+  - Sensores de temperatura
+  - Arrancadores Suaves
+  - Variadores de Frecuencia
+  - Puesta en marcha de procesos reales
 requisitosRecomendados:
-  - Conocimientos de principios de electrónica digital
+  - Conocimientos de instalaciones eléctricas domiciliarias
 ---
 
