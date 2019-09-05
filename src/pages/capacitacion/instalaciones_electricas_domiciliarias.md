@@ -1,17 +1,18 @@
 ---
 title: Instalaciones Eléctricas Domiciliarias
 description: >-
-  Aprenderá a realizar instalaciones de tipo domiciliaria  Además obtendrá los
-  conocimientos necesarios para realizar instalaciones eléctricas de equipos de
-  iluminación, calcular las líneas según el consumo y mucho más.
+  Aprenderá a realizar instalaciones domiciliarias, edificios y comerciales bajo
+  normas de CRE , NB-777 - IEC , instalación de luminarias LED, circuitos de
+  tomas de corriente , circuitos especiales incluyendo sensores y fotocelulas,
+  ademas de interpretar planos eléctricos.
 category: electricidad
 date: 18th Sep 19
-img: /img/instalacion_electrica_domicilio.jpg
+img: /img/domiciliarias.png
 contenido:
   - Energía eléctrica
   - Magnitudes eléctricas (voltaje resistencia –corriente – potencia eléctrica)
   - Análisis de circuitos eléctricos
-  - Conductores aisladores
+  - Dimensionamiento correcto de conductores aisladores
   - Materiales complementarios (aislantes – canalización y sujeción)
   - Normas y reglamentos (CRE -  IEC - NB-777)
   - Luminotecnia – Sensores de presencia
@@ -19,7 +20,7 @@ contenido:
   - Circuitos de tomas de corriente
   - Circuitos de fuerza
   - Circuitos especiales
-  - Interpretación de planos  eléctricos
+  - Interpretación de planos eléctricos
 requisitosRecomendados:
   - Conocimientos y principios de electricidad aplicada
 ---
