@@ -17,8 +17,8 @@ contenido:
   - Manejo de señales Analógicas
   - Puesta en marcha de procesos de automatización cortos.
 requisitosRecomendados:
-  - Conocimientos y principios basicos de Electricidad
-  - Conocimientos de Electricidad Domiciliaria
-  - Conocimientos de Contactares Reles.
+  - Conocimientos y principios básicos de electricidad
+  - Conocimientos de electricidad domiciliaria
+  - conocimientos de automatismos eléctricos
 ---
 
