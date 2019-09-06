@@ -9,7 +9,7 @@ description: >-
   protección perimetral.
 category: electronica
 date: 18th Sep 19
-img: /img/seguridad_electronica_ip.jpg
+img: /img/seguridadip.png
 contenido:
   - Introducción a cámaras de seguridad
   - Circuito cerrado CCTV
@@ -21,6 +21,7 @@ contenido:
   - Control de acceso / Cerraduras eléctricas/ Sensores/ alarmas
   - Cercas  eléctricas
 requisitosRecomendados:
-  - Conocimientos y principios de Electricidad Aplicada.
+  - Conocimientos y principios de electricidad aplicada
+  - Conocimientos de electrónica
 ---
 
