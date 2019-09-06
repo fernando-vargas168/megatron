@@ -5,7 +5,7 @@ description: >-
   eléctricos y de protección, arranque de máquinas y motores todo dentro el área
   industrial.
 category: electricidad
-date: Lunes 19 de agosto 2019
+date: 16th Sep 19
 img: /img/industrial.png
 contenido:
   - Introducción a los sistemas eléctricos industriales
