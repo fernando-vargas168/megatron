@@ -4,7 +4,7 @@ description: >-
   Aprenderá a proteger las instalaciones eléctricas contra posibles fallas de
   corriente, descargas eléctricas, cortos circuitos y sobre corrientes
   implementado un sistema de tierra , pararrayos mejorando así la calidad de
-  energía de casas, comercios o industrias todo bajo normas NB-777-148008
+  energía de casas, comercios o industrias todo bajo normas NB-777-148008.
 category: electricidad
 date: 14th Oct 19
 img: /img/proteccion.png
@@ -31,6 +31,6 @@ contenido:
   - Soldadura exotérmica
   - Protocolo de medición de resistividad del terreno (clase práctica)
 requisitosRecomendados:
-  - Conocimientos y principios básicos de electricidad.
+  - Conocimientos de electricidad domiciliaria
 ---
 
