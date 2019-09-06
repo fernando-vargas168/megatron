@@ -1,24 +1,35 @@
 ---
-title: Protección Eléctrica Aterramiento
+title: Protección Eléctrica y Aterramiento
 description: >-
   Aprenderá a proteger las instalaciones eléctricas contra posibles fallas de
-  corriente - proteger a personas de descargas eléctricas - contra incendios y
-  mejorar así la calidad de energía. Diseñar y realizar los cálculos de
-  ingeniería para la protección integral del sistema de aterramiento utilizando
-  instrumentos de medida adecuados y tratamiento de suelos.
+  corriente, descargas eléctricas, cortos circuitos y sobre corrientes
+  implementado un sistema de tierra , pararrayos mejorando así la calidad de
+  energía de casas, comercios o industrias todo bajo normas NB-777-148008
 category: electricidad
-date: Lunes 19 de agosto 2019
-img: /img/proteccion_electrica_aterramiento.jpg
+date: 14th Oct 19
+img: /img/proteccion.png
 contenido:
-  - Fallas de instalaciones eléctricas
-  - Disturbio eléctricos – transistorios – armónicos
-  - Fusibles – Interruptores diferenciales – Descargadores
-  - Normas de protección y aterramiento ( NEC 250 – NFPA 780)
-  - Aterrizaje NB 777
-  - Medicio y tratamiento de suelos aditivos químicos
-  - Protecciones contra descargas atmosericas – Sistemas de pararrayos
-  - Manejo de telurimetro ( Megger) – Soldadura exotérmica
-  - Medicion practica en terreno y elaboración de sistemas de aterramiento.
+  - >-
+    Fallas en instalaciones eléctricas (sobre corrientes-cortos circuitos-caídas
+    de tensión- transitorios-armónicos)
+  - >-
+    Protecciónes eléctricas (fusibles-termomagnéticos-interruptores
+    diferenciales-supresores de picos- descargas atmosféricas)
+  - Efectos fisiológicos de la corriente eléctrica en el cuerpo humano
+  - Normas de protección y aterramiento (NEC 250 - NFPA 780)
+  - Medición de resistividad y tratamiento de suelos
+  - Puesta a tierra en sitios industriales
+  - Puesta a tierra en sitios de telecomunicación
+  - tierra filtrada y MGB´s
+  - Puesta a tierra de cargas sensibles y tierra lógica
+  - Puesta a tierra en sitios comerciales
+  - >-
+    Puesta a tierra en supermercados y hospitales según norma boliviana NB
+    777-148008
+  - Sistema de pararrayos bajo norma NB-148010-1-2
+  - Manejo de telurómetro (megger)
+  - Soldadura exotérmica
+  - Protocolo de medición de resistividad del terreno (clase práctica)
 requisitosRecomendados:
   - Conocimientos y principios básicos de electricidad.
 ---
