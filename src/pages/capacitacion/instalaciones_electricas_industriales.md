@@ -13,13 +13,11 @@ contenido:
   - Acometidas en media tensión (áreas – subterráneas)
   - >-
     Puestos de transformación (distribución MT/BT – transformador en poste –
-    piso – cabina
-  - reconectador)
+    piso – cabina - reconectador)
   - Cálculo de transformadores de potencia
   - Dimensionamiento de circuitos industriales
   - Determinación de potencia instalada y demanda máxima
   - Cálculo de corrientes nominales
-  - Protección
   - Secciones de los alimentadores
   - >-
     Corrección factor de potencia (potencias activa -reactiva y aparente - banco
@@ -28,8 +26,7 @@ contenido:
   - >-
     Arranque de máquinas (arranque directo – inversión de giro – estrella
     triangulo)
-  - ''
 requisitosRecomendados:
-  - Conocimientos y de instalaciones eléctricas domiciliarias.
+  - Conocimientos de instalaciones eléctricas domiciliarias.
 ---
 
