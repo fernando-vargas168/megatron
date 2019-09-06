@@ -9,8 +9,7 @@ category: electricidad
 date: 28th Sep 19
 img: /img/rebobinado.png
 contenido:
-  - Nociones de electricidad y electrotecnia
-  - Electromagnetismo
+  - Nociones de electricidad y electromagnetismo
   - Funcionamiento de máquinas eléctricas
   - >-
     Motores de corriente continua- sincrónicos- asincrónicos- monofásicos –
@@ -24,7 +23,7 @@ contenido:
   - Bobinados de motores universales
   - Cambio de tensiones
   - Reparación de bobinados
-  - Traiga su motor y rebobínelo con el instructor
+  - Traiga su motor y rebobínelo con nosotros
 requisitosRecomendados:
   - Conocimientos de principios de electricidad aplicada
 ---
