@@ -1,29 +1,35 @@
 ---
 title: Instalaciones Eléctricas Industriales
 description: >-
-  Dimensionar - seleccionar e instalar (conductores eléctricos – dispositivos de
-  protección – maniobra y automatización. Dimensionar – montar y cablear
-  tableros eléctricos y dispositivos de control para motores eléctricos.
-  Identificar el equipamiento de una subestación de distribución para su
-  mantenimiento.
+  Aprenderá a dimensionar, seleccionar e instalar correctamente dispositivos
+  eléctricos y de protección, arranque de máquinas y motores todo dentro el área
+  industrial.
 category: electricidad
 date: Lunes 19 de agosto 2019
-img: /img/instalacion_electrica_industrial.jpg
+img: /img/industrial.png
 contenido:
-  - Componentes y accesorios de instalaciones industriales
-  - Transformadores
-  - Dimensionamiento de los circuitos industriales
-  - Determinación de la potencia instalada y demanda máxima
-  - Calculo de las corrientes nominales
-  - protección – secciones de los alimentadores
-  - Corrección actor de potencia
-  - Potencias activa reactiva y aparente / Banco de capacitores
-  - Armado de tablero de distribución y protección
-  - Circuitos básicos de automatismos eléctricos
-  - Arranque directo – inversión de giro – estrella triangulo.
-requisitosRecomendados:
+  - Introducción a los sistemas eléctricos industriales
+  - Sistema eléctrico trifásico (potencias – corriente -tensión)
+  - Acometidas en media tensión (áreas – subterráneas)
   - >-
-    Conocimientos y principios básicos de electricidad / Instalaciones
-    Domiciliarias.
+    Puestos de transformación (distribución MT/BT – transformador en poste –
+    piso – cabina
+  - reconectador)
+  - Cálculo de transformadores de potencia
+  - Dimensionamiento de circuitos industriales
+  - Determinación de potencia instalada y demanda máxima
+  - Cálculo de corrientes nominales
+  - Protección
+  - Secciones de los alimentadores
+  - >-
+    Corrección factor de potencia (potencias activa -reactiva y aparente - banco
+    de capacitores)
+  - Armado de tablero de distribución y protección
+  - >-
+    Arranque de máquinas (arranque directo – inversión de giro – estrella
+    triangulo)
+  - ''
+requisitosRecomendados:
+  - Conocimientos y de instalaciones eléctricas domiciliarias.
 ---
 
