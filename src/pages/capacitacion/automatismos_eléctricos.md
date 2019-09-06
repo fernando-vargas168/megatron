@@ -20,16 +20,16 @@ contenido:
     Elementos de protección (relés térmicos – guardamotores - relés falta de
     fase)
   - Dispositivos de control (contactores - relés de mando -temporizadores)
-  - Circuitos de Automatismos (arranque directo
-  - arranque secuencial
-  - arranque inversión de giro - arranque estrella triangulo)
   - >-
-    Instrumentación Industrial (sistemas de control - lazo abierto - lazo
+    Circuitos de automatismos (arranque directo- secuencial- inversión de giro
+    -  estrella triangulo)
+  - >-
+    Instrumentación industrial (sistemas de control - lazo abierto - lazo
     cerrado)
   - Sensores de proximidad (inductivos – capacitivos - fotoeléctricos)
-  - Sensores de Nivel (electrodos - boya)
-  - Sensores de Temperatura (termocuplas - controladores- RTDS)
-  - Arrancadores Electrónicos (arrancadores suaves - variadores de frecuencia)
+  - Sensores de nivel (electrodos - boya)
+  - Sensores de temperatura (termocuplas - controladores- RTDS)
+  - Arrancadores electrónicos (arrancadores suaves - variadores de frecuencia)
   - Puesta en marcha de procesos reales
 requisitosRecomendados:
   - Conocimientos de instalaciones eléctricas domiciliarias
