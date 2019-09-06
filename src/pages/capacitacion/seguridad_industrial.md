@@ -1,22 +1,23 @@
 ---
 title: Seguridad Industrial y Ocupacional
 description: >-
-  Conocer el uso de esta novedosa tarjeta electrónica con Microcontroladores, y
-  aplicable con sistemas robóticos, de telecomunicación, industriales,
-  instrumentación automatizada.
+  Aplicar los conocimientos de Seguridad y Salud Ocupacional  para reducir
+  probabilidades de accidentes en ambientes Laboral. Capacitar y supervisar a un
+  grupo de personas de forma adecuada en el área de Seguridad y Salud
+  Ocupacional.
 category: electricidad
 date: Lunes 19 de agosto 2019
 img: /img/seguridadindustrial.png
 contenido:
-  - Introducción a módulos de Arduino
-  - Programación de Lenguaje Arduino
-  - Comunicación serial Shield
-  - Entradas / Salidas Digitales
-  - Entradas / Salidas Analógicas
-  - Aplicación de sensores
-  - Control de Servomecanismos
-  - Comunicación con módulos Bluethoot
+  - Sistemas de análisis de riesgos
+  - Equipos de protección personal según el área de trabajo
+  - Reconocimiento de materiales peligrosos
+  - >-
+    Permisos de trabajo (tipo eléctrico – químico – mecánico – térmico –
+    radioactivo – ambiental)
+  - Primeros auxilios (teoría y práctica)
+  - Control y prevención de incendios.
 requisitosRecomendados:
-  - Conocimientos de principios de electrónica digital
+  - Conocimientos y principios básicos de electricidad
 ---
 
