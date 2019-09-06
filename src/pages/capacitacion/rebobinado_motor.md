@@ -25,7 +25,6 @@ contenido:
   - Cambio de tensiones
   - Reparación de bobinados
   - Traiga su motor y rebobínelo con el instructor
-  - ''
 requisitosRecomendados:
   - Conocimientos de principios de electricidad aplicada
 ---
