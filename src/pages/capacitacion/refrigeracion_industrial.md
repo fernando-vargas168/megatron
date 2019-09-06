@@ -1,9 +1,12 @@
 ---
-title: Refrigeracion industrial
-img: /img/refrigeracion_industrial.jpg
-date: Lunes 19 de agosto 2019
+title: Refrigeración Industrial
+description: >-
+  Aprenderá técnicas de equipos de  refrigeración de mayor magnitud y a nivel
+  comercial e industrial, compresores trifásicos, instalación, mantenimiento de
+  cámaras frigoríficas, chillers, torres de enfriamiento y Thermo King.
 category: refrigeracion
-description: "Capacitar a los asistentes en técnicas de equipos de  refrigeración de mayor magnitud y a nivel industrial e instalación y mantenimiento en cámaras frigoríficas chiller y compresores trifásico y otros"
+date: 21st Oct 19
+img: /img/industrial.png
 contenido:
   - Introducción a la refrigeración industrial
   - Termodinámica de la producción del frío
@@ -14,3 +17,4 @@ contenido:
 requisitosRecomendados:
   - Conocimientos de principios de electricidad
 ---
+
