@@ -13,14 +13,14 @@ contenido:
     Fallas en instalaciones eléctricas (sobre corrientes-cortos circuitos-caídas
     de tensión- transitorios-armónicos)
   - >-
-    Protecciónes eléctricas (fusibles-termomagnéticos-interruptores
+    Protecciones eléctricas (fusibles-termomagnéticos-interruptores
     diferenciales-supresores de picos- descargas atmosféricas)
   - Efectos fisiológicos de la corriente eléctrica en el cuerpo humano
   - Normas de protección y aterramiento (NEC 250 - NFPA 780)
   - Medición de resistividad y tratamiento de suelos
   - Puesta a tierra en sitios industriales
   - Puesta a tierra en sitios de telecomunicación
-  - tierra filtrada y MGB´s
+  - Tierra filtrada y MGB´s
   - Puesta a tierra de cargas sensibles y tierra lógica
   - Puesta a tierra en sitios comerciales
   - >-
