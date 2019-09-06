@@ -1,5 +1,5 @@
 ---
-title: Nano PLCS
+title: Nano PLCs Easy Eaton
 description: >-
   Aprenderá el manejo de minicontroladores programables para aplicaciones de
   automatización de gama baja a media aplicados en problemas domésticos
@@ -17,8 +17,6 @@ contenido:
   - Manejo de señales Analógicas
   - Puesta en marcha de procesos de automatización cortos.
 requisitosRecomendados:
-  - Conocimientos y principios básicos de electricidad
-  - Conocimientos de electricidad domiciliaria
-  - conocimientos de automatismos eléctricos
+  - Conocimientos de automatismos eléctricos
 ---
 
