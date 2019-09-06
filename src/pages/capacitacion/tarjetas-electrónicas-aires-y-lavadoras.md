@@ -23,9 +23,7 @@ contenido:
   - >-
     Actuadores (relés – motor tambor -bomba de desagüe – motor drive- buzzer-
     electroválvulas-resistencia calefactora)
-  - Sensores (peso
-  - temperatura
-  - presostato)
+  - Sensores (peso -temperatura -presostato)
   - Adaptación de tarjetas universales
   - Banco de pruebas para reparación
 requisitosRecomendados:
