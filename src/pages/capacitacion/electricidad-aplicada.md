@@ -19,8 +19,7 @@ contenido:
   - Inductancia y capacitancia
   - Instrumentación ( Multitester)
   - Laboratorios prácticos
-  - Mediciones de voltaje AC- DC
-  - Mediciones de corriente AC-DC
+  - Mediciones de voltaje corriente AC-DC
   - Armado de dimmer (proyecto final)
 requisitosRecomendados:
   - Ninguno
