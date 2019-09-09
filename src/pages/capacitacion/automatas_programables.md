@@ -25,8 +25,8 @@ contenido:
   - Instrucciones matemáticas básicas
   - Prácticas con señales analógicas
   - Subrutinas
-  - Montaje e instalación (mecánica
-  - cableado conexionado y funcionamiento de PLCs)
+  - Montaje e instalación
+  - Cableado conexionado y funcionamiento de PLCs
   - Puesta en marcha de procesos reales
 requisitosRecomendados:
   - Conocimientos de automatismos eléctricos
