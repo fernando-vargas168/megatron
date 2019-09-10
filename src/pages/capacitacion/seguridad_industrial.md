@@ -1,10 +1,9 @@
 ---
 title: Seguridad Industrial y Ocupacional
 description: >-
-  Aplicar los conocimientos de Seguridad y Salud Ocupacional  para reducir
-  probabilidades de accidentes en ambientes Laboral. Capacitar y supervisar a un
-  grupo de personas de forma adecuada en el área de Seguridad y Salud
-  Ocupacional.
+  Aplicar los conocimientos de seguridad y salud ocupacional  para reducir
+  probabilidades de accidentes en ambientes laborales importantes para el
+  trabajo de distintas áreas y así proteger al personal laboral.
 category: electricidad
 date: Lunes 19 de agosto 2019
 img: /img/seguridadindustrial.png
