@@ -5,11 +5,15 @@ category: mecatronica
 date: 6th Sep 19
 img: /img/roboticaarduino.png
 contenido:
-  - Introducción a la robótica/ plataformas motrices
+  - Introducción a la robótica
+  - Plataformas motrices para construir un robot movil
   - Estructuras y diseño mecánico
-  - Ruedas – Orugas
+  - Distribución de pesos – centro de masas y equilibrio
+  - Ruedas – orugas – motores y drivers de potencia
   - Técnicas de cableado
-  - Chapa electrónica
-  - Control de carro por aplicación Android
+  - Integración de módulos
+  - Selección de sensores.
+requisitosRecomendados:
+  - Manejo de computadoras.
 ---
 
