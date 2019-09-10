@@ -5,7 +5,7 @@ description: >
   fundamental, aprenda: magnitudes eléctricas - potencia eléctrica - resistencia
   eléctrica - corriente alterna y continua (AC-DC) ley ohm - ley de watt
   -electromagnetismo - inductancia - capacitores - instrumentación (multitester)
-category: electricidad
+category: electronica
 date: 6th Sep 19
 img: /img/electricidadaplicada.png
 contenido:
