@@ -259,8 +259,8 @@ const CursoCard = ({ title, img, date, slug, styleAvatar }) => {
       <Dialog open={open} onClose={handleClose}>
         <Form
           formName="capacitacion"
-          name="capacitacion"
-          value={"curso"}
+          name="curso"
+          value={`Quiero reservar el curso "${title}"`}
           title={title}
         />
       </Dialog>

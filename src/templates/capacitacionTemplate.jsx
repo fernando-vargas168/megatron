@@ -80,7 +80,7 @@ const capacitacionTemplate = ({ pageContext }) => {
           <Form
             formName="capacitacion"
             name="curso"
-            value={title}
+            value={`Quiero reservar el curso "${title}"`}
             title={title}
           />
         </Dialog>
