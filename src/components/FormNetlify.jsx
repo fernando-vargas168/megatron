@@ -15,7 +15,8 @@ const FormNetlify = () => {
         <input type="hidden" name="form-name" value="personas" />
         <input type="text" name="name" />
         <input type="email" name="email" />
-        <input type="celular" name="text" />
+        <input type="celular" name="mobile" />
+        <input type="text" name="persona" />
       </form>
       <form
         hidden
@@ -29,7 +30,8 @@ const FormNetlify = () => {
         <input type="hidden" name="form-name" value="capacitacion" />
         <input type="text" name="name" />
         <input type="email" name="email" />
-        <input type="celular" name="text" />
+        <input type="text" name="mobile" />
+        <input type="text" name="curso" />
       </form>
       <form
         hidden
@@ -43,7 +45,8 @@ const FormNetlify = () => {
         <input type="hidden" name="form-name" value="servicios" />
         <input type="text" name="name" />
         <input type="email" name="email" />
-        <input type="celular" name="text" />
+        <input type="celular" name="mobile" />
+        <input type="text" name="servicio" />
       </form>
       <form
         hidden
@@ -57,7 +60,8 @@ const FormNetlify = () => {
         <input type="hidden" name="form-name" value="empresas" />
         <input type="text" name="name" />
         <input type="email" name="email" />
-        <input type="celular" name="text" />
+        <input type="celular" name="mobile" />
+        <input type="text" name="empresa" />
       </form>
       <form
         hidden
@@ -71,7 +75,7 @@ const FormNetlify = () => {
         <input type="hidden" name="form-name" value="buscoEmpleo" />
         <input type="text" name="name" />
         <input type="email" name="email" />
-        <input type="celular" name="text" />
+        <input type="celular" name="mobile" />
       </form>
       <form
         hidden
@@ -85,7 +89,7 @@ const FormNetlify = () => {
         <input type="hidden" name="form-name" value="convocatoria" />
         <input type="text" name="name" />
         <input type="email" name="email" />
-        <input type="celular" name="text" />
+        <input type="celular" name="mobile" />
       </form>
     </div>
   );

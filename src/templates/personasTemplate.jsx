@@ -92,9 +92,9 @@ const personasTemplate = ({ pageContext }) => {
         <ButtonFixed buttons={buttons} />
         <Dialog open={open} onClose={handleClose}>
           <Form
-            formName="contactos_empresas"
-            name="contacto_empresa"
-            value={`${name} ${ci}`}
+            formName="personas"
+            name="persona"
+            value={`A nuestra empresa le interese el contacto de ${name} con el CI ${ci}`}
             title={name}
           />
         </Dialog>

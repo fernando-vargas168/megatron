@@ -260,7 +260,7 @@ const CursoCard = ({ title, img, date, slug, styleAvatar }) => {
         <Form
           formName="capacitacion"
           name="capacitacion"
-          value={title}
+          value={"curso"}
           title={title}
         />
       </Dialog>

@@ -38,7 +38,7 @@ const capacitacionTemplate = ({ pageContext }) => {
   return (
     <div>
       <SEO
-        title={`MEGATRON CPACITACIÓN | ${title}`}
+        title={`MEGATRON | ${title} | BOLIVIA CAPACITACIÓN CURSO`}
         description={description}
         image={img}
       />
@@ -79,7 +79,7 @@ const capacitacionTemplate = ({ pageContext }) => {
         <Dialog open={open} onClose={handleClose}>
           <Form
             formName="capacitacion"
-            name="capacitacion"
+            name="curso"
             value={title}
             title={title}
           />

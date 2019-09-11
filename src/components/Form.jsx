@@ -5,7 +5,7 @@ const Form = ({ value, name, formName = "contact", title, description }) => {
   const [values, setValues] = useState({
     name: "",
     email: "",
-    celular: ""
+    mobile: ""
   });
 
   const handleChange = name => event => {
@@ -43,11 +43,11 @@ const Form = ({ value, name, formName = "contact", title, description }) => {
         required
       />
       <TextField
-        value={values.celular}
-        name="celular"
-        id="standard-celular"
+        value={values.mobile}
+        name="mobile"
+        id="standard-mobile"
         label="Celular"
-        onChange={handleChange("celular")}
+        onChange={handleChange("mobile")}
         margin="normal"
         required
       />

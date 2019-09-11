@@ -100,9 +100,9 @@ const empresasTemplate = ({ pageContext }) => {
         <ButtonFixed buttons={buttons} />
         <Dialog open={open} onClose={handleClose}>
           <Form
-            formName="contactos_empresas"
-            name="contacto_empresa"
-            value={`${name} ${title}`}
+            formName="empresas"
+            name="empresa"
+            value={`me interesa saber el contacto de la empresa ${name} para el puesto de ${title}`}
             title={name}
           />
         </Dialog>

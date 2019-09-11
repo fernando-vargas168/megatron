@@ -343,7 +343,7 @@ const trabajo = ({ data }) => {
       </Dialog>
       <Dialog open={openEmpleo} onClose={() => setOpenEmpleo(false)}>
         <Form
-          formName="empleo"
+          formName="buscoEmpleo"
           title="Solicitud de Búsqueda de empleo"
           description="Publica tu curriculum, muchas empresas buscan en nuestro sitio web"
         ></Form>
