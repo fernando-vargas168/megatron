@@ -6,17 +6,19 @@ description: >
   aplicaciones  domóticas ,telecomunicación, industrial, instrumentación ,
   automatización , robotica y entretenimiento.
 category: mecatronica
-date: 3rd Oct 19
+date: 23rd Sep 19
 img: /img/arduino.png
 contenido:
   - Introducción a los MÓDULOS ARDUINO
-  - "Programación de Lenguaje Arduino ·\_\_\_\_\_\_\_\_ Comunicación serial Shield ·\_\_\_\_\_\_\_\_ Entradas / Salidas  Digitales ·\_\_\_\_\_\_\_\_ Entradas / Salidas  Analógicas"
+  - Programación  lenguaje arduino
+  - Comunicación serial shield
+  - Puertos de entrada y salida digitales y análogos
   - >-
-    Aplicación de Sensores con Arduino Temperatura  -Ultrasónicos Infrarrojos  
-    - Color Humedad - Movimiento Presión - Caudal
-  - Control de Servomecanismos
-  - Comunicación con módulos Bluethoot
-  - Proyectos con Arduino
+    Aplicación de sensores (temperatura  - ultrasónicos - infrarrojos   - color
+    humedad - movimiento presión - caudal
+  - Control de servomecanismos
+  - Comunicación con módulos bluethoot
+  - Proyectos con arduino
 requisitosRecomendados:
   - Conocimientos de electrónica digital
 ---
