@@ -1,6 +1,6 @@
 default: false
 servicios:
-  background: /img/vista_robot_high-definition-wallpaper.jpg
+  background: /img/51cb4e17-9911-4246-8d64-643622841fc6.jpg
   text: Servicios | Proyectos
 capacitacion:
   background: /img/background.png
