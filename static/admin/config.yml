@@ -175,7 +175,7 @@ collections:
         name: "puestos"
         widget: "list"
         fields:
-          - label: Título
+          - label: Título del puesto
             name: title
             widget: string
 
@@ -209,14 +209,17 @@ collections:
             hint: "Habilidades duras necesarias"
             name: "requisitos"
             widget: "list"
+            required: false
           - label: "Valores"
             hint: "Habilidades blandas necesarias"
             name: "valores"
             widget: "list"
+            required: false
           - label: "Otros requisitos"
             hint: "Ejemplo: licencia de conducir"
             name: "otrosRequisitos"
             widget: "list"
+            required: false
   - label: "Configuración del sitio web"
     name: "siteConfig" # Used in routes, e.g., /admin/collections/blog
     identifier_field: name
