@@ -36,7 +36,7 @@ collections:
           label: "Fecha",
           name: "date",
           widget: "date",
-          format: Do MMM YY,
+          format: DD-MMM-YY,
           required: false,
         }
       - { label: "Imagen", name: "img", widget: "image", required: false }
@@ -187,9 +187,9 @@ collections:
             widget: "string"
             required: false
           - label: "Fecha de publicación"
-            hint: "Formato: DD/MM/YY 04/05/19"
             name: "publicado"
-            widget: "string"
+            widget: "date"
+            format: DD-MMM-YY
             required: false
           - label: "Contrato"
             name: "contrato"
