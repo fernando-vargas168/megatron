@@ -15,7 +15,7 @@ puestos:
     publicado: 19-Sep-19
     requisitos:
       - Manejo de paquetes microsoft
-    sueldo: '1000'
+    sueldo: ''
     title: Pasantes de Ing. Informatica
     valores:
       - Trabajo en grupo.
@@ -31,7 +31,7 @@ puestos:
     publicado: 19-Sep-19
     requisitos:
       - Manejo de paquetes microsoft
-    sueldo: '1000'
+    sueldo: ''
     title: Pasantes de Ing. en sistemas
     valores:
       - Trabajo en grupo.
