@@ -12,10 +12,11 @@ hardSkills:
   - Manejo de Word - Excel.
 softSkills:
   - Responsable
+  - Trabajo en Equipo.
 educacion:
   - >-
-    Técnico Superior en electricidad Industrial - Tecnológico Industrial
-    comercial
+    Técnico Superior en electricidad Industrial - Tecnológico Industrial "Puerto
+    de Mejillones"
 experiencia:
   - Ayudante electrico - Bogin S.A.
   - Tecnico electricista - Supervisa Ingenieria
