@@ -12,6 +12,7 @@ hardSkills:
   - Manejo de Word - Excel.
 softSkills:
   - Responsable
+  - Trabajo en Equipo.
 educacion:
   - >-
     Técnico Superior en electricidad Industrial - Tecnológico Industrial "Puerto
