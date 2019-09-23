@@ -71,7 +71,6 @@ exports.createPages = ({ graphql, actions }) => {
                     title
                     description
                     sueldo
-                    categoria
                     publicado
                     contrato
                     vigente

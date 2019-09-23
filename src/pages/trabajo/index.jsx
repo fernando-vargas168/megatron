@@ -572,7 +572,7 @@ export const query = graphql`
                 title
                 description
                 sueldo
-                categoria
+
                 publicado
                 contrato
                 vigente

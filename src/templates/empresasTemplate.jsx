@@ -33,7 +33,6 @@ const empresasTemplate = ({ pageContext }) => {
     title,
     description,
     sueldo,
-    categoria,
     publicado,
     contrato,
     vigente,
@@ -45,7 +44,6 @@ const empresasTemplate = ({ pageContext }) => {
   const informationGeneral = [
     sueldo ? sueldo : "sueldo no definido",
     contrato,
-    categoria,
     `Publicado el: ${publicado}`
   ];
   return (
