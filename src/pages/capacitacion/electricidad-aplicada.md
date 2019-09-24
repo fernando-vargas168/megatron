@@ -6,7 +6,7 @@ description: >
   eléctrica - corriente alterna y continua (AC-DC) ley ohm - ley de watt
   -electromagnetismo - inductancia - capacitores - instrumentación (multitester)
 category: electronica
-date: 6th Sep 19
+date: 04-Sep-19
 img: /img/electricidadaplicada.png
 contenido:
   - Fundamentos de electricidad
