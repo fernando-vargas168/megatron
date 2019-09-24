@@ -1,8 +1,8 @@
 ---
 title: Impresoras en 3D
-description: a
+description: Diseñe  e imprima sus ideas en objetos y piezas reales.
 category: mecatronica
-date: 23rd Sep 19
+date: 14-Aug-19
 img: /img/impresoras3d.png
 contenido:
   - Funciones Básicas de Solidworks
