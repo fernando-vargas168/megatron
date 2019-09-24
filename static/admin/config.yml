@@ -189,7 +189,8 @@ collections:
           - label: "Fecha de publicación"
             name: "publicado"
             widget: "date"
-            format: DD-M-YY
+            format: DD-MM-YY
+            dateFormat: true
             required: false
           - label: "Contrato"
             name: "contrato"
