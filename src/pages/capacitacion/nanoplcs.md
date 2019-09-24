@@ -5,7 +5,7 @@ description: >-
   automatización de gama baja a media aplicados en problemas domésticos
   comerciales e industriales.
 category: automatizacion
-date: 18th Sep 19
+date: 19-Sep-19
 img: /img/nanoplcs.png
 contenido:
   - Fundamentos Teóricos de PLC modelo EASY DE EATON
