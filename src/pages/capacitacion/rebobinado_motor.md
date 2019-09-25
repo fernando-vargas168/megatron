@@ -6,7 +6,7 @@ description: >-
   asincrónicos de distintas ranuras y características como ser voltaje, rpm y
   Hz.
 category: electricidad
-date: 28th Sep 19
+date: 28-Sep-19
 img: /img/rebobinado.png
 contenido:
   - Nociones de electricidad y electromagnetismo
