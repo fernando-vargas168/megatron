@@ -5,7 +5,7 @@ description: >-
   probabilidades de accidentes en ambientes laborales importantes para el
   trabajo de distintas áreas y así proteger al personal laboral.
 category: electricidad
-date: Lunes 19 de agosto 2019
+date: 27-Jul-19
 img: /img/seguridadindustrial.png
 contenido:
   - Sistemas de análisis de riesgos
