@@ -6,7 +6,7 @@ description: >-
   implementado un sistema de tierra , pararrayos mejorando así la calidad de
   energía de casas, comercios o industrias todo bajo normas NB-777-148008.
 category: electricidad
-date: 14th Oct 19
+date: 18-May-19
 img: /img/proteccion.png
 contenido:
   - >-
