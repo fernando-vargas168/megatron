@@ -1,6 +1,6 @@
 ---
 name: Beimar Jhoel Cala Quispia
-description: 'Tec.Sup. en Electricidad Industrial '
+description: Técnico superior en Electricidad industrial
 img: /img/whatsapp-image-2019-09-19-at-17.35.47-2-.jpeg
 ci: 8767322
 ciudad: Cochabamba
