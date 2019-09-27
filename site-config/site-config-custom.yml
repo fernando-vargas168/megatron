@@ -7,7 +7,11 @@ capacitacion:
   text: Cursos | Talleres
 trabajo:
   background: /img/13a7410e-2ef3-43bd-8531-53b834ee0c0a.jpg
-  text: Encuentra Trabajo | Busca trabajo
+  text: >-
+    Aquí puede ofertar sus servicios laborales tanto para empresas como para
+    particulares y si es una empresa puede solicitar personal desde pasantes
+    hasta profesionales en todos los niveles , interactúa en nuestra plataforma
+    laboral de Megatron.
 contacto:
   address:
     text: 'Av. Cañoto \# 113 esq. Buenos Aires | Santa Cruz | Bolivia'
