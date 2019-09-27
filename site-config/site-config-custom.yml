@@ -1,7 +1,9 @@
 default: false
 servicios:
   background: /img/51cb4e17-9911-4246-8d64-643622841fc6.jpg
-  text: Servicios | Proyectos
+  text: >-
+    Realizamos servicios y proyectos de ingeniería a nivel industrial todos
+    avalados por la S.I.B. y el C.I.E.E.S.C.
 capacitacion:
   background: /img/293de21e-0857-4ea3-b9c0-ed944051d876.jpg
   text: Cursos | Talleres
