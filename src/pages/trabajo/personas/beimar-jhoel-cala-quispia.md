@@ -13,7 +13,9 @@ softSkills:
   - Responsable
   - Trabajo en Equipo.
 educacion:
-  - Tec. Sup. en Electricidad Industrial - Instituto "Puerto de Mejillones"
+  - >-
+    Técnico superior en Electricidad industrial - Instituto "Puerto de
+    Mejillones"
 experiencia:
   - Eléctrico domiciliario
   - Ayudante general - Embutidos Stege
