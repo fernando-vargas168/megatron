@@ -1,6 +1,6 @@
 ---
 name: Beimar Jhoel Cala Quispia
-description: 'Tec.Sup. en Electricidad Industrial '
+description: Técnico superior en Electricidad industrial
 img: /img/whatsapp-image-2019-09-19-at-17.35.47-2-.jpeg
 ci: 8767322
 ciudad: Cochabamba
@@ -13,7 +13,9 @@ softSkills:
   - Responsable
   - Trabajo en Equipo.
 educacion:
-  - Tec. Sup. en Electricidad Industrial - Instituto "Puerto de Mejillones"
+  - >-
+    Técnico superior en Electricidad industrial - Instituto "Puerto de
+    Mejillones"
 experiencia:
   - Eléctrico domiciliario
   - Ayudante general - Embutidos Stege
