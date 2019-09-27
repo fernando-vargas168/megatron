@@ -22,7 +22,7 @@ puestos:
       - Manejo de Autocad 2D
       - Normas de diseño(NEC-IEC-NFPA)
       - ''
-    title: Ingeniero Eléctricista
+    title: Ingeniero Electricista
     valores:
       - Disponibilidad para trabajos de relevamientos de campo
     vigente: true
