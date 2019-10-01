@@ -6,7 +6,7 @@ description: >-
   salidas digitales y análogas puesta en marcha de procesos reales y diseñe su
   tablero de control gobernado con autómatas programables.
 category: automatizacion
-date: 27-Jul-19
+date: 21-Oct-19
 img: /img/programacionplcs.png
 contenido:
   - Fundamentos teóricos de PLC modelos (Micro 820 - Micrologix 1200 – 1400)
