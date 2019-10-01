@@ -5,7 +5,7 @@ description: >-
   reparación de tarjetas de control y funcionamiento del sistema electrónico así
   complementar sus conocimientos y no ser dependientes de otros técnicos.
 category: refrigeracion
-date: 27-Aug-19
+date: 14-Oct-19
 img: /img/tarjetaselectronicas.png
 contenido:
   - Introducción a la electrónica
