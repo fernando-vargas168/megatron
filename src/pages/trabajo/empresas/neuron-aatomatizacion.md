@@ -1,6 +1,6 @@
 ---
 nit: 5851460014
-name: Neuron Aatomatizacion
+name: Neuron Automatizacion
 description: 'Servicio de Automatización Industrial '
 img: /img/neuron.jpg
 puestos:
