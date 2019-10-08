@@ -18,5 +18,7 @@ educacion:
   - industrial
   - automatismo
   - aire condicionado - MEGATRON
+experiencia:
+  - Supervisor HSE - SINOPEC
 ---
 
