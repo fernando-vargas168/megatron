@@ -1,6 +1,6 @@
 ---
 name: Elias Zelaya Garcia
-description: Técnico electricista capacitado
+description: Técnico electricista
 img: /img/elias-zelaya.jpg
 ci: 4619346
 ciudad: Santa Cruz
