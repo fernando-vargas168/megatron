@@ -2,7 +2,7 @@
 nit: 900239671
 name: ' PRAXAIR GASES INDUSTRIALES LTDA'
 description: Empresa dedicada a la fabricación de sustancias y productos químicos básicos
-img: /img/praxair.png
+img: /img/images.png
 puestos:
   - beneficios:
       - Buen ambiente laboral.
