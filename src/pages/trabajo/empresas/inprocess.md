@@ -2,7 +2,7 @@
 nit: 360677020
 name: INPROCESS
 description: Servicios de Ingeniería y Construcción
-img: /img/descarga.png
+img: /img/inp.jpg
 puestos:
   - beneficios:
       - Buen ambiente laboral
