@@ -1,6 +1,6 @@
 ---
 name: Jose Enrique Apaz Arancibia
-description: Técnico superior en Electricidad Industrial
+description: Técnico superior en electricidad industrial
 img: /img/whatsapp-image-2019-09-19-at-17.35.47-3-.jpeg
 ci: 13193178
 ciudad: Cochabamba
