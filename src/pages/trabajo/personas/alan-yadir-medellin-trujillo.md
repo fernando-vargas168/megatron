@@ -1,5 +1,5 @@
 ---
-name: ALAN YADIR MEDELLIN TRUJILLO
+name: Alan Yadir Medellin Trujillo
 description: Técnico superior en electricidad industrial
 img: /img/20191018_133007-1-.png
 ci: 8891373
