@@ -5,7 +5,7 @@ description: >-
   microcontroladores muy importante para la fabricación de tarjetas de control
   electrónico embebido
 category: electronica
-date: 14th Oct 19
+date: 20-Nov-19
 img: /img/digital.png
 contenido:
   - Introducción a la electrónica digital
