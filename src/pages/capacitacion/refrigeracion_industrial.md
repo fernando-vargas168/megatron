@@ -5,7 +5,7 @@ description: >-
   comercial e industrial, compresores trifásicos, instalación, mantenimiento de
   cámaras frigoríficas, chillers, torres de enfriamiento y Thermo King.
 category: refrigeracion
-date: 22-Apr-19
+date: 20-Nov-19
 img: /img/industrial.png
 contenido:
   - Introducción a la refrigeración industrial
