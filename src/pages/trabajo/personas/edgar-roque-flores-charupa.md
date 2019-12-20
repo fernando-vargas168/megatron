@@ -1,27 +1,26 @@
 ---
-name: EDGAR ROQUE FLORES CHARUPA
-description: TEC. EN ELECTRÓNICA INDUSTRIAL Y AUTOMATIZACIÓN
+name: Edgar Roque Flores Charupa
+description: Técnico superior en  electrónica industrial y automatización
 img: /img/whatsapp-image-2019-12-19-at-11.43.01.jpeg
 ci: 5824165
 ciudad: Santa Cruz
-edad: 38
+edad: 37
 licenciaDeConducir: true
-estadoCivil: SOLTERO
+estadoCivil: Soltero
 hardSkills:
   - MANEJO DE PAQUETES OFFICE
 softSkills:
-  - FACIL PREDIZAJE DE TAREAS ENCOMENDADAS
-  - FACILIDAD PARA TRABAJAR EN EQUIPO
-  - DISPONIBILIDAD INMEDIATA
+  - Facil aprendizaje
+  - Facilidad de trabajo en equipo
+  - Disponibilidad inmediata
 educacion:
-  - ELECTRICIDAD DOMICILIARIA - INFOCAL SANTA CRUZ
-  - TECNICO EN ELECTRONICA INDUSTRIAL Y AUTOMATIZACIÓN - POLITÉCNICO "IPRATE"
+  - Electricidad domiciliaria - INFOCAL Santa Cruz
+  - Técnico en electrónica industrial y automatización - Politecnico "IPRATE"
 experiencia:
-  - '"ELECTRICO C" TERMOELÉCTRICA "ESE"'
-  - OPERARIO DE PLANTA - COPELME S.A.
-  - OPERARIO DE PRODUCCION - PANTANAL S.A.
-  - OPERARIO DE PLANTA - CURTIEMBRE SAUSALITO
-  - PERSONAL DE MANTENIMIENTO - CLINICA NUCLEAR
-  - JEFE DE FABRICA - FASE
+  - '"Electrico C" Termoelectrica "ESE"'
+  - Operario de planta  - COPELME S.A.
+  - Operario de producción - PANTANAL S.A.
+  - Operario de planta - Curtiembre SAUSALITO
+  - Personal de mantenimiento - Clinica NUCLEAR
 ---
 
