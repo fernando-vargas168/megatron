@@ -2,7 +2,7 @@
 title: Robotica con Arduino
 description: 'Aprenda a fabricar y diseñar sus propios robots: móviles/ control android'
 category: mecatronica
-date: 12-Oct-19
+date: 13-Jan-20
 img: /img/roboticaarduino.png
 contenido:
   - Introducción a la robótica
