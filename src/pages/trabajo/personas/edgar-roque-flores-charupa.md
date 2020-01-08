@@ -8,7 +8,7 @@ edad: 37
 licenciaDeConducir: true
 estadoCivil: Soltero
 hardSkills:
-  - MANEJO DE PAQUETES OFFICE
+  - Manejo de paquetes Office
 softSkills:
   - Facil aprendizaje
   - Facilidad de trabajo en equipo
