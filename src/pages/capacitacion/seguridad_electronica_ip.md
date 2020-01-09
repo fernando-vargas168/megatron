@@ -8,7 +8,7 @@ description: >-
   dispositivos, aplicación de sensores de movimiento y cercas eléctricas para
   protección perimetral.
 category: electronica
-date: 20-Nov-19
+date: 13-Jan-20
 img: /img/seguridadip.png
 contenido:
   - Introducción a cámaras de seguridad
