@@ -6,7 +6,7 @@ description: >-
   manejo de manómetro, vaciado y carga de gas y reparación de tarjetas
   electrónicas.
 category: refrigeracion
-date: 13-Jan-20
+date: 08-Feb-20
 img: /img/aire.png
 contenido:
   - Unidades de potencia frigorífica
