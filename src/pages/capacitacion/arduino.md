@@ -6,7 +6,7 @@ description: >
   aplicaciones  domóticas ,telecomunicación, industrial, instrumentación ,
   automatización , robotica y entretenimiento.
 category: mecatronica
-date: 21-Oct-19
+date: 15-Feb-20
 img: /img/arduino.png
 contenido:
   - Introducción a los MÓDULOS ARDUINO
