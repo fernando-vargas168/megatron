@@ -5,7 +5,7 @@ description: >-
   componentes , funcionamientos de sistema electrónicos , reparación y armado de
   circuitos con proyectos prácticos.
 category: electronica
-date: 23-Nov-19
+date: 17-Feb-20
 img: /img/analogica.png
 contenido:
   - Teoría de semiconductores
