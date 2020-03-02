@@ -6,7 +6,7 @@ description: >-
   automatizados ,puesta en marcha de motores con arrancadores suaves y
   variadores de frecuencia.
 category: automatizacion
-date: 15-Feb-20
+date: 09-Mar-20
 img: /img/automatismos.png
 contenido:
   - Introducción a la automatización industrial
