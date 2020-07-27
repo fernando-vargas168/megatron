@@ -6,7 +6,7 @@ description: >-
   tomas de corriente , circuitos especiales incluyendo sensores y fotocelulas,
   ademas de interpretar planos eléctricos.
 category: electricidad
-date: 08-Mar-20
+date: 24-Aug-20
 img: /img/domiciliarias.png
 contenido:
   - Energía eléctrica
