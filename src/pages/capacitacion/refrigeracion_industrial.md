@@ -1,11 +1,11 @@
 ---
 title: Refrigeración Industrial
-description: >-
-  Aprenderá técnicas de equipos de  refrigeración de mayor magnitud y a nivel
-  comercial e industrial, compresores trifásicos, instalación, mantenimiento de
-  cámaras frigoríficas, chillers, torres de enfriamiento y Thermo King.
+description: Aprenderá técnicas de equipos de  refrigeración de mayor magnitud y
+  a nivel comercial e industrial, compresores trifásicos, instalación,
+  mantenimiento de cámaras frigoríficas, chillers, torres de enfriamiento y
+  Thermo King.
 category: refrigeracion
-date: 20-Nov-19
+date: 22-Nov-20
 img: /img/industrial.png
 contenido:
   - Introducción a la refrigeración industrial
@@ -17,4 +17,3 @@ contenido:
 requisitosRecomendados:
   - Conocimientos de principios de electricidad
 ---
-
