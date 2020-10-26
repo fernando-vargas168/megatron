@@ -1,14 +1,13 @@
 ---
 title: Seguridad Electrónica IP
-description: >-
-  Reconocer todos los componentes utilizados en los sistemas CCTV manejo
-  configuración de redes, monitoreo de cámaras IP y Wifi en vivo, utilización de
-  dispositivos instalar cámaras de seguridad y programación de DVR  para
-  visualizarlas en tiempo real a través de internet por medio de diversos
-  dispositivos, aplicación de sensores de movimiento y cercas eléctricas para
-  protección perimetral.
+description: Reconocer todos los componentes utilizados en los sistemas CCTV
+  manejo configuración de redes, monitoreo de cámaras IP y Wifi en vivo,
+  utilización de dispositivos instalar cámaras de seguridad y programación de
+  DVR  para visualizarlas en tiempo real a través de internet por medio de
+  diversos dispositivos, aplicación de sensores de movimiento y cercas
+  eléctricas para protección perimetral.
 category: electronica
-date: 11-Aug-20
+date: 07-Nov-20
 img: /img/seguridadip.png
 contenido:
   - Introducción a cámaras de seguridad
@@ -24,4 +23,3 @@ requisitosRecomendados:
   - Conocimientos y principios de electricidad aplicada
   - Conocimientos de electrónica
 ---
-
