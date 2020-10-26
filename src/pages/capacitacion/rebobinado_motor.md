@@ -1,18 +1,16 @@
 ---
 title: Rebobinado de Motores Eléctricos
-description: >-
-  Aprenderá el funcionamiento, cálculo, mantenimiento y rebobinado de motores de
-  corriente alterna monofásicos o trifásicos – motores sincrónicos y
+description: Aprenderá el funcionamiento, cálculo, mantenimiento y rebobinado de
+  motores de corriente alterna monofásicos o trifásicos – motores sincrónicos y
   asincrónicos de distintas ranuras y características como ser voltaje, rpm y
   Hz.
 category: electricidad
-date: 07-Mar-20
+date: 22-Nov-20
 img: /img/rebobinado.png
 contenido:
   - Nociones de electricidad y electromagnetismo
   - Funcionamiento de máquinas eléctricas
-  - >-
-    Motores de corriente continua- sincrónicos- asincrónicos- monofásicos –
+  - Motores de corriente continua- sincrónicos- asincrónicos- monofásicos –
     trifásicos- universales
   - Bobinados de corriente alterna
   - Bobinados del inductor y del inducido paralelo ondulado múltiples
@@ -27,4 +25,3 @@ contenido:
 requisitosRecomendados:
   - Conocimientos de principios de electricidad aplicada
 ---
-
