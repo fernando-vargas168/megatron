@@ -5,7 +5,7 @@ description: Aprenderá el funcionamiento, instalación y mantenimiento de equip
   , manejo de manómetro, vaciado y carga de gas y reparación de tarjetas
   electrónicas.
 category: refrigeracion
-date: 10-Oct-20
+date: 20-Feb-21
 img: /img/aire.png
 contenido:
   - Unidades de potencia frigorífica
