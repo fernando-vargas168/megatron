@@ -1,16 +1,15 @@
 ---
 title: Autocad Electrical
-description: >-
-  Aprenda a diseñar y dibujar sus planos eléctricos en esta plataforma CAD y
-  obtenga un valor agregado a los servicios eléctricos que ofrece.
+description: Aprenda a diseñar y dibujar sus planos eléctricos en esta
+  plataforma CAD y obtenga un valor agregado a los servicios eléctricos que
+  ofrece.
 category: electricidad
-date: 20-Jan-20
+date: 21-Jan-20
 img: /img/autocad.png
 contenido:
   - Creación de formas geométricas (edición – gráficos- escalas)
   - Creación de librerías y manejo de capas
-  - >-
-    Configuración de área de trabajo
+  - Configuración de área de trabajo
     (ladders-componentes-símbolos-circuitos-plcs-circuitos de fuerza)
   - Configuración de proyectos (propiedades-plantillas- atributos)
   - Administrar directorios de referencia
@@ -23,4 +22,3 @@ contenido:
 requisitosRecomendados:
   - Conocimientos en instalaciones eléctricas domiciliarias
 ---
-
