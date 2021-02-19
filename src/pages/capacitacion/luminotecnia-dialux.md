@@ -7,6 +7,7 @@ description: >
   Dialux 4.13 como herramienta informática. 
 category: electricidad
 date: 03-Aug-20
+img: /img/p1.png
 contenido:
   - Cálculo de iluminación
   - Interfaz de Dialux
@@ -15,4 +16,3 @@ contenido:
   - Iluminación industrial
   - Proyectos de iluminación arquitectónicos.
 ---
-
