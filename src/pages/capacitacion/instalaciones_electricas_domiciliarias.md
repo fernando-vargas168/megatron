@@ -5,7 +5,7 @@ description: Aprenderá a realizar instalaciones domiciliarias, edificios y
   circuitos de tomas de corriente , circuitos especiales incluyendo sensores y
   fotocelulas, ademas de interpretar planos eléctricos.
 category: electricidad
-date: 22-Feb-21
+date: 13-Mar-21
 img: /img/domiciliarias.png
 contenido:
   - Energía eléctrica
