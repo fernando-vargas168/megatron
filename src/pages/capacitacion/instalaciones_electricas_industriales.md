@@ -4,7 +4,7 @@ description: Aprenderá a dimensionar, seleccionar e instalar correctamente
   dispositivos eléctricos y de protección, arranque de máquinas y motores todo
   dentro el área industrial.
 category: electricidad
-date: 09-Nov-19
+date: 22-Mar-21
 img: /img/industrial.png
 contenido:
   - Introducción a los sistemas eléctricos industriales
