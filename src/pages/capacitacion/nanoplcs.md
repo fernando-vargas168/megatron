@@ -1,11 +1,10 @@
 ---
 title: Nano PLCs Easy Eaton
-description: >-
-  Aprenderá el manejo de minicontroladores programables para aplicaciones de
-  automatización de gama baja a media aplicados en problemas domésticos
-  comerciales e industriales.
+description: Aprenderá el manejo de minicontroladores programables para
+  aplicaciones de automatización de gama baja a media aplicados en problemas
+  domésticos comerciales e industriales.
 category: automatizacion
-date: 19-Sep-19
+date: 05-Apr-21
 img: /img/nanoplcs.png
 contenido:
   - Fundamentos Teóricos de PLC modelo EASY DE EATON
@@ -19,4 +18,3 @@ contenido:
 requisitosRecomendados:
   - Conocimientos de automatismos eléctricos
 ---
-
