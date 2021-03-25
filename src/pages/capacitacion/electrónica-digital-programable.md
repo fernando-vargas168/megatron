@@ -1,11 +1,10 @@
 ---
 title: Electrónica Digital Programable
-description: >-
-  Dar un conocimiento solido de circuitos integrados , memorias ,
+description: Dar un conocimiento solido de circuitos integrados , memorias ,
   microcontroladores muy importante para la fabricación de tarjetas de control
   electrónico embebido
 category: electronica
-date: 20-Nov-19
+date: 29-Mar-21
 img: /img/digital.png
 contenido:
   - Introducción a la electrónica digital
@@ -30,8 +29,7 @@ contenido:
   - PWM
   - MSSP
   - Aplicaciones y proyectos con microcontroladores
-  - ''
+  - ""
 requisitosRecomendados:
   - Conocimiento de electrónica analógica
 ---
-
