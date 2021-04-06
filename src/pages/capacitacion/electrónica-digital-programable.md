@@ -4,7 +4,7 @@ description: Dar un conocimiento solido de circuitos integrados , memorias ,
   microcontroladores muy importante para la fabricación de tarjetas de control
   electrónico embebido
 category: electronica
-date: 29-Mar-21
+date: 05-Apr-21
 img: /img/digital.png
 contenido:
   - Introducción a la electrónica digital
