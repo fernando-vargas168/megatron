@@ -1,20 +1,16 @@
 ---
-title: Programación de PLCs Allen Bradley
-description: >-
-  Aprenda a programar, instalar y cablear PLCs, Micro800, Micrologix1200,
-  Micrologix1400  conozca su arquitectura interna, lenguaje ladder, entradas
-  salidas digitales y análogas puesta en marcha de procesos reales y diseñe su
-  tablero de control gobernado con autómatas programables.
+title: Programación PLCs - HMI Allen Bradley
+description: Aprenda a programar, instalar y poner en marcha procesos
+  industriales gobernados con autómatas programables de la marca Micro800 y
+  Panel View 800 muy utilizado en el sector industrial.
 category: automatizacion
-date: 17-Feb-20
+date: 10-May-21
 img: /img/programacionplcs.png
 contenido:
   - Fundamentos teóricos de PLC modelos (Micro 820 - Micrologix 1200 – 1400)
-  - >-
-    Lenguajes de Programación ( grafcet – lista de instrucciones - bloques de
+  - Lenguajes de Programación ( grafcet – lista de instrucciones - bloques de
     funciones – diagrama ladder)
-  - >-
-    Configuración de comunicaciones con el RsLinx. Instrucciones de bit Archivos
+  - Configuración de comunicaciones con el RsLinx. Instrucciones de bit Archivos
     bobinas auxiliares
   - Archivos temporizadores
   - Archivos contadores
@@ -31,4 +27,3 @@ contenido:
 requisitosRecomendados:
   - Conocimientos de automatismos eléctricos
 ---
-
