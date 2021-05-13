@@ -6,7 +6,7 @@ description: Conozca el funcionamiento correcto de sistemas inverter para la
   disminución o incremento de velocidad para mantener una temperatura deseada.
 category: refrigeracion
 date: 24-May-21
-img: /img/electronica-inverter-24.jpeg
+img: /img/electronica-inverter-sin-fecha.jpeg
 contenido:
   - Electrónica inverter
   - Fuentes de alimentación lineales y conmutables
