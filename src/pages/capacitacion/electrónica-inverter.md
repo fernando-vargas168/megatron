@@ -5,7 +5,7 @@ description: Conozca el funcionamiento correcto de sistemas inverter para la
   regular el voltaje corriente y frecuencia regulando así el compresor para la
   disminución o incremento de velocidad para mantener una temperatura deseada.
 category: refrigeracion
-date: 24-May-21
+date: 18-Jul-21
 img: /img/electronica-inverter-sin-fecha.jpeg
 contenido:
   - Electrónica inverter
