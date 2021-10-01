@@ -5,7 +5,7 @@ description: Aprenderá técnicas de equipos de  refrigeración de mayor magnitu
   mantenimiento de cámaras frigoríficas, chillers, torres de enfriamiento y
   Thermo King.
 category: refrigeracion
-date: 21-Apr-21
+date: 25-Oct-21
 img: /img/industrial.png
 contenido:
   - Introducción a la refrigeración industrial
