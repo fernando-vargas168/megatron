@@ -5,7 +5,7 @@ description: Aprenderá el funcionamiento, cálculo, mantenimiento y rebobinado 
   asincrónicos de distintas ranuras y características como ser voltaje, rpm y
   Hz.
 category: electricidad
-date: 24-May-21
+date: 06-Oct-21
 img: /img/rebobinado.png
 contenido:
   - Nociones de electricidad y electromagnetismo
