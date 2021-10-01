@@ -5,7 +5,7 @@ description: Aprenda a diseñar y armar tableros de control con tecnología
   automatizados ,puesta en marcha de motores con arrancadores suaves y
   variadores de frecuencia.
 category: automatizacion
-date: 10-Jul-21
+date: 18-Oct-21
 img: /img/automatismos.png
 contenido:
   - Introducción a la automatización industrial
