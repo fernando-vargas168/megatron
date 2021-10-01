@@ -4,7 +4,7 @@ description: Aprenda a diseñar y dibujar sus planos eléctricos en esta
   plataforma CAD y obtenga un valor agregado a los servicios eléctricos que
   ofrece.
 category: electricidad
-date: 21-Apr-21
+date: 06-Oct-21
 img: /img/autocad.png
 contenido:
   - Creación de formas geométricas (edición – gráficos- escalas)
