@@ -5,7 +5,7 @@ description: "Manejar sistemas de automatización mediante aire comprimido muy
   eléctrica, cilindros , sensores , manejo de electroválvulas los mismos
   controlados con relés o PLCs. "
 category: automatizacion
-date: 14-Jun-21
+date: 18-Oct-21
 img: /img/electroneumatica.png
 contenido:
   - Introducción a la neumática
