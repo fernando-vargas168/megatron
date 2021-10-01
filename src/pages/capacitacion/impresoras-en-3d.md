@@ -2,12 +2,11 @@
 title: Impresoras en 3D
 description: Diseñe  e imprima sus ideas en objetos y piezas reales.
 category: mecatronica
-date: 23-Nov-19
+date: 30-Oct-21
 img: /img/impresoras3d.png
 contenido:
   - Funciones Básicas de Solidworks
-  - >-
-    Croquizado  –  Extruir Saliente / Base – Cortes – Revolución de Saliente /
+  - Croquizado  –  Extruir Saliente / Base – Cortes – Revolución de Saliente /
     Base
   - Simetría de Entidades
   - Matriz Lineal / Circular
@@ -25,4 +24,3 @@ contenido:
 requisitosRecomendados:
   - Conocimientos de electrónica digital y programación de arduino.
 ---
-
