@@ -4,7 +4,7 @@ description: Aprenda a programar, instalar y poner en marcha procesos
   industriales gobernados con autómatas programables de la marca Micro800 y
   Panel View 800 muy utilizado en el sector industrial.
 category: automatizacion
-date: 18-Jul-21
+date: Invalid date
 img: /img/programacionplcs.png
 contenido:
   - Fundamentos teóricos de PLC modelos (Micro 820 - Micrologix 1200 – 1400)
