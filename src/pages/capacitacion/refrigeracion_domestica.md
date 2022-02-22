@@ -6,7 +6,7 @@ description: >
   refrigerante, técnicas de soldadura ,reparación y mantenimiento de heladeras,
   frigobar, freezers, equipos de refrigeración doméstica en general.
 category: refrigeracion
-date: 16-Aug-21
+date: 07-Feb-22
 img: /img/refrigeracion.png
 contenido:
   - Nociones sobre termodinámica
