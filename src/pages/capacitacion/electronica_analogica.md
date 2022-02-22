@@ -4,7 +4,7 @@ description: Brindarle al participante un conocimiento solido sobre
   ELECTRÓNICA,  testeo de componentes , funcionamientos de sistema electrónicos
   , reparación y armado de circuitos con proyectos prácticos.
 category: electronica
-date: 17-Oct-21
+date: Invalid date
 img: /img/analogica.png
 contenido:
   - Teoría de semiconductores
