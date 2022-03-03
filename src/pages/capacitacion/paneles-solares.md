@@ -6,7 +6,7 @@ description: >+
 
 
 category: electricidad
-date: 17-Oct-21
+date: Invalid date
 img: /img/panel3.jpg
 contenido:
   - Introducción a los sistemas fotovoltaicos
