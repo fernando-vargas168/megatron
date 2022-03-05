@@ -1,5 +1,5 @@
 ---
-title: Paneles Solares
+title: Instalaciones Fotovoltaicas
 description: >+
   Aprenda a implementar sistemas fotovoltaicos y generar energía solar
   renovable, aplicados a entornos domésticos, rurales y urbanos.
