@@ -4,7 +4,7 @@ description: Aprenderá el manejo de minicontroladores programables para
   aplicaciones de automatización de gama baja a media aplicados en problemas
   domésticos comerciales e industriales.
 category: automatizacion
-date: Invalid date
+date: 09-Apr-22
 img: /img/nanoplcs.png
 contenido:
   - Fundamentos Teóricos de PLC modelo EASY DE EATON
