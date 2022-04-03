@@ -7,7 +7,7 @@ description: Reconocer todos los componentes utilizados en los sistemas CCTV
   diversos dispositivos, aplicación de sensores de movimiento y cercas
   eléctricas para protección perimetral.
 category: electronica
-date: Invalid date
+date: 09-Apr-22
 img: /img/seguridadip.png
 contenido:
   - Introducción a cámaras de seguridad
