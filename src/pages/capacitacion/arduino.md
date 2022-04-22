@@ -5,7 +5,7 @@ description: >
   microcontrolador ATMEL, aplicable con sistemas de control embebido para
   aplicaciones  domóticas ,telecomunicación, industrial, instrumentación ,
   automatización , robotica y entretenimiento.
-category: mecatronica
+category: electronica
 date: 13-Apr-22
 img: /img/arduino.png
 contenido:
