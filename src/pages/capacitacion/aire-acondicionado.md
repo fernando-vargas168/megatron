@@ -6,7 +6,7 @@ description: >
   permitidos y de protección al medio ambiente también complementado con
   reparación de tarjetas electrónicas.
 category: refrigeracion
-date: Invalid date
+date: 14-May-22
 img: /img/aire.png
 contenido:
   - Unidades de potencia frigorífica
